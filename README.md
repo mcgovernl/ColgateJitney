@@ -1,4 +1,6 @@
 # README
+COSC480 Colgate Jitney Group 1
+Liam McGovern, Jack Kerning, Ryan Wetsman, Peyton Baker, Harrison Chen
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
@@ -20,5 +22,3 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
-* ...
