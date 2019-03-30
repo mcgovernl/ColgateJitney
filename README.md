@@ -34,4 +34,3 @@ Relationships: (Maybe wrong)
         has_many :drivers, ;through => :reviews
   Review belongs_to :drivers
          belongs_to :riders
-a
