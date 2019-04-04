@@ -1,4 +1,4 @@
-class RiderController < ApplicationController
+class RidersController < ApplicationController
   def index
     #homepage for rider using the app
     #should show list of avaliable drivers
