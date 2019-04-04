@@ -1,0 +1,23 @@
+#main
+    %h3.header Add your driver information
+
+    =form_for @driver, :method => :post do |f|
+        =f.label :first, "First name"
+        =f.text_field :first
+
+        =f.label :last, "Last name"
+        =f.text_field :last
+
+        =f.label :make, "Vehicle make"
+        =f.text_field :make
+
+        =f.label :model, "Vehicle model"
+        =f.text_field :model
+
+        =f.label :plate, "License plate"
+        =f.text_field :plate
+
+        =f.label :seats, "Number of seats"
+        =f.number_field :seats
+
+        =f.submit "Add Information"
