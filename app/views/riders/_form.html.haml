@@ -1,0 +1,20 @@
+=form_for @rider, :method => :post do |f|
+  .field
+    =f.label :first, "First Name"
+    =f.text_field :first
+
+  .field
+    =f.label :last, "Last Name"
+    =f.text_field :last
+
+  .field
+    =f.label :destination, "Destination"
+    =f.text_field :destination
+
+  -# if we want to add images later
+  -# .field
+  -#   =f.label :image, "Image"
+  -#   =f.file_field :image, accept: "image/png,image/gif,image/jpeg"
+
+  .field
+    =f.submit "Submit"
