@@ -2,6 +2,7 @@ class RidersController < ApplicationController
   def index
     #homepage for rider using the app
     #should show list of avaliable drivers
+    #need to redirect to new if there is no rider for current user
     @drivers = Drivers.where("available is TRUE")
   end
 

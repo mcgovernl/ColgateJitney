@@ -1,12 +1,11 @@
 class DriversController < ApplicationController
 
-  def index
-  end
-
   def show
     #homepage for driver using the app. Shows their Driver information
     #should also allow them to edit their avliablity on the fly
-    @driver = Driver.find(params[:id])
+    #need to redirect to new if no driver for current user
+    id = params[:id]
+    @driver = Driver.find(id)
     @reviews = @driver.reviews
   end
 
