@@ -17,7 +17,7 @@
     .row
         .col-md-offset-2
         -@reviews.each do |review|
-            .col-md-offset-2= review
+            .col-md-offset-2= "#{review.stars} #{review.description}"
             %br
 
 =link_to "Edit Driver Details", edit_driver_path(@driver)

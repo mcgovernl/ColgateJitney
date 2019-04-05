@@ -25,7 +25,7 @@ class DriversController < ApplicationController
             redirect_to driver_path(d) and return
         else
             flash[:warning] = "Error creating driver"
-            redirect_to new_rider_path(d) and return
+            redirect_to new_driver_path(d) and return
         end
     end
 
@@ -43,8 +43,9 @@ class DriversController < ApplicationController
             flash[:notice] = "Successfully updated driver #{d.first} , #{d.last}"
             redirect_to driver_path(d) and return
         else
+            byebug
             flash[:warning] = "Error updating driver"
-            redirect_to edit_rider_path(d) and return
+            redirect_to edit_driver_path(d) and return
         end
     end
 

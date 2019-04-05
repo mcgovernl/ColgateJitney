@@ -13,7 +13,7 @@ class RidersController < ApplicationController
     end
 
     def show
-        #should show rider profile
+      @reviews = Driver.find(params[:driver_id]).reviews
     end
 
     def new
@@ -44,7 +44,7 @@ class RidersController < ApplicationController
         r.update(create_update_params)
         if r.save()
             flash[:notice] = "Successfully updated rider #{r.first} , #{r.last}"
-            redirect_to rider_path(r) and return
+            redirect_to riders_path(r) and return
         else
             flash[:warning] = "Error updating rider"
             redirect_to edit_rider_path(r) and return

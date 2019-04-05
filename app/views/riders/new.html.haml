@@ -1,6 +1,11 @@
 #main
     %p Create new Rider
 
+    -if flash[:warning].nil?
+        %p= flash[:warning]
+    -elsif flash[:notice].nil?
+        %p= flash[:notice]
+
     =form_for @rider, :method => :post do |f|
         .field
             =f.label :first, "First Name"
