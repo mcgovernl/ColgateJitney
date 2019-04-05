@@ -1,3 +1,39 @@
 #main
-  %p Create New Driver
-    =render 'form'
+    %p Create New Driver
+
+    =form_for @driver, :method => :post do |f|
+        .field
+            =f.label :first, "First Name"
+            =f.text_field :first
+
+        .field
+            =f.label :last, "Last Name"
+            =f.text_field :last
+
+        .field
+            =f.label :make, "Car Make"
+            =f.text_field :make
+
+        .field
+            =f.label :model, "Car Model"
+            =f.text_field :model
+
+        .field
+            =f.label :plate, "License Plate"
+            =f.text_field :plate
+
+        .field
+            =f.label :seats, "Available Seats"
+            =f.number_field :seats
+
+        .field
+            =f.label :available, "Currently Available?"
+            =f.check_box :available
+
+        -# if we want to add images later
+        -# .field
+        -#   =f.label :image, "Image"
+        -#   =f.file_field :image, accept: "image/png,image/gif,image/jpeg"
+
+        .field
+            =f.submit "Create New Driver"

@@ -1,8 +1,8 @@
-%h1 Pages#home
+%h1 Welcome to Colgate Jitney
 
 -if current_user
-  =link_to "I am a Driver", driver_path(current_user)
-  =link_to "I am a Rider", riders_path
+  =link_to "I am a Driver", driver_path(current_user[:id])
+  =link_to "I am a Rider", riders_path()
   =link_to 'Sign out', destroy_user_session_path, method: :delete
 
 -else

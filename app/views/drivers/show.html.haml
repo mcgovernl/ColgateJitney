@@ -1,1 +1,23 @@
 #main
+    .row
+        %h2.header.title= "#{@driver.first} #{@driver.last}"
+    .row
+        .col-md-offset= "Make: #{@driver.make}, Model: #{@driver.model}, Plate: #{@driver.plate}"
+    .row
+        .col-md-offset= "Available seats: #{@driver.seats}"
+
+    .row
+        -if @driver.available?
+            .col-md-offset= "Currently available!"
+        -else
+            .col-md-offset= "Not currently available :("
+
+    .row
+        %h2.header.title= "Reviews"
+    .row
+        .col-md-offset-2
+        -@reviews.each do |review|
+            .col-md-offset-2= review
+            %br
+
+=link_to "Edit Driver Details", edit_driver_path(@driver)

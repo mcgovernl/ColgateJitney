@@ -27,8 +27,12 @@ ActiveRecord::Schema.define(version: 2019_04_01_173251) do
   create_table "reviews", force: :cascade do |t|
     t.integer "stars"
     t.text "description"
+    t.integer "driver_id"
+    t.integer "rider_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["driver_id"], name: "index_reviews_on_driver_id"
+    t.index ["rider_id"], name: "index_reviews_on_rider_id"
   end
 
   create_table "riders", force: :cascade do |t|

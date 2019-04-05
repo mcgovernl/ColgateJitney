@@ -3,6 +3,8 @@ class CreateReviews < ActiveRecord::Migration[5.2]
     create_table :reviews do |t|
       t.integer :stars
       t.text :description
+      t.references :driver
+      t.references :rider
 
       t.timestamps
     end

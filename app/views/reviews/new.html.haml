@@ -1,0 +1,11 @@
+#main
+    %div= "Leave a review for #{@driver.first} #{@driver.last}!"
+
+    =form_for @review, :method => :post do |f|
+        =f.label :stars, "How many stars?"
+        =f.number_field :stars, max: 5, min: 0
+
+        =f.label :description, "Leave a description"
+        =f.text_field :description
+
+        =f.submit "Add Review"
