@@ -21,3 +21,11 @@ Feature: Leave a review
         And I fill in "Literally a Dog!" for "Leave a description"
         And I press "Add Review"
         Then I should see "Literally a Dog!"
+
+    Scenario: Leaving an empty review
+        Given I am on the home page
+        When I follow "I am a Rider"
+        And I follow "Jack Kerning"
+        And I follow "Leave a review"
+        And I press "Add Review"
+        Then I should see "Leave a review for Jack Kerning!"

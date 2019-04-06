@@ -26,3 +26,43 @@ Feature: Login
         And I should see "I am a Driver"
         And I should see "I am a Rider"
         And I should see "Sign out"
+
+    Scenario: Create Driver
+        Given I am logged in
+        When I follow "I am a Driver"
+        Then I should see "Create New Driver"
+        When I fill in "First Name" with "Capy"
+        And I fill in "Last Name" with "Bara"
+        And I fill in "Car Make" with "Capybara"
+        And I fill in "Car Model" with "CarMobile"
+        And I fill in "License Plate" with "CPYBRA"
+        And I fill in "Seats" with "2"
+        And I check "Currently Available?"
+        And I press "Create New Driver"
+        Then I should see "Successfully created driver Capy , Bara"
+
+    Scenario: Fail to create driver
+        Given I am logged in
+        When I follow "I am a Driver"
+        Then I should see "Create New Driver"
+        When I press "Create New Driver"
+        Then I should see "Create New Driver"
+
+    Scenario: Create Rider
+        Given I am logged in
+        And I am on the home page
+        When I follow "I am a Rider"
+        And I fill in "First Name" with "Capy"
+        And I fill in "Last Name" with "Bara"
+        And I fill in "Destination" with "Hamilton"
+        And I press "Create New Rider"
+        Then I should see "Drivers"
+        And I should see "Successfully created rider Capy , Bara"
+
+
+    Scenario: Fail to create rider
+        Given I am logged in
+        When I follow "I am a Rider"
+        Then I should see "Create new Rider"
+        When I press "Create New Rider"
+        Then I should see "Create new Rider"

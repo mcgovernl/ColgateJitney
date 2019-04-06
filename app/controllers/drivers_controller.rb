@@ -20,9 +20,11 @@ class DriversController < ApplicationController
 
     def create
         d = Driver.new(create_update_params)
-        if d.save()
-            flash[:notice] = "Successfully created driver #{d.first} , #{d.last}"
-            redirect_to driver_path(d) and return
+        if params[:driver][:first] != ""
+          if d.save()
+              flash[:notice] = "Successfully created driver #{d.first} , #{d.last}"
+              redirect_to driver_path(d) and return
+          end
         else
             flash[:warning] = "Error creating driver"
             redirect_to new_driver_path(d) and return
@@ -38,12 +40,13 @@ class DriversController < ApplicationController
     def update
         id = params[:id]
         d = Driver.find(id)
-        d.update(create_update_params)
-        if d.save()
-            flash[:notice] = "Successfully updated driver #{d.first} , #{d.last}"
-            redirect_to driver_path(d) and return
+        if params[:driver][:first] != ""
+            d.update(create_update_params)
+            if d.save()
+                flash[:notice] = "Successfully updated driver #{d.first} , #{d.last}"
+                redirect_to driver_path(d) and return
+            end
         else
-            byebug
             flash[:warning] = "Error updating driver"
             redirect_to edit_driver_path(d) and return
         end

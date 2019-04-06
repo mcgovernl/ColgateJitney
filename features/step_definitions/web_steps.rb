@@ -284,3 +284,9 @@ end
 Given("I am not a first time rider") do
     @rider = Rider.create!({:first => "Capy",:last => "Bara",:destination => "Hamilton"})
 end
+
+Given("these Reviews:") do |table|
+    table.hashes.each do |h|
+        Review.create!(h)
+    end
+end

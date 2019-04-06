@@ -23,33 +23,35 @@ class RidersController < ApplicationController
 
     def create
         r = Rider.new(create_update_params)
-        if r.save()
-            flash[:notice] = "Successfully created rider #{r.first} , #{r.last}"
-            redirect_to riders_path(r) and return
+        if params[:rider][:first] != ""
+            if r.save()
+                flash[:notice] = "Successfully created rider #{r.first} , #{r.last}"
+                redirect_to riders_path(r) and return
+            end
         else
             flash[:warning] = "Error creating rider"
             redirect_to new_rider_path(r) and return
         end
     end
 
-    def edit
-        #edit rider profile details
-        id = params[:id]
-        @rider = Rider.find(id)
-    end
-
-    def update
-        id = params[:id]
-        r = Rider.find(id)
-        r.update(create_update_params)
-        if r.save()
-            flash[:notice] = "Successfully updated rider #{r.first} , #{r.last}"
-            redirect_to riders_path(r) and return
-        else
-            flash[:warning] = "Error updating rider"
-            redirect_to edit_rider_path(r) and return
-        end
-    end
+    # def edit
+    #     #edit rider profile details
+    #     id = params[:id]
+    #     @rider = Rider.find(id)
+    # end
+    #
+    # def update
+    #     id = params[:id]
+    #     r = Rider.find(id)
+    #     r.update(create_update_params)
+    #     if r.save()
+    #         flash[:notice] = "Successfully updated rider #{r.first} , #{r.last}"
+    #         redirect_to riders_path(r) and return
+    #     else
+    #         flash[:warning] = "Error updating rider"
+    #         redirect_to edit_rider_path(r) and return
+    #     end
+    # end
 
     def destroy
     end
