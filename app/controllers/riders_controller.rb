@@ -13,7 +13,8 @@ class RidersController < ApplicationController
     end
 
     def show
-      @reviews = Driver.find(params[:driver_id]).reviews
+      @driver = Driver.find(params[:driver_id])
+      @reviews = @driver.reviews
     end
 
     def new

@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(version: 2019_04_01_173251) do
     t.string "plate"
     t.integer "seats"
     t.boolean "available"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_drivers_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -39,8 +41,10 @@ ActiveRecord::Schema.define(version: 2019_04_01_173251) do
     t.string "first"
     t.string "last"
     t.text "destination"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_riders_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
