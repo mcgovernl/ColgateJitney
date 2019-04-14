@@ -9,7 +9,7 @@ class CreateDrivers < ActiveRecord::Migration[5.2]
       t.integer :seats
       t.boolean :available
       t.references :user
-      #t.decimal :price
+      t.decimal :price, precision: 10, scale: 2
       t.timestamps
     end
   end

@@ -6,6 +6,7 @@
             %th Driver Name
             %th Number of Seats
             %th Car
+            %th Price
 
         %tbody
             -@drivers.each do |driver|
@@ -13,3 +14,4 @@
                     %td.name= link_to "#{driver.first} #{driver.last}", rider_path(:id => @rider.id, :driver_id => driver.id)
                     %td.seats= "#{driver.seats}"
                     %td.car= "#{driver.make} #{driver.model}"
+                    %td.price= "#{driver.price}"

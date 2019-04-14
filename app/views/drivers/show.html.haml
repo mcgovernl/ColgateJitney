@@ -5,7 +5,8 @@
         .col-md-offset= "Make: #{@driver.make}, Model: #{@driver.model}, Plate: #{@driver.plate}"
     .row
         .col-md-offset= "Available seats: #{@driver.seats}"
-
+    .row
+        .col-md-offset= "Current Price: #{@driver.price}"
     .row
         -if @driver.available?
             .col-md-offset= "Currently available!"

@@ -22,7 +22,7 @@ Driver.create!(first: 'Liam',last: 'McGovern',make: 'Ford',model: 'Explorer',pla
 Driver.create!(first: 'Jack',last: 'Kerning',make: 'Jeep',model: 'Wrangler',plate: 'JDK456',seats: 4,available: true,user_id: 2)
 Driver.create!(first: 'Ryan',last: 'Wetsman',make: 'Kia',model: 'Sorento',plate: 'OPA808',seats: 6,available: true,user_id: 3)
 Driver.create!(first: 'Peyton',last: 'Baker',make: 'Honda',model: 'Prius',plate: 'GOGREEN',seats: 4,available: false,user_id: 4)
-Driver.create!(first: 'Harrison',last: 'Chen',make: 'Toyota',model: 'Tundra',plate: 'M4NL3T',seats: 3,available: true,user_id: 5)
+Driver.create!(first: 'Harrison',last: 'Chen',make: 'Toyota',model: 'Tundra',plate: 'Z00M3R',seats: 3,available: true,user_id: 5)
 Driver.create!(first: 'Steve',last: 'Stevenson',make: 'Tesla',model: 'X',plate: 'B0RN2R1D3',seats: 7,available: true,user_id: 6)
 
 Rider.create!(first: 'Liam',last: 'McGovern',destination: "110 Broad Street",user_id: 1)
@@ -37,5 +37,5 @@ Review.create!(stars: 3,description: "Made me spill my drink on myself",driver_i
 Review.create!(stars: 4,description: "Literally a driving dog",driver_id: 6, rider_id: 4)
 Review.create!(stars: 1,description: "Pigsty of a Car",driver_id: 2, rider_id: 1)
 Review.create!(stars: 5,description: "Absolute Legend",driver_id: 5, rider_id: 2)
-Review.create!(stars: 5,description: "Was at a family wedding out of town and this driver was awesome!  Wedding was in the woods and he found the place to drop us off, AND picked us up in the pouring rain.  Highly recommend;  will use again when Im back in Syracuse!!",driver_id: 4, rider_id: 3)
+Review.create!(stars: 5,description: "Was at a family wedding out of town and this driver was awesome!  Wedding was in the woods and he found the place to drop us off, AND picked us up in the pouring rain.  Highly recommend;  will use again when Im back in Hamilton!!",driver_id: 4, rider_id: 3)
 Review.create!(stars: 2,description: "Who gave this man a license",driver_id: 4, rider_id: 3)
