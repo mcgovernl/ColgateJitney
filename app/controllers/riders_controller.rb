@@ -3,7 +3,6 @@ class RidersController < ApplicationController
         #homepage for rider using the app
         #should show list of avaliable drivers
         #need to redirect to new if there is no rider for current user
-        # byebug
         begin
           @rider = Rider.find(current_user[:id])
         rescue ActiveRecord::RecordNotFound
@@ -23,10 +22,11 @@ class RidersController < ApplicationController
     end
 
     def create
+        params[:rider][:user_id] = current_user[:id]
         r = Rider.new(create_update_params)
         if params[:rider][:first] != ""
             if r.save()
-                flash[:notice] = "Successfully created rider #{r.first} , #{r.last}"
+                flash[:notice] = "Successfully created rider #{r.first} #{r.last}"
                 redirect_to riders_path(r) and return
             end
         else
@@ -59,6 +59,6 @@ class RidersController < ApplicationController
 
     private
     def create_update_params
-        params.require(:rider).permit(:first,:last,:destination)
+        params.require(:rider).permit(:first,:last,:destination,:user_id)
     end
 end

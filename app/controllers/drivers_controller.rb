@@ -19,10 +19,11 @@ class DriversController < ApplicationController
     end
 
     def create
+        params[:driver][:user_id] = current_user[:id]
         d = Driver.new(create_update_params)
         if params[:driver][:first] != ""
           if d.save()
-              flash[:notice] = "Successfully created driver #{d.first} , #{d.last}"
+              flash[:notice] = "Successfully created driver #{d.first} #{d.last}"
               redirect_to driver_path(d) and return
           end
         else
@@ -43,7 +44,7 @@ class DriversController < ApplicationController
         if params[:driver][:first] != ""
             d.update(create_update_params)
             if d.save()
-                flash[:notice] = "Successfully updated driver #{d.first} , #{d.last}"
+                flash[:notice] = "Successfully updated driver #{d.first} #{d.last}"
                 redirect_to driver_path(d) and return
             end
         else
@@ -57,6 +58,6 @@ class DriversController < ApplicationController
 
     private
     def create_update_params
-        params.require(:driver).permit(:first,:last,:make,:model,:plate,:seats,:available)
+        params.require(:driver).permit(:first,:last,:make,:model,:plate,:seats,:available,:price,:user_id)
     end
 end

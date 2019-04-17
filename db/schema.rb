@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_04_01_173251) do
     t.integer "seats"
     t.boolean "available"
     t.integer "user_id"
+    t.decimal "price", precision: 10, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_drivers_on_user_id"
