@@ -8,7 +8,15 @@ class RidersController < ApplicationController
         rescue ActiveRecord::RecordNotFound
           redirect_to new_rider_path and return
         end
-        @drivers = Driver.where("available = ?", true)
+
+        do_redirect, view_prefs = update_settings(params, session)
+        if do_redirect
+            flash.keep
+            redirect_to riders_path(view_prefs) and return
+        end
+
+        @drivers = filter_and_sort view_prefs
+        # @drivers = Driver.where("available = ?", true)
     end
 
     def show
@@ -60,5 +68,44 @@ class RidersController < ApplicationController
     private
     def create_update_params
         params.require(:rider).permit(:first,:last,:destination,:user_id)
+    end
+
+    def update_settings(parms, sess)
+        preferences = sess[:preferences] || Hash.new
+        if parms[:reset_filters]
+            session.clear
+            return true, preferences
+        end
+
+        should_redirect = false
+        {"seats_filter" => "", "price_filter" => ""}.each do |parm, default|
+            parmval = parms[parm]
+            if parmval.nil?
+                parmval = preferences[parm] || default
+                should_redirect = true
+            elsif parmval != preferences[parm]
+                should_redirect = true
+            end
+            preferences[parm] = parmval
+        end
+
+        sess[:preferences] = preferences
+        return should_redirect, preferences
+    end
+
+    def filter_and_sort(view_prefs)
+        constraints = {}
+        minseats = view_prefs["seats_filter"].to_i
+        if minseats > 0
+            constraints[:minseats] = minseats
+        end
+        maxprice = view_prefs["price_filter"].to_i
+        if maxprice > 0
+            constraints[:maxprice] = maxprice
+        end
+
+        drivers = Rider.filter_on_constraints(constraints)
+
+        return drivers.where("available = ?", true)
     end
 end

@@ -8669,3 +8669,1629 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for ::1 at 2019-04-18 18:25:29 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  Rendered pages/home.html.haml within layouts/application (71.2ms)
+  Rendered layouts/_alerts.html.erb (0.6ms)
+Completed 200 OK in 600ms (Views: 598.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-18 18:25:31 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.6ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 78ms (Views: 65.9ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-18 18:25:34 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BjsFnY2ew2UaDAZ+IO1mAjViFEGZbjAI1+GfA2kEatFmWqP2ORE38rSta8hK+yGSkh2LULUrq3faGLadDX53KA==", "user"=>{"email"=>"rwetsman@colgate.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "rwetsman@colgate.edu"], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BjsFnY2ew2UaDAZ+IO1mAjViFEGZbjAI1+GfA2kEatFmWqP2ORE38rSta8hK+yGSkh2LULUrq3faGLadDX53KA==", "user"=>{"email"=>"rwetsman@colgate.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 161ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-04-18 18:25:35 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_alerts.html.erb (1.4ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-04-18 18:25:41 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sRStdecnKElF7gnHGeb0zmdCQMDIjorQuaIOxt9QXMfRdQseU6jc3utPZHFz8LNewD3f0eTLEa+0WydYuypBPg==", "user"=>{"email"=>"rwetsman@colgate.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rwetsman@colgate.edu"], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "rwetsman@colgate.edu"], ["encrypted_password", "$2a$11$ASrV7Xds2yPXm4dCbt3vTeMnCXYMkLvRw/0FaIs1GpEH97lh/XxSO"], ["created_at", "2019-04-18 22:25:41.323031"], ["updated_at", "2019-04-18 22:25:41.323031"]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 143ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for ::1 at 2019-04-18 18:25:41 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:3
+  Rendered pages/home.html.haml within layouts/application (3.7ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/riders" for ::1 at 2019-04-18 18:25:42 -0400
+Processing by RidersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.5ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+Redirected to http://localhost:3000/riders/new
+Completed 302 Found in 15ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/riders/new" for ::1 at 2019-04-18 18:25:42 -0400
+Processing by RidersController#new as HTML
+  Rendering riders/new.html.haml within layouts/application
+  Rendered riders/new.html.haml within layouts/application (5.8ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 49ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/riders" for ::1 at 2019-04-18 18:25:47 -0400
+Processing by RidersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8orUeE5IEihnI9l4CRdQZ13qHuRdeeu/gC2Ax8qDxnOS63IT+sfmv8mCtM5jARf3+pWB9XE8cMCN1KlZrvnbig==", "rider"=>{"first"=>"Ryan", "last"=>"Wetsman", "destination"=>"Hamilton"}, "commit"=>"Create New Rider"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:33
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/riders_controller.rb:36
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:36
+  [1m[36mRider Create (0.6ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Ryan"], ["last", "Wetsman"], ["destination", "Hamilton"], ["user_id", 8], ["created_at", "2019-04-18 22:25:47.204459"], ["updated_at", "2019-04-18 22:25:47.204459"]]
+  ↳ app/controllers/riders_controller.rb:36
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/riders_controller.rb:36
+Redirected to http://localhost:3000/riders.8
+Completed 302 Found in 23ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/riders.8" for ::1 at 2019-04-18 18:25:47 -0400
+Processing by RidersController#index as 
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+Redirected to http://localhost:3000/riders?price_filter=&seats_filter=
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for ::1 at 2019-04-18 18:25:47 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  Rendered riders/index.html.haml within layouts/application (3.4ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 29ms (Views: 22.0ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mUser Destroy (1.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDriver Destroy (0.9ms)[0m  [1m[31mDELETE FROM "drivers"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRider Destroy (1.2ms)[0m  [1m[31mDELETE FROM "riders"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mReview Destroy (1.0ms)[0m  [1m[31mDELETE FROM "reviews"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "liam@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "liam@colgatejitney.com"], ["encrypted_password", "$2a$11$U9paLn1kEc47JHZpPDO6IuA0jF835To139XHlCc6QeVNtFfHqRb/C"], ["created_at", "2019-04-18 22:26:25.508826"], ["updated_at", "2019-04-18 22:26:25.508826"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jack@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "jack@colgatejitney.com"], ["encrypted_password", "$2a$11$Zos4B4iNWiox1hK3mJTW6.lHKig36oKFuO4GRxd6l4/IdcHuoXcgu"], ["created_at", "2019-04-18 22:26:25.639870"], ["updated_at", "2019-04-18 22:26:25.639870"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ryan@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "ryan@colgatejitney.com"], ["encrypted_password", "$2a$11$ad20ctJkgMfO.U/h3ob3tO6I6E3SzQfBJVOS8ozvubW7BTBB6TRvm"], ["created_at", "2019-04-18 22:26:25.772204"], ["updated_at", "2019-04-18 22:26:25.772204"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "peyton@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "peyton@colgatejitney.com"], ["encrypted_password", "$2a$11$QzWbWzD3ZJZCfom2.C/5q.VjaH5qfHjsOKgLx8mV8PgBg0Ddq.YMS"], ["created_at", "2019-04-18 22:26:25.907839"], ["updated_at", "2019-04-18 22:26:25.907839"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harrison@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "harrison@colgatejitney.com"], ["encrypted_password", "$2a$11$6XnyhT/2Tcwmrj6EaAO3D.vHkgedbyhacaKFWnMySpsT.mDr1zw1O"], ["created_at", "2019-04-18 22:26:26.043424"], ["updated_at", "2019-04-18 22:26:26.043424"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "steve@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "steve@colgatejitney.com"], ["encrypted_password", "$2a$11$m1sYr3aVNdxr5IHHoO4vDeIXf0gcsypRL4YRmaTZiRAybba88YJ5."], ["created_at", "2019-04-18 22:26:26.175356"], ["updated_at", "2019-04-18 22:26:26.175356"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:21
+Started GET "/" for ::1 at 2019-04-18 18:26:52 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:3
+  Rendered pages/home.html.haml within layouts/application (87.3ms)
+  Rendered layouts/_alerts.html.erb (0.6ms)
+Completed 200 OK in 485ms (Views: 419.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-18 18:26:54 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 47ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-18 18:26:55 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fQR8NYy1/xc7gOKhvvilxeWNGg+crwHCQAJJ+AWVBRQdZdpeODoLgJUhjxfU7uJVQvKFHrDqmr1N+2BmYe8Y7Q==", "user"=>{"email"=>"rwetsman@colgate.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "rwetsman@colgate.edu"], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fQR8NYy1/xc7gOKhvvilxeWNGg+crwHCQAJJ+AWVBRQdZdpeODoLgJUhjxfU7uJVQvKFHrDqmr1N+2BmYe8Y7Q==", "user"=>{"email"=>"rwetsman@colgate.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 190ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-04-18 18:26:57 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-04-18 18:27:03 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UPbmkfrGmhFlzXObM68x3RfOGvnlrd7JThFme1z1DvEwl0D6TkluhstsHi1ZuXZNsLGF6MnoRbZD6E/lOI8TCA==", "user"=>{"email"=>"rwetsman@colgate.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rwetsman@colgate.edu"], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "rwetsman@colgate.edu"], ["encrypted_password", "$2a$11$ioR.QEMRbfDF3CJ3d4a/0ORaVR3V9jKvocfQjs/UNNeTJn7/6XRaC"], ["created_at", "2019-04-18 22:27:03.477453"], ["updated_at", "2019-04-18 22:27:03.477453"]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 148ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2019-04-18 18:27:03 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:3
+  Rendered pages/home.html.haml within layouts/application (3.6ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/riders" for ::1 at 2019-04-18 18:27:05 -0400
+Processing by RidersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.3ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+Redirected to http://localhost:3000/riders/new
+Completed 302 Found in 10ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/riders/new" for ::1 at 2019-04-18 18:27:05 -0400
+Processing by RidersController#new as HTML
+  Rendering riders/new.html.haml within layouts/application
+  Rendered riders/new.html.haml within layouts/application (5.7ms)
+  Rendered layouts/_alerts.html.erb (0.6ms)
+Completed 200 OK in 31ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/riders" for ::1 at 2019-04-18 18:27:09 -0400
+Processing by RidersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ddM4D0MjALZu4RkUJVSj1y/2PsyLq2j8bhqyUc1v+LUVsp5k96z0IcBAdKJPQuRHiImh3afu84Nj45vPqRXlTA==", "rider"=>{"first"=>"Ryan", "last"=>"Wetsman", "destination"=>"Hamilton"}, "commit"=>"Create New Rider"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:33
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/riders_controller.rb:36
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:36
+  [1m[36mRider Create (0.5ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Ryan"], ["last", "Wetsman"], ["destination", "Hamilton"], ["user_id", 15], ["created_at", "2019-04-18 22:27:09.020418"], ["updated_at", "2019-04-18 22:27:09.020418"]]
+  ↳ app/controllers/riders_controller.rb:36
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/riders_controller.rb:36
+Redirected to http://localhost:3000/riders.9
+Completed 302 Found in 18ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/riders.9" for ::1 at 2019-04-18 18:27:09 -0400
+Processing by RidersController#index as 
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+Redirected to http://localhost:3000/riders/new
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/riders/new" for ::1 at 2019-04-18 18:27:09 -0400
+Processing by RidersController#new as HTML
+  Rendering riders/new.html.haml within layouts/application
+  Rendered riders/new.html.haml within layouts/application (3.7ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/riders" for ::1 at 2019-04-18 18:27:32 -0400
+Processing by RidersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OsCjycpj6NI2g22wJkGdeJ253lj763GZy5YC0HK/EIBaoQWifuwcRZgiAAZMV9roOsZBSdeu6ubGbytOFsUNeQ==", "rider"=>{"first"=>"Ryan", "last"=>"Wetsman", "destination"=>"Hamilton"}, "commit"=>"Create New Rider"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:33
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/riders_controller.rb:36
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:36
+  [1m[36mRider Create (0.6ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Ryan"], ["last", "Wetsman"], ["destination", "Hamilton"], ["user_id", 15], ["created_at", "2019-04-18 22:27:32.598948"], ["updated_at", "2019-04-18 22:27:32.598948"]]
+  ↳ app/controllers/riders_controller.rb:36
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/riders_controller.rb:36
+Redirected to http://localhost:3000/riders.10
+Completed 302 Found in 12ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/riders.10" for ::1 at 2019-04-18 18:27:32 -0400
+Processing by RidersController#index as 
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+Redirected to http://localhost:3000/riders/new
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/riders/new" for ::1 at 2019-04-18 18:27:32 -0400
+Processing by RidersController#new as HTML
+  Rendering riders/new.html.haml within layouts/application
+  Rendered riders/new.html.haml within layouts/application (9.3ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drivers/15" for ::1 at 2019-04-18 18:27:39 -0400
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:7
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+Redirected to http://localhost:3000/drivers/new
+Completed 302 Found in 9ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/drivers/new" for ::1 at 2019-04-18 18:27:39 -0400
+Processing by DriversController#new as HTML
+  Rendering drivers/new.html.haml within layouts/application
+  Rendered drivers/new.html.haml within layouts/application (6.6ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 35ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/drivers" for ::1 at 2019-04-18 18:27:52 -0400
+Processing by DriversController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QGRynuGgwS1mn8LSqugtKStGPtM2Hcj5+sqidrYMsq0gBdT1VS81usg+r2TA/mq5jDmhwhpYU4b3M4vo0navVA==", "driver"=>{"first"=>"Ryan", "last"=>"Wetsman", "make"=>"Kia", "model"=>"Sorento", "plate"=>"757YMA", "seats"=>"4", "price"=>"10", "available"=>"1"}, "commit"=>"Create New Driver"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:22
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/drivers_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:25
+  [1m[36mDriver Create (0.4ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Ryan"], ["last", "Wetsman"], ["make", "Kia"], ["model", "Sorento"], ["plate", "757YMA"], ["seats", 4], ["available", 1], ["user_id", 15], ["price", 10.0], ["created_at", "2019-04-18 22:27:52.876491"], ["updated_at", "2019-04-18 22:27:52.876491"]]
+  ↳ app/controllers/drivers_controller.rb:25
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/drivers_controller.rb:25
+Redirected to http://localhost:3000/drivers/8
+Completed 302 Found in 16ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/drivers/8" for ::1 at 2019-04-18 18:27:52 -0400
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:7
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+Redirected to http://localhost:3000/drivers/new
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/drivers/new" for ::1 at 2019-04-18 18:27:52 -0400
+Processing by DriversController#new as HTML
+  Rendering drivers/new.html.haml within layouts/application
+  Rendered drivers/new.html.haml within layouts/application (8.3ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-18 18:30:02 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:3
+  Rendered pages/home.html.haml within layouts/application (112.8ms)
+  Rendered layouts/_alerts.html.erb (0.6ms)
+Completed 200 OK in 514ms (Views: 509.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/riders" for ::1 at 2019-04-18 18:30:16 -0400
+Processing by RidersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+Redirected to http://localhost:3000/riders/new
+Completed 302 Found in 9ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/riders/new" for ::1 at 2019-04-18 18:30:16 -0400
+Processing by RidersController#new as HTML
+  Rendering riders/new.html.haml within layouts/application
+  Rendered riders/new.html.haml within layouts/application (7.1ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 32ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/riders" for ::1 at 2019-04-18 18:30:27 -0400
+Processing by RidersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UXmdS90pCOwpVycnaO6j7wLIDvJOnye8Fxef6LdgrMIxGDsgaab8e4f2SpEC+OR/pbeR42LavMMa7rZ20xqxOw==", "rider"=>{"first"=>"Jack", "last"=>"Wetsman", "destination"=>"New York"}, "commit"=>"Create New Rider"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:33
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/riders_controller.rb:36
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:36
+  [1m[36mRider Create (0.5ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Jack"], ["last", "Wetsman"], ["destination", "New York"], ["user_id", 15], ["created_at", "2019-04-18 22:30:27.518059"], ["updated_at", "2019-04-18 22:30:27.518059"]]
+  ↳ app/controllers/riders_controller.rb:36
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/riders_controller.rb:36
+Redirected to http://localhost:3000/riders.11
+Completed 302 Found in 21ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/riders.11" for ::1 at 2019-04-18 18:30:27 -0400
+Processing by RidersController#index as 
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+Redirected to http://localhost:3000/riders/new
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/riders/new" for ::1 at 2019-04-18 18:30:27 -0400
+Processing by RidersController#new as HTML
+  Rendering riders/new.html.haml within layouts/application
+  Rendered riders/new.html.haml within layouts/application (34.3ms)
+  Rendered layouts/_alerts.html.erb (0.8ms)
+Completed 200 OK in 59ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/riders.11" for ::1 at 2019-04-18 18:31:56 -0400
+Processing by RidersController#index as 
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+Redirected to http://localhost:3000/riders/new
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/riders/new" for ::1 at 2019-04-18 18:31:56 -0400
+Processing by RidersController#new as HTML
+  Rendering riders/new.html.haml within layouts/application
+  Rendered riders/new.html.haml within layouts/application (3.5ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/riders" for ::1 at 2019-04-18 18:33:14 -0400
+Processing by RidersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UX6/IN2i4X80YbALaZAdTl5xCJp9LbyQ4lI8zWl0xC0xHxlLaS0V6JrA3b0Dhlre+Q6Xi1FoJ+/vqxVTDQ7Z1A==", "rider"=>{"first"=>"Ryan", "last"=>"Wetsman", "destination"=>"Hamilton"}, "commit"=>"Create New Rider"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:34
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/riders_controller.rb:37
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:37
+  [1m[36mRider Create (0.4ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Ryan"], ["last", "Wetsman"], ["destination", "Hamilton"], ["user_id", 15], ["created_at", "2019-04-18 22:33:14.664792"], ["updated_at", "2019-04-18 22:33:14.664792"]]
+  ↳ app/controllers/riders_controller.rb:37
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/riders_controller.rb:37
+Redirected to http://localhost:3000/riders.12
+Completed 302 Found in 23ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/riders.12" for ::1 at 2019-04-18 18:33:14 -0400
+Processing by RidersController#index as 
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mRider Load (0.6ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mCACHE Rider Load (0.0ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+Redirected to http://localhost:3000/riders/new
+Completed 302 Found in 65265ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/riders/new" for ::1 at 2019-04-18 18:34:19 -0400
+Processing by RidersController#new as HTML
+  Rendering riders/new.html.haml within layouts/application
+  Rendered riders/new.html.haml within layouts/application (3.7ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateDrivers (20190401165720)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "drivers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first" varchar, "last" varchar, "make" varchar, "model" varchar, "plate" varchar, "seats" integer, "available" boolean, "user_id" integer, "price" decimal(10,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190401165720_create_drivers.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_drivers_on_user_id" ON "drivers" ("user_id")[0m
+  ↳ db/migrate/20190401165720_create_drivers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190401165720"]]
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateRiders (20190401170223)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "riders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first" varchar, "last" varchar, "destination" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190401170223_create_riders.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_riders_on_user_id" ON "riders" ("user_id")[0m
+  ↳ db/migrate/20190401170223_create_riders.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190401170223"]]
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateReviews (20190401170316)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "stars" integer, "description" text, "driver_id" integer, "rider_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190401170316_create_reviews.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_driver_id" ON "reviews" ("driver_id")[0m
+  ↳ db/migrate/20190401170316_create_reviews.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_rider_id" ON "reviews" ("rider_id")[0m
+  ↳ db/migrate/20190401170316_create_reviews.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190401170316"]]
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to DeviseCreateUsers (20190401173251)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190401173251_devise_create_users.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20190401173251_devise_create_users.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20190401173251_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190401173251"]]
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-18 22:34:43.293228"], ["updated_at", "2019-04-18 22:34:43.293228"]]
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/Cellar/ruby/2.6.0_1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mUser Destroy (2.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDriver Destroy (1.0ms)[0m  [1m[31mDELETE FROM "drivers"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRider Destroy (1.0ms)[0m  [1m[31mDELETE FROM "riders"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mReview Destroy (1.4ms)[0m  [1m[31mDELETE FROM "reviews"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "liam@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "liam@colgatejitney.com"], ["encrypted_password", "$2a$11$VmwwEeE3rX6Biy8qeufKMOuoWV2W.MQdKx6e9wUdQfv9sDZpe4Yim"], ["created_at", "2019-04-18 22:34:51.643917"], ["updated_at", "2019-04-18 22:34:51.643917"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jack@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "jack@colgatejitney.com"], ["encrypted_password", "$2a$11$qlwm7cMLps2aLD4DQ9/WtetWwfEvqrSjCHsInNqqDh2AfDmd5iSlG"], ["created_at", "2019-04-18 22:34:51.775592"], ["updated_at", "2019-04-18 22:34:51.775592"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ryan@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "ryan@colgatejitney.com"], ["encrypted_password", "$2a$11$8GNzWTR6MD1Y/QYw7ZEVkOJAA0bAWQbJNpJKp3LRVFKxqaOaH1FjO"], ["created_at", "2019-04-18 22:34:51.909164"], ["updated_at", "2019-04-18 22:34:51.909164"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "peyton@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "peyton@colgatejitney.com"], ["encrypted_password", "$2a$11$H8bw0Hzf96tvxyMa/AuUtedgjzHXoP0ZetGzMOLoFVr1qzpoEUduW"], ["created_at", "2019-04-18 22:34:52.041590"], ["updated_at", "2019-04-18 22:34:52.041590"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harrison@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "harrison@colgatejitney.com"], ["encrypted_password", "$2a$11$galPiqaWwBUNxmHCE/TOTulF/JX5HKABfdfsLBHQJWeRgfOLxo5VG"], ["created_at", "2019-04-18 22:34:52.169847"], ["updated_at", "2019-04-18 22:34:52.169847"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "steve@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "steve@colgatejitney.com"], ["encrypted_password", "$2a$11$u94//ijVEwbBG5coV54KsOFDO40ZI3M.NuC7ZHPShr42C9o2nh//G"], ["created_at", "2019-04-18 22:34:52.307967"], ["updated_at", "2019-04-18 22:34:52.307967"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mDriver Create (0.5ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Liam"], ["last", "McGovern"], ["make", "Ford"], ["model", "Explorer"], ["plate", "ESK543"], ["seats", 8], ["available", 1], ["user_id", 1], ["created_at", "2019-04-18 22:34:52.336229"], ["updated_at", "2019-04-18 22:34:52.336229"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mDriver Create (0.4ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Jack"], ["last", "Kerning"], ["make", "Jeep"], ["model", "Wrangler"], ["plate", "JDK456"], ["seats", 4], ["available", 1], ["user_id", 2], ["created_at", "2019-04-18 22:34:52.344328"], ["updated_at", "2019-04-18 22:34:52.344328"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mDriver Create (0.5ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Ryan"], ["last", "Wetsman"], ["make", "Kia"], ["model", "Sorento"], ["plate", "OPA808"], ["seats", 6], ["available", 1], ["user_id", 3], ["created_at", "2019-04-18 22:34:52.353190"], ["updated_at", "2019-04-18 22:34:52.353190"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mDriver Create (0.5ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Peyton"], ["last", "Baker"], ["make", "Honda"], ["model", "Prius"], ["plate", "GOGREEN"], ["seats", 4], ["available", 0], ["user_id", 4], ["created_at", "2019-04-18 22:34:52.363593"], ["updated_at", "2019-04-18 22:34:52.363593"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mDriver Create (0.4ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Harrison"], ["last", "Chen"], ["make", "Toyota"], ["model", "Tundra"], ["plate", "Z00M3R"], ["seats", 3], ["available", 1], ["user_id", 5], ["created_at", "2019-04-18 22:34:52.370845"], ["updated_at", "2019-04-18 22:34:52.370845"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mDriver Create (0.4ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Steve"], ["last", "Stevenson"], ["make", "Tesla"], ["model", "X"], ["plate", "B0RN2R1D3"], ["seats", 7], ["available", 1], ["user_id", 6], ["created_at", "2019-04-18 22:34:52.378978"], ["updated_at", "2019-04-18 22:34:52.378978"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mRider Create (0.4ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Liam"], ["last", "McGovern"], ["destination", "110 Broad Street"], ["user_id", 1], ["created_at", "2019-04-18 22:34:52.412451"], ["updated_at", "2019-04-18 22:34:52.412451"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mRider Create (0.3ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Jack"], ["last", "Kerning"], ["destination", "6 Pine Street"], ["user_id", 2], ["created_at", "2019-04-18 22:34:52.419393"], ["updated_at", "2019-04-18 22:34:52.419393"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mRider Create (0.4ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Ryan"], ["last", "Wetsman"], ["destination", "Library Cafe"], ["user_id", 3], ["created_at", "2019-04-18 22:34:52.425723"], ["updated_at", "2019-04-18 22:34:52.425723"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mRider Create (0.4ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Peyton"], ["last", "Baker"], ["destination", "The Jug"], ["user_id", 4], ["created_at", "2019-04-18 22:34:52.432719"], ["updated_at", "2019-04-18 22:34:52.432719"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mRider Create (0.4ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Harrison"], ["last", "Chen"], ["destination", "Wynn Hall"], ["user_id", 5], ["created_at", "2019-04-18 22:34:52.439308"], ["updated_at", "2019-04-18 22:34:52.439308"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:33
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:33
+  [1m[36mRider Create (0.7ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Steve"], ["last", "Stevenson"], ["destination", "The Pound"], ["user_id", 6], ["created_at", "2019-04-18 22:34:52.463531"], ["updated_at", "2019-04-18 22:34:52.463531"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("stars", "description", "driver_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["stars", 5], ["description", "All you could ask for from a driver"], ["driver_id", 1], ["rider_id", 5], ["created_at", "2019-04-18 22:34:52.489252"], ["updated_at", "2019-04-18 22:34:52.489252"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mReview Create (0.6ms)[0m  [1m[32mINSERT INTO "reviews" ("stars", "description", "driver_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["stars", 3], ["description", "Made me spill my drink on myself"], ["driver_id", 3], ["rider_id", 4], ["created_at", "2019-04-18 22:34:52.518052"], ["updated_at", "2019-04-18 22:34:52.518052"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:37
+  [1m[36mReview Create (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("stars", "description", "driver_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["stars", 4], ["description", "Literally a driving dog"], ["driver_id", 6], ["rider_id", 4], ["created_at", "2019-04-18 22:34:52.522457"], ["updated_at", "2019-04-18 22:34:52.522457"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:38
+  [1m[36mReview Create (0.6ms)[0m  [1m[32mINSERT INTO "reviews" ("stars", "description", "driver_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["stars", 1], ["description", "Pigsty of a Car"], ["driver_id", 2], ["rider_id", 1], ["created_at", "2019-04-18 22:34:52.527776"], ["updated_at", "2019-04-18 22:34:52.527776"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mReview Create (0.7ms)[0m  [1m[32mINSERT INTO "reviews" ("stars", "description", "driver_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["stars", 5], ["description", "Absolute Legend"], ["driver_id", 5], ["rider_id", 2], ["created_at", "2019-04-18 22:34:52.549448"], ["updated_at", "2019-04-18 22:34:52.549448"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[36mReview Create (0.6ms)[0m  [1m[32mINSERT INTO "reviews" ("stars", "description", "driver_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["stars", 5], ["description", "Was at a family wedding out of town and this driver was awesome!  Wedding was in the woods and he found the place to drop us off, AND picked us up in the pouring rain.  Highly recommend;  will use again when Im back in Hamilton!!"], ["driver_id", 4], ["rider_id", 3], ["created_at", "2019-04-18 22:34:52.554091"], ["updated_at", "2019-04-18 22:34:52.554091"]]
+  ↳ db/seeds.rb:40
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:41
+  [1m[36mReview Create (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("stars", "description", "driver_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["stars", 2], ["description", "Who gave this man a license"], ["driver_id", 4], ["rider_id", 3], ["created_at", "2019-04-18 22:34:52.557653"], ["updated_at", "2019-04-18 22:34:52.557653"]]
+  ↳ db/seeds.rb:41
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:41
+Started GET "/" for ::1 at 2019-04-18 18:35:02 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:3
+  Rendered pages/home.html.haml within layouts/application (22.1ms)
+  Rendered layouts/_alerts.html.erb (0.7ms)
+Completed 200 OK in 338ms (Views: 334.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-18 18:35:04 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.7ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-04-18 18:35:07 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 58ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-04-18 18:35:13 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xIKxeqykeJJ1uNuVE+OZ8rNqTLjcTQLmKTXdQmpZejek4xcRGCuMBdsZtiN59d5iFBXTqfAImZkkzPTcDiNnzg==", "user"=>{"email"=>"rwetsman@colgate.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rwetsman@colgate.edu"], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "rwetsman@colgate.edu"], ["encrypted_password", "$2a$11$.9CUI8GRI.X9LVT21FTsKOHjn2M7WeuoA2p9CvhJXOiKBij9Afu4K"], ["created_at", "2019-04-18 22:35:13.905811"], ["updated_at", "2019-04-18 22:35:13.905811"]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 145ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2019-04-18 18:35:13 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:3
+  Rendered pages/home.html.haml within layouts/application (4.7ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/riders" for ::1 at 2019-04-18 18:35:15 -0400
+Processing by RidersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+Redirected to http://localhost:3000/riders/new
+Completed 302 Found in 13ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/riders/new" for ::1 at 2019-04-18 18:35:15 -0400
+Processing by RidersController#new as HTML
+  Rendering riders/new.html.haml within layouts/application
+  Rendered riders/new.html.haml within layouts/application (6.6ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 36ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/riders" for ::1 at 2019-04-18 18:35:19 -0400
+Processing by RidersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eRLYpgcoYs0j1DobxS0XBy22PuA5lAHfTlHFmcLOmn4Zc37Ns6eWWo11V62vO1CXismh8RXRmqBDqOwHprSHhw==", "rider"=>{"first"=>"Ryan", "last"=>"Wetsman", "destination"=>"Hamilton"}, "commit"=>"Create New Rider"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:33
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/riders_controller.rb:36
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:36
+  [1m[36mRider Create (0.3ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Ryan"], ["last", "Wetsman"], ["destination", "Hamilton"], ["user_id", 7], ["created_at", "2019-04-18 22:35:19.205649"], ["updated_at", "2019-04-18 22:35:19.205649"]]
+  ↳ app/controllers/riders_controller.rb:36
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/riders_controller.rb:36
+Redirected to http://localhost:3000/riders.7
+Completed 302 Found in 17ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/riders.7" for ::1 at 2019-04-18 18:35:19 -0400
+Processing by RidersController#index as 
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+Redirected to http://localhost:3000/riders?price_filter=&seats_filter=
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for ::1 at 2019-04-18 18:35:19 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  Rendered riders/index.html.haml within layouts/application (4.3ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 30ms (Views: 22.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-04-18 18:35:23 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:3
+  Rendered pages/home.html.haml within layouts/application (3.2ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/drivers/7" for ::1 at 2019-04-18 18:35:24 -0400
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:7
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+Redirected to http://localhost:3000/drivers/new
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/drivers/new" for ::1 at 2019-04-18 18:35:24 -0400
+Processing by DriversController#new as HTML
+  Rendering drivers/new.html.haml within layouts/application
+  Rendered drivers/new.html.haml within layouts/application (8.3ms)
+  Rendered layouts/_alerts.html.erb (0.6ms)
+Completed 200 OK in 38ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/drivers" for ::1 at 2019-04-18 18:35:35 -0400
+Processing by DriversController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y1Etbcp68YxUKHGUCUpyP3UAm2tn+By5OWbyKzgWvPSrMIsGfvUFG/qJHCJjXDWv0n8Eeku9h8Y0n9u1XGyhDQ==", "driver"=>{"first"=>"Ryan", "last"=>"Wetsman", "make"=>"Kia", "model"=>"Sorento", "plate"=>"757YMA", "seats"=>"4", "price"=>"15", "available"=>"1"}, "commit"=>"Create New Driver"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/drivers_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:25
+  [1m[36mDriver Create (0.5ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Ryan"], ["last", "Wetsman"], ["make", "Kia"], ["model", "Sorento"], ["plate", "757YMA"], ["seats", 4], ["available", 1], ["user_id", 7], ["price", 15.0], ["created_at", "2019-04-18 22:35:35.810493"], ["updated_at", "2019-04-18 22:35:35.810493"]]
+  ↳ app/controllers/drivers_controller.rb:25
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/drivers_controller.rb:25
+Redirected to http://localhost:3000/drivers/7
+Completed 302 Found in 16ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/drivers/7" for ::1 at 2019-04-18 18:35:35 -0400
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:7
+  [1m[36mDriver Load (0.4ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  Rendering drivers/show.html.haml within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 7]]
+  ↳ app/views/drivers/show.html.haml:20
+  Rendered drivers/show.html.haml within layouts/application (6.7ms)
+  Rendered layouts/_alerts.html.erb (0.6ms)
+Completed 200 OK in 52ms (Views: 24.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-18 18:35:38 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:3
+  Rendered pages/home.html.haml within layouts/application (3.0ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/riders" for ::1 at 2019-04-18 18:35:39 -0400
+Processing by RidersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+Redirected to http://localhost:3000/riders?price_filter=&seats_filter=
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for ::1 at 2019-04-18 18:35:39 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  Rendered riders/index.html.haml within layouts/application (3.4ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 27ms (Views: 22.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for ::1 at 2019-04-18 18:36:13 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  Rendered riders/index.html.haml within layouts/application (3.8ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 29ms (Views: 23.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for ::1 at 2019-04-18 18:36:19 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  Rendered riders/index.html.haml within layouts/application (34101.2ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 34140ms (Views: 34135.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for ::1 at 2019-04-18 18:38:02 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE (available = 1)[0m
+  ↳ app/views/riders/index.html.haml:21
+  Rendered riders/index.html.haml within layouts/application (16.4ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 55ms (Views: 33.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for ::1 at 2019-04-18 18:38:20 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.3ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  Rendered riders/index.html.haml within layouts/application (6.6ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 80ms (Views: 25.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for ::1 at 2019-04-18 18:38:37 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  Rendered riders/index.html.haml within layouts/application (3.6ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 20888ms (Views: 24.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/riders?utf8=%E2%9C%93&seats_filter=0&price_filter=100&commit=Filter+drivers" for ::1 at 2019-04-18 18:39:04 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"utf8"=>"✓", "seats_filter"=>"0", "price_filter"=>"100", "commit"=>"Filter drivers"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.3ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+Redirected to http://localhost:3000/riders?price_filter=100&seats_filter=0
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/riders?price_filter=100&seats_filter=0" for ::1 at 2019-04-18 18:39:04 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"100", "seats_filter"=>"0"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  Rendered riders/index.html.haml within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 2654ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for [:maxprice, 100]:Array):
+    20:         %tbody
+    21:             -@drivers.each do |driver|
+    22:                 %tr
+    23:                     %td.name= link_to "#{driver.first} #{driver.last}", rider_path(:id => @rider.id, :driver_id => driver.id)
+    24:                     %td.seats= "#{driver.seats}"
+    25:                     %td.car= "#{driver.make} #{driver.model}"
+    26:                     %td.price= "#{driver.price}"
+  
+app/views/riders/index.html.haml:23:in `block in _app_views_riders_index_html_haml__4173938769093059142_70236062542420'
+app/views/riders/index.html.haml:21:in `each'
+app/views/riders/index.html.haml:21:in `_app_views_riders_index_html_haml__4173938769093059142_70236062542420'
+Started GET "/riders?price_filter=100&seats_filter=0" for ::1 at 2019-04-18 18:39:43 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"100", "seats_filter"=>"0"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  Rendered riders/index.html.haml within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 98127ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for [:maxprice, 100]:Array):
+    20:         %tbody
+    21:             -@drivers.each do |driver|
+    22:                 %tr
+    23:                     %td.name= link_to "#{driver.first} #{driver.last}", rider_path(:id => @rider.id, :driver_id => driver.id)
+    24:                     %td.seats= "#{driver.seats}"
+    25:                     %td.car= "#{driver.make} #{driver.model}"
+    26:                     %td.price= "#{driver.price}"
+  
+app/views/riders/index.html.haml:23:in `block in _app_views_riders_index_html_haml__4173938769093059142_70236062082660'
+app/views/riders/index.html.haml:21:in `each'
+app/views/riders/index.html.haml:21:in `_app_views_riders_index_html_haml__4173938769093059142_70236062082660'
+Started GET "/" for ::1 at 2019-04-18 18:41:31 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:3
+  Rendered pages/home.html.haml within layouts/application (26.7ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 90ms (Views: 87.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/riders" for ::1 at 2019-04-18 18:41:33 -0400
+Processing by RidersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE (available = 1)[0m
+  ↳ app/views/riders/index.html.haml:21
+  Rendered riders/index.html.haml within layouts/application (20.5ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 71ms (Views: 45.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/riders?utf8=%E2%9C%93&seats_filter=0&price_filter=&commit=Filter+drivers" for ::1 at 2019-04-18 18:41:37 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"utf8"=>"✓", "seats_filter"=>"0", "price_filter"=>"", "commit"=>"Filter drivers"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.4ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE (available = 1)[0m
+  ↳ app/views/riders/index.html.haml:21
+  Rendered riders/index.html.haml within layouts/application (10.6ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 33.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/riders?utf8=%E2%9C%93&seats_filter=5&price_filter=&commit=Filter+drivers" for ::1 at 2019-04-18 18:41:41 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"utf8"=>"✓", "seats_filter"=>"5", "price_filter"=>"", "commit"=>"Filter drivers"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.3ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE (available = 1)[0m
+  ↳ app/views/riders/index.html.haml:21
+  Rendered riders/index.html.haml within layouts/application (5.5ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 36ms (Views: 28.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/riders?utf8=%E2%9C%93&seats_filter=5&price_filter=&commit=Filter+drivers" for ::1 at 2019-04-18 18:41:55 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"utf8"=>"✓", "seats_filter"=>"5", "price_filter"=>"", "commit"=>"Filter drivers"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+Redirected to http://localhost:3000/riders?price_filter=&seats_filter=5
+Completed 302 Found in 19ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=5" for ::1 at 2019-04-18 18:41:55 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  Rendered riders/index.html.haml within layouts/application (7.9ms)
+Completed 500 Internal Server Error in 4366ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for [:minseats, 5]:Array):
+    20:         %tbody
+    21:             -@drivers.each do |driver|
+    22:                 %tr
+    23:                     %td.name= link_to "#{driver.first} #{driver.last}", rider_path(:id => @rider.id, :driver_id => driver.id)
+    24:                     %td.seats= "#{driver.seats}"
+    25:                     %td.car= "#{driver.make} #{driver.model}"
+    26:                     %td.price= "#{driver.price}"
+  
+app/views/riders/index.html.haml:23:in `block in _app_views_riders_index_html_haml__4173938769093059142_70236100217920'
+app/views/riders/index.html.haml:21:in `each'
+app/views/riders/index.html.haml:21:in `_app_views_riders_index_html_haml__4173938769093059142_70236100217920'
+Started GET "/riders?price_filter=&seats_filter=5" for ::1 at 2019-04-18 18:42:06 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.3ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  Rendered riders/index.html.haml within layouts/application (12.7ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for [:minseats, 5]:Array):
+    20:         %tbody
+    21:             -@drivers.each do |driver|
+    22:                 %tr
+    23:                     %td.name= link_to "#{driver.first} #{driver.last}", rider_path(:id => @rider.id, :driver_id => driver.id)
+    24:                     %td.seats= "#{driver.seats}"
+    25:                     %td.car= "#{driver.make} #{driver.model}"
+    26:                     %td.price= "#{driver.price}"
+  
+app/views/riders/index.html.haml:23:in `block in _app_views_riders_index_html_haml__4173938769093059142_70236109775840'
+app/views/riders/index.html.haml:21:in `each'
+app/views/riders/index.html.haml:21:in `_app_views_riders_index_html_haml__4173938769093059142_70236109775840'
+Started GET "/riders?price_filter=&seats_filter=" for ::1 at 2019-04-18 18:42:09 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+Redirected to http://localhost:3000/riders?price_filter=&seats_filter=
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for ::1 at 2019-04-18 18:42:09 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  Rendered riders/index.html.haml within layouts/application (6.6ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/riders?utf8=%E2%9C%93&seats_filter=5&price_filter=&commit=Filter+drivers" for ::1 at 2019-04-18 18:42:16 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"utf8"=>"✓", "seats_filter"=>"5", "price_filter"=>"", "commit"=>"Filter drivers"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.4ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+Redirected to http://localhost:3000/riders?price_filter=&seats_filter=5
+Completed 302 Found in 8ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=5" for ::1 at 2019-04-18 18:42:16 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  Rendered riders/index.html.haml within layouts/application (9.1ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for [:minseats, 5]:Array):
+    20:         %tbody
+    21:             -@drivers.each do |driver|
+    22:                 %tr
+    23:                     %td.name= link_to "#{driver.first} #{driver.last}", rider_path(:id => @rider.id, :driver_id => driver.id)
+    24:                     %td.seats= "#{driver.seats}"
+    25:                     %td.car= "#{driver.make} #{driver.model}"
+    26:                     %td.price= "#{driver.price}"
+  
+app/views/riders/index.html.haml:23:in `block in _app_views_riders_index_html_haml__4173938769093059142_70236102622500'
+app/views/riders/index.html.haml:21:in `each'
+app/views/riders/index.html.haml:21:in `_app_views_riders_index_html_haml__4173938769093059142_70236102622500'
+Started GET "/riders?price_filter=&seats_filter=5" for ::1 at 2019-04-18 18:45:04 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  Rendered riders/index.html.haml within layouts/application (219926.2ms)
+Completed 500 Internal Server Error in 219934ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for [:minseats, 5]:Array):
+    21:             -@drivers.each do |driver|
+    22:             -byebug
+    23:                 %tr
+    24:                     %td.name= link_to "#{driver.first} #{driver.last}", rider_path(:id => @rider.id, :driver_id => driver.id)
+    25:                     %td.seats= "#{driver.seats}"
+    26:                     %td.car= "#{driver.make} #{driver.model}"
+    27:                     %td.price= "#{driver.price}"
+  
+app/views/riders/index.html.haml:24:in `block in _app_views_riders_index_html_haml__4173938769093059142_70236063098940'
+app/views/riders/index.html.haml:21:in `each'
+app/views/riders/index.html.haml:21:in `_app_views_riders_index_html_haml__4173938769093059142_70236063098940'
+Started GET "/riders?price_filter=&seats_filter=5" for ::1 at 2019-04-18 18:48:47 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `where' for {:minseats=>5}:Hash
+Did you mean?  when):
+  
+app/controllers/riders_controller.rb:109:in `filter_and_sort'
+app/controllers/riders_controller.rb:18:in `index'
+Started GET "/riders?price_filter=&seats_filter=5" for ::1 at 2019-04-18 18:50:00 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE (seats >= 5) AND (available = 1)[0m
+  ↳ app/views/riders/index.html.haml:21
+  Rendered riders/index.html.haml within layouts/application (9086.1ms)
+  Rendered layouts/_alerts.html.erb (0.8ms)
+Completed 200 OK in 9137ms (Views: 9112.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=5" for ::1 at 2019-04-18 18:53:14 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE (seats >= 5) AND (available = 1)[0m
+  ↳ app/views/riders/index.html.haml:23
+  Rendered riders/index.html.haml within layouts/application (8.5ms)
+  Rendered layouts/_alerts.html.erb (0.8ms)
+Completed 200 OK in 41ms (Views: 36.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/riders?reset_filters=1" for ::1 at 2019-04-18 18:53:15 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"reset_filters"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+Redirected to http://localhost:3000/riders?price_filter=&seats_filter=5
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=5" for ::1 at 2019-04-18 18:53:15 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>"5"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/riders_controller.rb:7:in `index'
+Started GET "/riders?price_filter=&seats_filter=5" for ::1 at 2019-04-18 18:55:03 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>"5"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/riders_controller.rb:7:in `index'
+Started GET "/" for ::1 at 2019-04-18 18:55:05 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  Rendered pages/home.html.haml within layouts/application (5.7ms)
+  Rendered layouts/_alerts.html.erb (0.9ms)
+Completed 200 OK in 38ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-18 18:55:06 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_alerts.html.erb (0.6ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-18 18:55:08 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4ALbt8gxX1pl2uvouaPjcib/VhTtwCKy/xORjoTaKROBcNaE9CCCfjkrkVJLJL0dgcYR39SLqFPs8GrE82CjeA==", "user"=>{"email"=>"rwetsman@colgate.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "rwetsman@colgate.edu"], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 136ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-04-18 18:55:08 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:3
+  Rendered pages/home.html.haml within layouts/application (2.8ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/riders" for ::1 at 2019-04-18 18:55:09 -0400
+Processing by RidersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+Redirected to http://localhost:3000/riders?price_filter=&seats_filter=
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for ::1 at 2019-04-18 18:55:09 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE (available = 1)[0m
+  ↳ app/views/riders/index.html.haml:23
+  Rendered riders/index.html.haml within layouts/application (4.6ms)
+  Rendered layouts/_alerts.html.erb (0.7ms)
+Completed 200 OK in 32ms (Views: 28.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/riders?utf8=%E2%9C%93&seats_filter=5&price_filter=&commit=Filter+drivers" for ::1 at 2019-04-18 18:55:13 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"utf8"=>"✓", "seats_filter"=>"5", "price_filter"=>"", "commit"=>"Filter drivers"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.4ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+Redirected to http://localhost:3000/riders?price_filter=&seats_filter=5
+Completed 302 Found in 9ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=5" for ::1 at 2019-04-18 18:55:13 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.3ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE (seats >= 5) AND (available = 1)[0m
+  ↳ app/views/riders/index.html.haml:23
+  Rendered riders/index.html.haml within layouts/application (5.7ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 29ms (Views: 24.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for ::1 at 2019-04-18 18:55:15 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.3ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+Redirected to http://localhost:3000/riders?price_filter=&seats_filter=
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for ::1 at 2019-04-18 18:55:15 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE (available = 1)[0m
+  ↳ app/views/riders/index.html.haml:23
+  Rendered riders/index.html.haml within layouts/application (6.3ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 29ms (Views: 25.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/riders?utf8=%E2%9C%93&seats_filter=&price_filter=10&commit=Filter+drivers" for ::1 at 2019-04-18 18:55:24 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"utf8"=>"✓", "seats_filter"=>"", "price_filter"=>"10", "commit"=>"Filter drivers"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+Redirected to http://localhost:3000/riders?price_filter=10&seats_filter=
+Completed 302 Found in 7ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/riders?price_filter=10&seats_filter=" for ::1 at 2019-04-18 18:55:24 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"10", "seats_filter"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE (price <= 10) AND (available = 1)[0m
+  ↳ app/views/riders/index.html.haml:23
+  Rendered riders/index.html.haml within layouts/application (7.9ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 56ms (Views: 52.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for ::1 at 2019-04-18 18:55:26 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+Redirected to http://localhost:3000/riders?price_filter=&seats_filter=
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for ::1 at 2019-04-18 18:55:26 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE (available = 1)[0m
+  ↳ app/views/riders/index.html.haml:23
+  Rendered riders/index.html.haml within layouts/application (7.7ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-04-18 18:55:29 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:3
+  Rendered pages/home.html.haml within layouts/application (4.9ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/riders" for ::1 at 2019-04-18 18:55:31 -0400
+Processing by RidersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+Redirected to http://localhost:3000/riders?price_filter=&seats_filter=
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for ::1 at 2019-04-18 18:55:31 -0400
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  Rendering riders/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE (available = 1)[0m
+  ↳ app/views/riders/index.html.haml:23
+  Rendered riders/index.html.haml within layouts/application (6.8ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 0.6ms)
+
+
