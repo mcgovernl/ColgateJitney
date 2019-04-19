@@ -1,6 +1,17 @@
 #main
     %p.rider Available Drivers
 
+    =form_tag riders_path, :method => :get do
+        =label_tag "seats_filter", "Minimum seats"
+        =number_field_tag "seats_filter"
+
+        =label_tag "price_filter", "Maximum price"
+        =number_field_tag "price_filter"
+
+        =submit_tag "Filter drivers"
+
+    =link_to "Clear filters", riders_path("seats_filter" => "", "price_filter" => "")
+
     %table.table
         %thead
             %th Driver Name
