@@ -9,11 +9,12 @@
         .col-md-offset= "Current Price: #{@driver.price}"
     .row
         -if @driver.available?
-            .col-md-offset= "Currently available!"
+            .col-md-offset.available= "Currently available!"
         -else
-            .col-md-offset= "Not currently available :("
+            .col-md-offset.not_available= "Not currently available :("
 
     %table.table
+        %h2 Reviews
         %thead
             %th Reviews
             %th Stars
@@ -24,10 +25,11 @@
             -@reviews.each do |rev|
                 %tr
                     %td
-                    %td= rev.stars
+                    %td.stars= rev.stars
                     %td= rev.description
                     //Leave the name of rider who wrote description
 
     %br
 
     =link_to "Leave a review", new_review_path(:rider_id => params[:id] , :driver_id => params[:driver_id])
+    =link_to "Go back to view all drivers", riders_path()

@@ -1,19 +1,20 @@
 #main
     %div= "Leave a review for #{@driver.first} #{@driver.last}!"
-
     -if flash[:warning].nil?
         %p= flash[:warning]
     -elsif flash[:notice].nil?
         %p= flash[:notice]
 
     =form_for @review, :method => :post do |f|
-        =f.label :stars, "How many stars?"
-        =f.number_field :stars, max: 5, min: 0
-
-        =f.label :description, "Leave a description"
-        =f.text_field :description
+        .inputs
+            =f.label :stars, "How many stars?"
+            =f.number_field :stars, max: 5, min: 0
+        .inputs
+            =f.label :description, "Leave a description"
+            =f.text_field :description, class: 'description'
 
         =f.hidden_field :driver_id, :value => @driver.id
-
         =f.hidden_field :rider_id, :value => @rider.id
-        =f.submit "Add Review"
+        
+        .inputs
+            =f.submit "Add Review"
