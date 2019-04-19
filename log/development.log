@@ -1,0 +1,262 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (72.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (73.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateDrivers (20190401165720)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "drivers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first" varchar, "last" varchar, "make" varchar, "model" varchar, "plate" varchar, "seats" integer, "available" boolean, "user_id" integer, "price" decimal(10,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190401165720_create_drivers.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_drivers_on_user_id" ON "drivers" ("user_id")[0m
+  ↳ db/migrate/20190401165720_create_drivers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190401165720"]]
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (115.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateRiders (20190401170223)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "riders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first" varchar, "last" varchar, "destination" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190401170223_create_riders.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_riders_on_user_id" ON "riders" ("user_id")[0m
+  ↳ db/migrate/20190401170223_create_riders.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190401170223"]]
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (69.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateReviews (20190401170316)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "stars" integer, "description" text, "driver_id" integer, "rider_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190401170316_create_reviews.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_driver_id" ON "reviews" ("driver_id")[0m
+  ↳ db/migrate/20190401170316_create_reviews.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_rider_id" ON "reviews" ("rider_id")[0m
+  ↳ db/migrate/20190401170316_create_reviews.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190401170316"]]
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (65.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to DeviseCreateUsers (20190401173251)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190401173251_devise_create_users.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20190401173251_devise_create_users.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20190401173251_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190401173251"]]
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (60.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-19 16:26:41.922932"], ["updated_at", "2019-04-19 16:26:41.922932"]]
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (40.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mUser Destroy (1109.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDriver Destroy (72.4ms)[0m  [1m[31mDELETE FROM "drivers"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRider Destroy (69.6ms)[0m  [1m[31mDELETE FROM "riders"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mReview Destroy (52.6ms)[0m  [1m[31mDELETE FROM "reviews"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "liam@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "liam@colgatejitney.com"], ["encrypted_password", "$2a$11$de1SaGH/yBEH6BBKq5tGne1qHQhlBhSJbYtTF/PzfanGaVgKsTjCK"], ["created_at", "2019-04-19 16:26:50.369801"], ["updated_at", "2019-04-19 16:26:50.369801"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (44.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jack@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "jack@colgatejitney.com"], ["encrypted_password", "$2a$11$eL/Mx4hLRTMI.g2zlWnQyeGRy9gu5P7ruLAcGHnNtpvMY78O2daDe"], ["created_at", "2019-04-19 16:26:50.690065"], ["updated_at", "2019-04-19 16:26:50.690065"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (40.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ryan@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "ryan@colgatejitney.com"], ["encrypted_password", "$2a$11$epB3kStJYNqJF6HwEXDrnePEGSkjJB.TYZu8.8CdqOa4/UE//zbVy"], ["created_at", "2019-04-19 16:26:51.006417"], ["updated_at", "2019-04-19 16:26:51.006417"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (41.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "peyton@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "peyton@colgatejitney.com"], ["encrypted_password", "$2a$11$ssWKGwkNjmNuKVXUarrYV.XCbBY8XPLmMS06u8RkR2bsZVW9rN4Fq"], ["created_at", "2019-04-19 16:26:51.322961"], ["updated_at", "2019-04-19 16:26:51.322961"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (41.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harrison@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "harrison@colgatejitney.com"], ["encrypted_password", "$2a$11$bU/i1k4ZR.0enlL3H1VU4.zEPCr83vG1t2LOquKqeB8Z2U6oWiqSe"], ["created_at", "2019-04-19 16:26:51.639760"], ["updated_at", "2019-04-19 16:26:51.639760"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (57.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "steve@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "steve@colgatejitney.com"], ["encrypted_password", "$2a$11$MtS6L8SEkCbbOCsHFUtGBuHEmX6VrC2IzHS3ZRxHpVcc7y.O6J1wq"], ["created_at", "2019-04-19 16:26:51.972768"], ["updated_at", "2019-04-19 16:26:51.972768"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (33.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mDriver Create (1.1ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Liam"], ["last", "McGovern"], ["make", "Ford"], ["model", "Explorer"], ["plate", "ESK543"], ["seats", 8], ["available", 1], ["user_id", 1], ["created_at", "2019-04-19 16:26:52.163338"], ["updated_at", "2019-04-19 16:26:52.163338"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (72.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mDriver Create (0.3ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Jack"], ["last", "Kerning"], ["make", "Jeep"], ["model", "Wrangler"], ["plate", "JDK456"], ["seats", 4], ["available", 1], ["user_id", 2], ["created_at", "2019-04-19 16:26:52.241847"], ["updated_at", "2019-04-19 16:26:52.241847"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (48.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mDriver Create (0.3ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Ryan"], ["last", "Wetsman"], ["make", "Kia"], ["model", "Sorento"], ["plate", "OPA808"], ["seats", 6], ["available", 1], ["user_id", 3], ["created_at", "2019-04-19 16:26:52.293979"], ["updated_at", "2019-04-19 16:26:52.293979"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (52.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mDriver Create (0.3ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Peyton"], ["last", "Baker"], ["make", "Honda"], ["model", "Prius"], ["plate", "GOGREEN"], ["seats", 4], ["available", 0], ["user_id", 4], ["created_at", "2019-04-19 16:26:52.350866"], ["updated_at", "2019-04-19 16:26:52.350866"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (53.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mDriver Create (0.3ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Harrison"], ["last", "Chen"], ["make", "Toyota"], ["model", "Tundra"], ["plate", "Z00M3R"], ["seats", 3], ["available", 1], ["user_id", 5], ["created_at", "2019-04-19 16:26:52.409515"], ["updated_at", "2019-04-19 16:26:52.409515"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (53.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mDriver Create (0.3ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Steve"], ["last", "Stevenson"], ["make", "Tesla"], ["model", "X"], ["plate", "B0RN2R1D3"], ["seats", 7], ["available", 1], ["user_id", 6], ["created_at", "2019-04-19 16:26:52.467697"], ["updated_at", "2019-04-19 16:26:52.467697"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (53.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mRider Create (0.3ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Liam"], ["last", "McGovern"], ["destination", "110 Broad Street"], ["user_id", 1], ["created_at", "2019-04-19 16:26:52.541768"], ["updated_at", "2019-04-19 16:26:52.541768"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (54.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mRider Create (0.3ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Jack"], ["last", "Kerning"], ["destination", "6 Pine Street"], ["user_id", 2], ["created_at", "2019-04-19 16:26:52.600969"], ["updated_at", "2019-04-19 16:26:52.600969"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (54.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mRider Create (0.3ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Ryan"], ["last", "Wetsman"], ["destination", "Library Cafe"], ["user_id", 3], ["created_at", "2019-04-19 16:26:52.659647"], ["updated_at", "2019-04-19 16:26:52.659647"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (53.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mRider Create (0.3ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Peyton"], ["last", "Baker"], ["destination", "The Jug"], ["user_id", 4], ["created_at", "2019-04-19 16:26:52.717663"], ["updated_at", "2019-04-19 16:26:52.717663"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (54.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mRider Create (0.3ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Harrison"], ["last", "Chen"], ["destination", "Wynn Hall"], ["user_id", 5], ["created_at", "2019-04-19 16:26:52.776308"], ["updated_at", "2019-04-19 16:26:52.776308"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (53.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:33
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:33
+  [1m[36mRider Create (0.3ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Steve"], ["last", "Stevenson"], ["destination", "The Pound"], ["user_id", 6], ["created_at", "2019-04-19 16:26:52.834477"], ["updated_at", "2019-04-19 16:26:52.834477"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (53.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("stars", "description", "driver_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["stars", 5], ["description", "All you could ask for from a driver"], ["driver_id", 1], ["rider_id", 5], ["created_at", "2019-04-19 16:26:52.904893"], ["updated_at", "2019-04-19 16:26:52.904893"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (58.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("stars", "description", "driver_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["stars", 3], ["description", "Made me spill my drink on myself"], ["driver_id", 3], ["rider_id", 4], ["created_at", "2019-04-19 16:26:52.967075"], ["updated_at", "2019-04-19 16:26:52.967075"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (54.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:37
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("stars", "description", "driver_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["stars", 4], ["description", "Literally a driving dog"], ["driver_id", 6], ["rider_id", 4], ["created_at", "2019-04-19 16:26:53.025520"], ["updated_at", "2019-04-19 16:26:53.025520"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (54.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:38
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("stars", "description", "driver_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["stars", 1], ["description", "Pigsty of a Car"], ["driver_id", 2], ["rider_id", 1], ["created_at", "2019-04-19 16:26:53.083632"], ["updated_at", "2019-04-19 16:26:53.083632"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (54.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("stars", "description", "driver_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["stars", 5], ["description", "Absolute Legend"], ["driver_id", 5], ["rider_id", 2], ["created_at", "2019-04-19 16:26:53.142335"], ["updated_at", "2019-04-19 16:26:53.142335"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (54.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("stars", "description", "driver_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["stars", 5], ["description", "Was at a family wedding out of town and this driver was awesome!  Wedding was in the woods and he found the place to drop us off, AND picked us up in the pouring rain.  Highly recommend;  will use again when Im back in Hamilton!!"], ["driver_id", 4], ["rider_id", 3], ["created_at", "2019-04-19 16:26:53.200331"], ["updated_at", "2019-04-19 16:26:53.200331"]]
+  ↳ db/seeds.rb:40
+  [1m[35m (54.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:41
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("stars", "description", "driver_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["stars", 2], ["description", "Who gave this man a license"], ["driver_id", 4], ["rider_id", 3], ["created_at", "2019-04-19 16:26:53.258890"], ["updated_at", "2019-04-19 16:26:53.258890"]]
+  ↳ db/seeds.rb:41
+  [1m[35m (54.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:41
