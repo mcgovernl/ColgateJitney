@@ -1,12 +1,17 @@
-%h1.title Welcome to Colgate Jitney
+<link href='https://fonts.googleapis.com/css?family=Amethysta' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Caesar+Dressing' rel='stylesheet' type='text/css'>
+
+<h1>Welcome to Colgate <span class="fire">L</span><span class="burn">itne</span><span class="fire">y</span> </h1>
+%br
+%br
 %h2.center The Best Jitney So Far
 .center
   -if current_user
-    =link_to "I am a Driver", driver_path(current_user[:id])
-    =link_to "I am a Rider", riders_path()
-    %br
-    =link_to 'Sign out', destroy_user_session_path, method: :delete
+    %div.container
+      =link_to "I am a Driver", driver_path(current_user[:id]) , :class => "button fire"
+      =link_to "I am a Rider", riders_path(), :class => "button fire"
+      =link_to 'Sign out', destroy_user_session_path, method: :delete, :class => "button fire"
 
   -else
-    =link_to 'Sign up', new_user_registration_path
-    =link_to 'Sign in', new_user_session_path
+    =link_to 'Sign up', new_user_registration_path, :class => "button fire"
+    =link_to 'Sign in', new_user_session_path, :class => "button fire"

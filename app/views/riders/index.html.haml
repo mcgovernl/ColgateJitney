@@ -1,23 +1,29 @@
 #main
-    %p.rider Available Drivers
+    %h1.fire.rider Available Drivers
+    %br
+    %div.container
+        =form_tag riders_path, :method => :get do
+            =label_tag "seats_filter", "Minimum seats"
+            =number_field_tag "seats_filter"
 
-    =form_tag riders_path, :method => :get do
-        =label_tag "seats_filter", "Minimum seats"
-        =number_field_tag "seats_filter"
+            =label_tag "price_filter", "Maximum price"
+            =number_field_tag "price_filter"
 
-        =label_tag "price_filter", "Maximum price"
-        =number_field_tag "price_filter"
+            =submit_tag "Filter drivers"
 
-        =submit_tag "Filter drivers"
-
-    =link_to "Clear filters", riders_path("seats_filter" => "", "price_filter" => "")
-
+        %br
+        %br
+        =link_to "Clear filters", riders_path("seats_filter" => "", "price_filter" => ""), :class => "button"
+        %br
+        %br
+        %br
+        %br
     %table.table
         %thead
-            %th Driver Name
-            %th Number of Seats
-            %th Car
-            %th Price
+            %th.fire Driver Name
+            %th.burn Number of Seats
+            %th.burn Car
+            %th.fire Price
 
         %tbody
             -@drivers.each do |driver|
@@ -25,6 +31,8 @@
                     %td.name= link_to "#{driver.first} #{driver.last}", rider_path(:id => @rider.id, :driver_id => driver.id)
                     %td.seats= "#{driver.seats}"
                     %td.car= "#{driver.make} #{driver.model}"
-                    %td.price= "#{driver.price}"
-
-    %a= link_to "Back to Driver/Rider selection" , root_path
+                    %td.price= "$#{driver.price}"
+    %br
+    %br
+    %div.container
+        =link_to "Back to Driver/Rider selection" , root_path, :class => "button"

@@ -2,6 +2,8 @@
     .row
         %h2.header.title= "#{@driver.first} #{@driver.last}"
     .row
+        %span.line
+    .row
         .col-md-offset= "Make: #{@driver.make}, Model: #{@driver.model}, Plate: #{@driver.plate}"
     .row
         .col-md-offset= "Available seats: #{@driver.seats}"
@@ -16,11 +18,14 @@
     .row
         %h2.header.title= "Reviews"
     .row
-        .col-md-offset-2
         -@reviews.each do |review|
             .col-md-offset-2= "#{review.stars} #{review.description}"
             %br
-
-=link_to "Edit Driver Details", edit_driver_path(@driver)
 %br
-=link_to "Back to Driver/Rider selection" , root_path
+%br
+%br
+%div.container
+    =link_to "Edit Driver Details", edit_driver_path(@driver), :class => "button fire"
+    =link_to "Back to Driver/Rider selection" , root_path , :class => "button fire"
+
+//add table of riders looking for a ride

@@ -1,5 +1,5 @@
 #main
-    %p Create New Driver
+    %h1.fire Create New Driver
 
     -if flash[:warning].nil?
         %p= flash[:warning]
@@ -46,3 +46,8 @@
 
         .field
             =f.submit "Create New Driver"
+    %br
+    %br
+    %br
+    %div.container
+        =link_to "Return to Homepage", root_path, :class => "button"

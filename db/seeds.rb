@@ -18,12 +18,12 @@ User.create!(email: 'peyton@colgatejitney.com', password: 'test123', password_co
 User.create!(email: 'harrison@colgatejitney.com', password: 'test123', password_confirmation: 'test123') #user id 5
 User.create!(email: 'steve@colgatejitney.com', password: 'test123', password_confirmation: 'test123') #user id 6
 
-Driver.create!(first: 'Liam',last: 'McGovern',make: 'Ford',model: 'Explorer',plate: 'ESK543',seats: 8,available: true,user_id: 1)
-Driver.create!(first: 'Jack',last: 'Kerning',make: 'Jeep',model: 'Wrangler',plate: 'JDK456',seats: 4,available: true,user_id: 2)
-Driver.create!(first: 'Ryan',last: 'Wetsman',make: 'Kia',model: 'Sorento',plate: 'OPA808',seats: 6,available: true,user_id: 3)
-Driver.create!(first: 'Peyton',last: 'Baker',make: 'Honda',model: 'Prius',plate: 'GOGREEN',seats: 4,available: false,user_id: 4)
-Driver.create!(first: 'Harrison',last: 'Chen',make: 'Toyota',model: 'Tundra',plate: 'Z00M3R',seats: 3,available: true,user_id: 5)
-Driver.create!(first: 'Steve',last: 'Stevenson',make: 'Tesla',model: 'X',plate: 'B0RN2R1D3',seats: 7,available: true,user_id: 6)
+Driver.create!(first: 'Liam',last: 'McGovern',make: 'Ford',model: 'Explorer',plate: 'ESK543',seats: 8,available: true,user_id: 1,price: 100)
+Driver.create!(first: 'Jack',last: 'Kerning',make: 'Jeep',model: 'Wrangler',plate: 'JDK456',seats: 4,available: true,user_id: 2,price: 69)
+Driver.create!(first: 'Ryan',last: 'Wetsman',make: 'Kia',model: 'Sorento',plate: 'OPA808',seats: 6,available: true,user_id: 3,price: 33.33)
+Driver.create!(first: 'Peyton',last: 'Baker',make: 'Honda',model: 'Prius',plate: 'GOGREEN',seats: 4,available: false,user_id: 4, price: 0.01)
+Driver.create!(first: 'Harrison',last: 'Chen',make: 'Toyota',model: 'Tundra',plate: 'Z00M3R',seats: 3,available: true,user_id: 5,price: 420)
+Driver.create!(first: 'Steve',last: 'Stevenson',make: 'Tesla',model: 'X',plate: 'B0RN2R1D3',seats: 7,available: true,user_id: 6,price: 80085)
 
 Rider.create!(first: 'Liam',last: 'McGovern',destination: "110 Broad Street",user_id: 1)
 Rider.create!(first: 'Jack',last: 'Kerning',destination: "6 Pine Street",user_id: 2)

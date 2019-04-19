@@ -1,5 +1,5 @@
 #main
-    %p Create new Rider
+    %h1.fire Create new Rider
 
     -if flash[:warning].nil?
         %p= flash[:warning]
@@ -26,3 +26,9 @@
 
         .field
             =f.submit "Create New Rider"
+
+    %br
+    %br
+    %br
+    %div.container
+        =link_to "Return to Homepage", root_path, :class => "button"

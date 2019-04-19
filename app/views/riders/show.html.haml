@@ -1,22 +1,28 @@
+<link href='https://fonts.googleapis.com/css?family=Amethysta' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Caesar+Dressing' rel='stylesheet' type='text/css'>
+
+
 #main
     .row
-        %h2.header.title= "#{@driver.first} #{@driver.last}"
+        %h1.span.fire.driver= "#{@driver.first} #{@driver.last}"
+    .row
+        %div.info Information
     .row
         .col-md-offset= "Make: #{@driver.make}, Model: #{@driver.model}, Plate: #{@driver.plate}"
     .row
         .col-md-offset= "Available seats: #{@driver.seats}"
     .row
-        .col-md-offset= "Current Price: #{@driver.price}"
+        .col-md-offset= "Current Price: $#{@driver.price}"
     .row
         -if @driver.available?
-            .col-md-offset.available= "Currently available!"
+            .col-md-offset.available.burn= "Currently available!"
         -else
             .col-md-offset.not_available= "Not currently available :("
-
+    .row
+    .row
     %table.table
-        %h2 Reviews
+        %h1.review Reviews
         %thead
-            %th Reviews
             %th Stars
             %th Description
             //%th Reviewer
@@ -24,12 +30,16 @@
         %tbody
             -@reviews.each do |rev|
                 %tr
-                    %td
                     %td.stars= rev.stars
                     %td= rev.description
                     //Leave the name of rider who wrote description
 
     %br
-
-    =link_to "Leave a review", new_review_path(:rider_id => params[:id] , :driver_id => params[:driver_id])
-    =link_to "Go back to view all drivers", riders_path()
+    %br
+    %br
+    %div.container
+        =link_to "Leave a review", new_review_path(:rider_id => params[:id] , :driver_id => params[:driver_id]), :class => "button fire"
+        %br
+        %br
+        %br
+        =link_to "Go back to view all drivers", riders_path(), :class => "button burn"
