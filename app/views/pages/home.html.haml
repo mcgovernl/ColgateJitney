@@ -1,10 +1,12 @@
-%h1 Welcome to Colgate Jitney
+%h1.title Welcome to Colgate Jitney
+%h2.center The Best Jitney So Far
+.center
+  -if current_user
+    =link_to "I am a Driver", driver_path(current_user[:id])
+    =link_to "I am a Rider", riders_path()
+    %br
+    =link_to 'Sign out', destroy_user_session_path, method: :delete
 
--if current_user
-  =link_to "I am a Driver", driver_path(current_user[:id])
-  =link_to "I am a Rider", riders_path()
-  =link_to 'Sign out', destroy_user_session_path, method: :delete
-
--else
-  =link_to 'Sign up', new_user_registration_path
-  =link_to 'Sign in', new_user_session_path
+  -else
+    =link_to 'Sign up', new_user_registration_path
+    =link_to 'Sign in', new_user_session_path
