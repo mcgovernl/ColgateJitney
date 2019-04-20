@@ -25,13 +25,14 @@ Feature: Login
         And I fill in "Password" with "capybara"
         And I press "Log in"
         Then I should see "Signed in successfully."
-        And I should see "Welcome to Colgate Jitney"
+        And I should see "Welcome to Colgate"
         And I should see "I am a Driver"
         And I should see "I am a Rider"
         And I should see "Sign out"
 
     Scenario: Create Driver
         Given I am logged in
+        And I am a new user
         When I follow "I am a Driver"
         Then I should see "Create New Driver"
         When I fill in "First Name" with "Capy"
@@ -46,6 +47,7 @@ Feature: Login
 
     Scenario: Fail to create driver
         Given I am logged in
+        And I am a new user
         When I follow "I am a Driver"
         Then I should see "Create New Driver"
         When I press "Create New Driver"
@@ -53,6 +55,7 @@ Feature: Login
 
     Scenario: Create Rider
         Given I am logged in
+        And I am a new user
         And I am on the home page
         When I follow "I am a Rider"
         And I fill in "First Name" with "Capy"
@@ -69,7 +72,7 @@ Feature: Login
         Then I should see "Create new Rider"
         When I press "Create New Rider"
         Then I should see "Create new Rider"
-        
+
     Scenario: Trying to sign up with an already used Email
         Given I am a valid user
         And I am on the home page
@@ -98,4 +101,3 @@ Feature: Login
         And I fill in "Password confirmation" with "wrong password"
         And I press "Sign up"
         Then I should see "Password confirmation doesn't match Password"
-

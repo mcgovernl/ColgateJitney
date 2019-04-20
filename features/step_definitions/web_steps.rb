@@ -254,13 +254,18 @@ Then /^show me the page$/ do
 end
 
 Given("these Drivers:") do |table|
+    i = 1
     table.hashes.each do |h|
         if h["available"] == "yes"
             h["available"] = true
         else
             h["available"] = false
         end
-        Driver.create!(h)
+        user = User.create!({:email => "driver#{i}@gmail.com" , :password => "capybara",:password_confirmation => "capybara"})
+        driver = Driver.new(h)
+        driver.user = user
+        driver.save!
+        i = i + 1
     end
 end
 
@@ -278,15 +283,20 @@ Given("I am logged in") do
 end
 
 Given("I am not a first time driver") do
-    @driver = Driver.create!({:first => "Capy",:last => "Bara",:make => "Ford",:model => "F150",:plate => "777777",:seats => 4,:available => false})
+    @driver = Driver.create!({:first => "Capy",:last => "Bara",:make => "Ford",:model => "F150",:plate => "777777",:seats => 4,:available => false, :price => 100, :user_id => @user.id})
 end
 
 Given("I am not a first time rider") do
-    @rider = Rider.create!({:first => "Capy",:last => "Bara",:destination => "Hamilton"})
+    @rider = Rider.create!({:first => "Capy",:last => "Bara",:destination => "Hamilton",:user_id => @user.id})
 end
 
 Given("these Reviews:") do |table|
     table.hashes.each do |h|
         Review.create!(h)
     end
+end
+
+Given("I am a new user") do
+  @user.driver = nil
+  @user.rider = nil
 end

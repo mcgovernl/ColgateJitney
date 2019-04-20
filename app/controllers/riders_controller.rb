@@ -4,7 +4,8 @@ class RidersController < ApplicationController
         #should show list of avaliable drivers
         #need to redirect to new if there is no rider for current user
         begin
-          @rider = Rider.find(current_user[:id])
+          @user = User.find(current_user[:id])
+          @rider = @user.rider
         rescue ActiveRecord::RecordNotFound
           redirect_to new_rider_path and return
         end

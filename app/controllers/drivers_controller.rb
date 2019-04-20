@@ -4,10 +4,13 @@ class DriversController < ApplicationController
         #homepage for driver using the app. Shows their Driver information
         #should also allow them to edit their avliablity on the fly
         #need to redirect to new if no driver for current user
-        id = current_user[:id]
         begin
-          @driver = Driver.find(id)
+          @user = User.find(current_user[:id])
+          @driver = @user.driver
         rescue ActiveRecord::RecordNotFound
+          redirect_to new_driver_path() and return
+        end
+        if @driver == nil
           redirect_to new_driver_path() and return
         end
         @reviews = @driver.reviews
