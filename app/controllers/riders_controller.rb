@@ -25,9 +25,7 @@ class RidersController < ApplicationController
     end
 
     def show
-      if !params[:id].nil?
-          params[:driver_id] = params[:id]
-      end
+      @rider = Rider.find(params[:id])
       @driver = Driver.find(params[:driver_id])
       @reviews = @driver.reviews
     end
