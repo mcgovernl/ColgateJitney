@@ -63,7 +63,7 @@ Feature: Login
         And I fill in "Destination" with "Hamilton"
         And I press "Create New Rider"
         Then I should see "Drivers"
-        And I should see "Successfully created rider Capy , Bara"
+        And I should see "Successfully created rider Capy Bara"
 
 
     Scenario: Fail to create rider
