@@ -3,23 +3,23 @@ require 'rails_helper'
 RSpec.describe DriversController, type: :controller do
 
 
-  it "should should be able to log in" do
+    it "should should be able to log in" do
 
-  end
+    end
 
-  it "should be able to create a new Driver object" do
+    it "should be able to create a new Driver object" do
 
-  end
+    end
 
-  it "renders the Driver's info page" do
+    it "renders the Driver's info page" do
 
-  end
+    end
 
-  it "renders the Driver's own review page" do
+    it "renders the Driver's own review page" do
 
-  end
+    end
 
-  it "should be able to toggle availability" do
+    it "should be able to toggle availability" do
 
-  end
+    end
 end

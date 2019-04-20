@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/home/lmcgovern/ColgateJitney/features/support/paths.rb": [
+      "/Users/ryanwetsman/Documents/school stuff/480/jitney/ColgateJitney/features/support/paths.rb": [
         null,
         null,
         null,
@@ -46,7 +46,7 @@
         null,
         1
       ],
-      "/home/lmcgovern/ColgateJitney/features/support/selectors.rb": [
+      "/Users/ryanwetsman/Documents/school stuff/480/jitney/ColgateJitney/features/support/selectors.rb": [
         null,
         null,
         null,
@@ -92,7 +92,7 @@
         null,
         1
       ],
-      "/home/lmcgovern/ColgateJitney/features/step_definitions/web_steps.rb": [
+      "/Users/ryanwetsman/Documents/school stuff/480/jitney/ColgateJitney/features/step_definitions/web_steps.rb": [
         null,
         null,
         null,
@@ -396,40 +396,40 @@
         3,
         null
       ],
-      "/home/lmcgovern/ColgateJitney/app/controllers/application_controller.rb": [
+      "/Users/ryanwetsman/Documents/school stuff/480/jitney/ColgateJitney/app/controllers/application_controller.rb": [
         1,
         null
       ],
-      "/home/lmcgovern/ColgateJitney/app/helpers/application_helper.rb": [
+      "/Users/ryanwetsman/Documents/school stuff/480/jitney/ColgateJitney/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/lmcgovern/ColgateJitney/app/helpers/driver_helper.rb": [
+      "/Users/ryanwetsman/Documents/school stuff/480/jitney/ColgateJitney/app/helpers/driver_helper.rb": [
         1,
         null
       ],
-      "/home/lmcgovern/ColgateJitney/app/helpers/pages_helper.rb": [
+      "/Users/ryanwetsman/Documents/school stuff/480/jitney/ColgateJitney/app/helpers/pages_helper.rb": [
         1,
         null
       ],
-      "/home/lmcgovern/ColgateJitney/app/helpers/rider_helper.rb": [
+      "/Users/ryanwetsman/Documents/school stuff/480/jitney/ColgateJitney/app/helpers/rider_helper.rb": [
         1,
         null
       ],
-      "/home/lmcgovern/ColgateJitney/app/controllers/pages_controller.rb": [
+      "/Users/ryanwetsman/Documents/school stuff/480/jitney/ColgateJitney/app/controllers/pages_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/home/lmcgovern/ColgateJitney/app/models/driver.rb": [
+      "/Users/ryanwetsman/Documents/school stuff/480/jitney/ColgateJitney/app/models/driver.rb": [
         1,
         1,
         1,
         1,
         null
       ],
-      "/home/lmcgovern/ColgateJitney/app/controllers/drivers_controller.rb": [
+      "/Users/ryanwetsman/Documents/school stuff/480/jitney/ColgateJitney/app/controllers/drivers_controller.rb": [
         1,
         null,
         1,
@@ -497,13 +497,13 @@
         null,
         null
       ],
-      "/home/lmcgovern/ColgateJitney/app/models/review.rb": [
+      "/Users/ryanwetsman/Documents/school stuff/480/jitney/ColgateJitney/app/models/review.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/lmcgovern/ColgateJitney/app/models/rider.rb": [
+      "/Users/ryanwetsman/Documents/school stuff/480/jitney/ColgateJitney/app/models/rider.rb": [
         1,
         1,
         1,
@@ -522,7 +522,7 @@
         null,
         null
       ],
-      "/home/lmcgovern/ColgateJitney/app/controllers/riders_controller.rb": [
+      "/Users/ryanwetsman/Documents/school stuff/480/jitney/ColgateJitney/app/controllers/riders_controller.rb": [
         1,
         1,
         null,
@@ -643,7 +643,7 @@
         null,
         null
       ],
-      "/home/lmcgovern/ColgateJitney/app/controllers/reviews_controller.rb": [
+      "/Users/ryanwetsman/Documents/school stuff/480/jitney/ColgateJitney/app/controllers/reviews_controller.rb": [
         1,
         1,
         3,
@@ -681,6 +681,6 @@
         null
       ]
     },
-    "timestamp": 1555720902
+    "timestamp": 1555725563
   }
 }

@@ -1,23 +1,23 @@
 require 'rails_helper'
 
 RSpec.describe RidersController, type: :controller do
-  it "should be able to login" do
+    it "should be able to login" do
 
-  end
+    end
 
-  it "should be able to create a new Rider object" do
+    it "should be able to create a new Rider object" do
 
-  end
+    end
 
-  it "renders available drivers page" do
+    it "renders available drivers page" do
 
-  end
+    end
 
-  it "renders a Drivers info page" do
+    it "renders a Drivers info page" do
 
-  end
+    end
 
-  it "should be able to leave a new review for a driver" do
+    it "should be able to leave a new review for a driver" do
 
-  end
+    end
 end
