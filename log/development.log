@@ -5799,3 +5799,133 @@ Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.1ms)
 NoMethodError (undefined method `reviews' for nil:NilClass):
   
 app/controllers/drivers_controller.rb:13:in `show'
+Started GET "/riders" for 149.43.72.103 at 2019-04-19 20:38:36 -0400
+Cannot render console from 149.43.72.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/lmcgovern/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by RidersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."user_id" = ? LIMIT ?[0m  [["user_id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+Redirected to http://clab.cs.colgate.edu:3000/riders?price_filter=&seats_filter=
+Completed 302 Found in 47ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for 149.43.72.103 at 2019-04-19 20:38:37 -0400
+Cannot render console from 149.43.72.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."user_id" = ? LIMIT ?[0m  [["user_id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+  Rendering riders/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE (available = 1)[0m
+  ↳ app/views/riders/index.html.haml:29
+  Rendered riders/index.html.haml within layouts/application (71.5ms)
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    28:         %tbody
+    29:             -@drivers.each do |driver|
+    30:                 %tr
+    31:                     %td.name= link_to "#{driver.first} #{driver.last}", rider_path(:id => @rider.id, :driver_id => driver.id)
+    32:                     %td.seats= "#{driver.seats}"
+    33:                     %td.car= "#{driver.make} #{driver.model}"
+    34:                     %td.price= "$#{driver.price}"
+  
+app/views/riders/index.html.haml:31:in `block in _app_views_riders_index_html_haml__4450335703901171733_47418289113860'
+app/views/riders/index.html.haml:29:in `_app_views_riders_index_html_haml__4450335703901171733_47418289113860'
+Started GET "/" for 149.43.72.103 at 2019-04-19 20:38:47 -0400
+Cannot render console from 149.43.72.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:9
+  Rendered pages/home.html.haml within layouts/application (6.5ms)
+  Rendered layouts/_alerts.html.erb (0.6ms)
+Completed 200 OK in 335ms (Views: 333.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/riders" for 149.43.72.103 at 2019-04-19 20:38:56 -0400
+Cannot render console from 149.43.72.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."user_id" = ? LIMIT ?[0m  [["user_id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+Redirected to http://clab.cs.colgate.edu:3000/riders?price_filter=&seats_filter=
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for 149.43.72.103 at 2019-04-19 20:38:56 -0400
+Cannot render console from 149.43.72.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."user_id" = ? LIMIT ?[0m  [["user_id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+  Rendering riders/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE (available = 1)[0m
+  ↳ app/views/riders/index.html.haml:29
+  Rendered riders/index.html.haml within layouts/application (12.3ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    28:         %tbody
+    29:             -@drivers.each do |driver|
+    30:                 %tr
+    31:                     %td.name= link_to "#{driver.first} #{driver.last}", rider_path(:id => @rider.id, :driver_id => driver.id)
+    32:                     %td.seats= "#{driver.seats}"
+    33:                     %td.car= "#{driver.make} #{driver.model}"
+    34:                     %td.price= "$#{driver.price}"
+  
+app/views/riders/index.html.haml:31:in `block in _app_views_riders_index_html_haml__4450335703901171733_69824795924460'
+app/views/riders/index.html.haml:29:in `_app_views_riders_index_html_haml__4450335703901171733_69824795924460'
+Started GET "/" for 149.43.72.103 at 2019-04-19 20:40:37 -0400
+Cannot render console from 149.43.72.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:9
+  Rendered pages/home.html.haml within layouts/application (24.5ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 53ms (Views: 50.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/riders" for 149.43.72.103 at 2019-04-19 20:40:39 -0400
+Cannot render console from 149.43.72.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."user_id" = ? LIMIT ?[0m  [["user_id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+Redirected to http://clab.cs.colgate.edu:3000/drivers/new
+Completed 302 Found in 12ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/drivers/new" for 149.43.72.103 at 2019-04-19 20:40:39 -0400
+Cannot render console from 149.43.72.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#new as HTML
+  Rendering drivers/new.html.haml within layouts/application
+  Rendered drivers/new.html.haml within layouts/application (13.8ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 70ms (Views: 40.4ms | ActiveRecord: 1.0ms)
+
+

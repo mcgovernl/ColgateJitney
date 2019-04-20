@@ -43,7 +43,7 @@ Feature: Login
         And I fill in "Seats" with "2"
         And I check "Currently Available?"
         And I press "Create New Driver"
-        Then I should see "Successfully created driver Capy , Bara"
+        Then I should see "Successfully created driver Capy Bara"
 
     Scenario: Fail to create driver
         Given I am logged in

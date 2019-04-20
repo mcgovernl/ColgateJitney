@@ -8,10 +8,10 @@ class DriversController < ApplicationController
           @user = User.find(current_user[:id])
           @driver = @user.driver
         rescue ActiveRecord::RecordNotFound
-          redirect_to new_driver_path() and return
+          redirect_to new_driver_path and return
         end
         if @driver == nil
-          redirect_to new_driver_path() and return
+          redirect_to new_driver_path and return
         end
         @reviews = @driver.reviews
     end

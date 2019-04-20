@@ -10,6 +10,10 @@ class RidersController < ApplicationController
           redirect_to new_rider_path and return
         end
 
+        if @rider == nil
+          redirect_to new_rider_path and return
+        end
+
         do_redirect, view_prefs = update_settings(params, session)
         if do_redirect
             flash.keep
