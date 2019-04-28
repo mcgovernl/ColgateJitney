@@ -3,7 +3,7 @@
         %h2.header.title= "#{@driver.first} #{@driver.last}"
     .row
         %span.line
-    .row
+    .r
         .col-md-offset= "Make: #{@driver.make}, Model: #{@driver.model}, Plate: #{@driver.plate}"
     .row
         .col-md-offset= "Available seats: #{@driver.seats}"
@@ -25,6 +25,7 @@
 %br
 %br
 %div.container
+    =link_to "Toggle Availability", driver_path(@driver,:toggle => true),:method => :put, :class => "button fire"
     =link_to "Edit Driver Details", edit_driver_path(@driver), :class => "button fire"
     =link_to "Back to Driver/Rider selection" , root_path , :class => "button fire"
 

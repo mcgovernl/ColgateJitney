@@ -44,7 +44,18 @@ class DriversController < ApplicationController
     def update
         id = params[:id]
         d = Driver.find(id)
-        if params[:driver][:first] != ""
+        if params[:toggle]
+          d.update(:available => !d.available)
+          if d.save()
+              flash[:notice] = "Successfully updated driver #{d.first} #{d.last}"
+              redirect_to driver_path(d) and return
+          else
+              flash[:warning] = "Error toggling availability"
+              redirect_to driver_path(d) and return
+          end
+        end
+
+        if !params[:driver].nil? && params[:driver][:first] != ""
             d.update(create_update_params)
             if d.save()
                 flash[:notice] = "Successfully updated driver #{d.first} #{d.last}"
