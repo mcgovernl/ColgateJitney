@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_01_173251) do
+ActiveRecord::Schema.define(version: 2019_04_28_183931) do
 
   create_table "drivers", force: :cascade do |t|
     t.string "first"
@@ -32,20 +32,35 @@ ActiveRecord::Schema.define(version: 2019_04_01_173251) do
     t.text "description"
     t.integer "driver_id"
     t.integer "rider_id"
+    t.integer "ride_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["driver_id"], name: "index_reviews_on_driver_id"
+    t.index ["ride_id"], name: "index_reviews_on_ride_id"
     t.index ["rider_id"], name: "index_reviews_on_rider_id"
   end
 
   create_table "riders", force: :cascade do |t|
     t.string "first"
     t.string "last"
+    t.text "start"
     t.text "destination"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_riders_on_user_id"
+  end
+
+  create_table "rides", force: :cascade do |t|
+    t.string "start"
+    t.string "destination"
+    t.boolean "done"
+    t.integer "driver_id"
+    t.integer "rider_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["driver_id"], name: "index_rides_on_driver_id"
+    t.index ["rider_id"], name: "index_rides_on_rider_id"
   end
 
   create_table "users", force: :cascade do |t|

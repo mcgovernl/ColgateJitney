@@ -5,6 +5,7 @@ class CreateReviews < ActiveRecord::Migration[5.2]
       t.text :description
       t.references :driver
       t.references :rider
+      t.references :ride
 
       t.timestamps
     end
