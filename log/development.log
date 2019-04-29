@@ -7573,3 +7573,2614 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 149.43.221.103 at 2019-04-29 13:58:20 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/lmcgovern/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  Rendered pages/home.html.haml within layouts/application (30.9ms)
+  Rendered layouts/_alerts.html.erb (0.6ms)
+Completed 200 OK in 489ms (Views: 487.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 149.43.221.103 at 2019-04-29 13:58:22 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (26.3ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 76ms (Views: 56.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users/sign_in" for 149.43.221.103 at 2019-04-29 13:58:34 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lCgtFEbS13Lvi1QTEamdld/sNwyB82PVONSP4fknBPU1sLoO6SLHFkRPTBlf42+LVz3e5+kZRamqY1P5WM57Gw==", "user"=>{"email"=>"liam@colgatejitney.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liam@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ /home/lmcgovern/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://clab.cs.colgate.edu:3000/
+Completed 302 Found in 297ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 149.43.221.103 at 2019-04-29 13:58:34 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:9
+  Rendered pages/home.html.haml within layouts/application (6.3ms)
+  Rendered layouts/_alerts.html.erb (0.6ms)
+Completed 200 OK in 73ms (Views: 71.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/riders" for 149.43.221.103 at 2019-04-29 13:58:38 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+Redirected to http://clab.cs.colgate.edu:3000/riders?price_filter=&seats_filter=
+Completed 302 Found in 34ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for 149.43.221.103 at 2019-04-29 13:58:38 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+  Rendering riders/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE (available = 1)[0m
+  ↳ app/views/riders/index.html.haml:29
+  Rendered riders/index.html.haml within layouts/application (35.5ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 76ms (Views: 64.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/riders/1?driver_id=5" for 149.43.221.103 at 2019-04-29 13:58:42 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#show as HTML
+  Parameters: {"driver_id"=>"5", "id"=>"1"}
+  [1m[36mRider Load (0.3ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:28
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:29
+  Rendering riders/show.html.haml within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 5]]
+  ↳ app/views/riders/show.html.haml:33
+  Rendered riders/show.html.haml within layouts/application (15.1ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 95ms (Views: 43.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/rides/new?driver_id=5&rider_id=1" for 149.43.221.103 at 2019-04-29 13:58:44 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/rides/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/rides/new?driver_id=5&rider_id=1" for 149.43.221.103 at 2019-04-29 13:59:58 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/rides/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/riders" for 149.43.221.103 at 2019-04-29 14:00:11 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+Redirected to http://clab.cs.colgate.edu:3000/riders?price_filter=&seats_filter=
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for 149.43.221.103 at 2019-04-29 14:00:11 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+  Rendering riders/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE (available = 1)[0m
+  ↳ app/views/riders/index.html.haml:29
+  Rendered riders/index.html.haml within layouts/application (11.5ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 44ms (Views: 39.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/riders/1?driver_id=5" for 149.43.221.103 at 2019-04-29 14:00:12 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#show as HTML
+  Parameters: {"driver_id"=>"5", "id"=>"1"}
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:28
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:29
+  Rendering riders/show.html.haml within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 5]]
+  ↳ app/views/riders/show.html.haml:33
+  Rendered riders/show.html.haml within layouts/application (12.4ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/rides?driver_id=5&rider_id=1" for 149.43.221.103 at 2019-04-29 14:00:14 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidesController#create as HTML
+  Parameters: {"authenticity_token"=>"4w1QuGlrlrGe4iGNlx6m8o+DOhk3GUjWJPVOueSwKWZEHrE1Ko3TapdEB2EWE5m8NKKoqAv9ALGiA830SC1wxg==", "driver_id"=>"5", "rider_id"=>"1"}
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:3
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:4
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (private method `require' called for nil:NilClass):
+  
+app/controllers/rides_controller.rb:21:in `create_update_params'
+app/controllers/rides_controller.rb:7:in `create'
+Started GET "/riders/1?driver_id=5" for 149.43.221.103 at 2019-04-29 14:00:37 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#show as HTML
+  Parameters: {"driver_id"=>"5", "id"=>"1"}
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:28
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:29
+  Rendering riders/show.html.haml within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 5]]
+  ↳ app/views/riders/show.html.haml:33
+  Rendered riders/show.html.haml within layouts/application (15.1ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 103ms (Views: 46.0ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/rides?driver_id=5&rider_id=1" for 149.43.221.103 at 2019-04-29 14:00:39 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidesController#create as HTML
+  Parameters: {"authenticity_token"=>"Fva82dX4ulsaLKMyIjfKIMmJb7w8qMKpY49KTZNO87ex5V1Ulh7/gBOKhd6jOvVucqj9DQBMis7leckAP9OqFw==", "driver_id"=>"5", "rider_id"=>"1"}
+  [1m[36mRider Load (0.3ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:3
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:4
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `permit' for "5":String):
+  
+app/controllers/rides_controller.rb:21:in `create_update_params'
+app/controllers/rides_controller.rb:7:in `create'
+Started GET "/riders/1?driver_id=5" for 149.43.221.103 at 2019-04-29 14:01:21 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#show as HTML
+  Parameters: {"driver_id"=>"5", "id"=>"1"}
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:28
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:29
+  Rendering riders/show.html.haml within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 5]]
+  ↳ app/views/riders/show.html.haml:33
+  Rendered riders/show.html.haml within layouts/application (15.3ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 104ms (Views: 44.1ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/rides?driver_id=5&rider_id=1" for 149.43.221.103 at 2019-04-29 14:01:22 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidesController#create as HTML
+  Parameters: {"authenticity_token"=>"nRKTKgYohm3CJMrm4x9ePj1CBcvGBsORUFQ+MhyMnsk6AXKnRc7DtsuC7ApiEmFwhmOXevrii/bWor1/sBHHaQ==", "driver_id"=>"5", "rider_id"=>"1"}
+  [1m[36mRider Load (0.3ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:3
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:4
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 4, expected 1)):
+  
+app/controllers/rides_controller.rb:21:in `create_update_params'
+app/controllers/rides_controller.rb:7:in `create'
+Started GET "/riders/1?driver_id=5" for 149.43.221.103 at 2019-04-29 14:02:19 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#show as HTML
+  Parameters: {"driver_id"=>"5", "id"=>"1"}
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:28
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:29
+  Rendering riders/show.html.haml within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 5]]
+  ↳ app/views/riders/show.html.haml:33
+  Rendered riders/show.html.haml within layouts/application (14.7ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 121ms (Views: 44.4ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/rides?driver_id=5&rider_id=1" for 149.43.221.103 at 2019-04-29 14:02:20 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidesController#create as HTML
+  Parameters: {"authenticity_token"=>"jkJ8GriJ7Yt8BjdoLuviOC6h+dG6rClMTeSxHUD3i7gpUZ2X+2+oUHWgEYSv5t12lYBrYIZIYSvLEjJQ7GrSGA==", "driver_id"=>"5", "rider_id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/rides_controller.rb:3:in `create'
+Started GET "/riders/1?driver_id=5" for 149.43.221.103 at 2019-04-29 14:02:37 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#show as HTML
+  Parameters: {"driver_id"=>"5", "id"=>"1"}
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:28
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:29
+  Rendering riders/show.html.haml within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 5]]
+  ↳ app/views/riders/show.html.haml:33
+  Rendered riders/show.html.haml within layouts/application (12.8ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/riders/1?driver_id=5" for 149.43.221.103 at 2019-04-29 14:02:38 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#show as HTML
+  Parameters: {"driver_id"=>"5", "id"=>"1"}
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:28
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:29
+  Rendering riders/show.html.haml within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 5]]
+  ↳ app/views/riders/show.html.haml:33
+  Rendered riders/show.html.haml within layouts/application (12.8ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 43ms (Views: 40.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/rides?driver_id=5&rider_id=1" for 149.43.221.103 at 2019-04-29 14:02:44 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidesController#create as HTML
+  Parameters: {"authenticity_token"=>"2AePgGhy5ldTKigf4FNEeSGNAee5hSYYXh6dnoWCDfR/FG4NK5SjjFqMDvNhXns3mqyTVoVhbn/Y6B7TKR9UVA==", "driver_id"=>"5", "rider_id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/rides_controller.rb:3:in `create'
+Started POST "/rides?driver_id=5&rider_id=1" for 149.43.221.103 at 2019-04-29 14:03:16 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidesController#create as HTML
+  Parameters: {"authenticity_token"=>"2AePgGhy5ldTKigf4FNEeSGNAee5hSYYXh6dnoWCDfR/FG4NK5SjjFqMDvNhXns3mqyTVoVhbn/Y6B7TKR9UVA==", "driver_id"=>"5", "rider_id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/rides_controller.rb:3:in `create'
+Started GET "/riders/1?driver_id=5" for 149.43.221.103 at 2019-04-29 14:03:19 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#show as HTML
+  Parameters: {"driver_id"=>"5", "id"=>"1"}
+  [1m[36mRider Load (0.3ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:28
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:29
+  Rendering riders/show.html.haml within layouts/application
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 5]]
+  ↳ app/views/riders/show.html.haml:33
+  Rendered riders/show.html.haml within layouts/application (30.7ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 63ms (Views: 59.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/rides?booking%5Bdriver_id%5D=5&booking%5Brider_id%5D=1" for 149.43.221.103 at 2019-04-29 14:03:21 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidesController#create as HTML
+  Parameters: {"authenticity_token"=>"4B66W1hwaHREsCyO2TQmU0+MkmPcFt1Q0u+ASdTPkx9HDVvWG5Ytr00WCmJYORkd9K0A0uDylTdUGQMEeFLKvw==", "booking"=>{"driver_id"=>"5", "rider_id"=>"1"}}
+  [1m[36mRider Load (0.3ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:3
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rides_controller.rb:8
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:8
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:8
+  [1m[36mRide Create (0.4ms)[0m  [1m[32mINSERT INTO "rides" ("driver_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["driver_id", 5], ["rider_id", 1], ["created_at", "2019-04-29 18:03:21.349839"], ["updated_at", "2019-04-29 18:03:21.349839"]]
+  ↳ app/controllers/rides_controller.rb:8
+  [1m[35m (64.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rides_controller.rb:8
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 66.4ms)
+
+
+  
+NoMethodError (undefined method `avaliable=' for nil:NilClass):
+  
+app/controllers/rides_controller.rb:9:in `create'
+Started GET "/riders/1?driver_id=5" for 149.43.221.103 at 2019-04-29 14:04:04 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#show as HTML
+  Parameters: {"driver_id"=>"5", "id"=>"1"}
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:28
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:29
+  Rendering riders/show.html.haml within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 5]]
+  ↳ app/views/riders/show.html.haml:33
+  Rendered riders/show.html.haml within layouts/application (15.3ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 104ms (Views: 44.9ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/rides?booking%5Bdriver_id%5D=5&booking%5Brider_id%5D=1" for 149.43.221.103 at 2019-04-29 14:04:05 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidesController#create as HTML
+  Parameters: {"authenticity_token"=>"H+SFnvt1S8TIiC7wPf4E6nAvFxxByBWBInmy1C6AWQ2492QTuJMOH8EuCBy88zukyw6FrX0sXeakjzGZgh0ArQ==", "booking"=>{"driver_id"=>"5", "rider_id"=>"1"}}
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:3
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rides_controller.rb:8
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:8
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:8
+  [1m[36mRide Create (0.4ms)[0m  [1m[32mINSERT INTO "rides" ("driver_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["driver_id", 5], ["rider_id", 1], ["created_at", "2019-04-29 18:04:05.727184"], ["updated_at", "2019-04-29 18:04:05.727184"]]
+  ↳ app/controllers/rides_controller.rb:8
+  [1m[35m (61.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rides_controller.rb:8
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 62.9ms)
+
+
+  
+NoMethodError (undefined method `avaliable=' for #<Driver:0x00007f7f701e1f58>
+Did you mean?  available=
+               available
+               available?):
+  
+app/controllers/rides_controller.rb:9:in `create'
+Started GET "/riders/1?driver_id=5" for 149.43.221.103 at 2019-04-29 14:04:22 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#show as HTML
+  Parameters: {"driver_id"=>"5", "id"=>"1"}
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:28
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:29
+  Rendering riders/show.html.haml within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 5]]
+  ↳ app/views/riders/show.html.haml:33
+  Rendered riders/show.html.haml within layouts/application (14.8ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 147ms (Views: 44.1ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/rides?booking%5Bdriver_id%5D=5&booking%5Brider_id%5D=1" for 149.43.221.103 at 2019-04-29 14:04:23 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidesController#create as HTML
+  Parameters: {"authenticity_token"=>"LHsHL/VfgpFfnkHq5928LKkQ6Wo/QYR6a20gsZ9QfaiLaOaitrnHSlY4ZwZm0INiEjF72wOlzB3tm6P8M80kCA==", "booking"=>{"driver_id"=>"5", "rider_id"=>"1"}}
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:3
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rides_controller.rb:8
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:8
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:8
+  [1m[36mRide Create (0.3ms)[0m  [1m[32mINSERT INTO "rides" ("driver_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["driver_id", 5], ["rider_id", 1], ["created_at", "2019-04-29 18:04:23.974063"], ["updated_at", "2019-04-29 18:04:23.974063"]]
+  ↳ app/controllers/rides_controller.rb:8
+  [1m[35m (80.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rides_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rides_controller.rb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:10
+  [1m[36mDriver Update (0.2ms)[0m  [1m[33mUPDATE "drivers" SET "available" = ?, "updated_at" = ? WHERE "drivers"."id" = ?[0m  [["available", 0], ["updated_at", "2019-04-29 18:04:24.078020"], ["id", 5]]
+  ↳ app/controllers/rides_controller.rb:10
+  [1m[35m (68.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rides_controller.rb:10
+Completed 500 Internal Server Error in 461ms (ActiveRecord: 152.2ms)
+
+
+  
+NameError (undefined local variable or method `driver' for #<RidesController:0x00007f7f79b39bd8>
+Did you mean?  @driver
+               @rider):
+  
+app/controllers/rides_controller.rb:11:in `create'
+Started GET "/riders/1?driver_id=1" for 149.43.221.103 at 2019-04-29 14:05:11 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#show as HTML
+  Parameters: {"driver_id"=>"1", "id"=>"1"}
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:28
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:29
+  Rendering riders/show.html.haml within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 1]]
+  ↳ app/views/riders/show.html.haml:33
+  Rendered riders/show.html.haml within layouts/application (14.4ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 98ms (Views: 42.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/riders/1?driver_id=3" for 149.43.221.103 at 2019-04-29 14:05:23 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#show as HTML
+  Parameters: {"driver_id"=>"3", "id"=>"1"}
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:28
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:29
+  Rendering riders/show.html.haml within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 3]]
+  ↳ app/views/riders/show.html.haml:33
+  Rendered riders/show.html.haml within layouts/application (13.1ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/rides?booking%5Bdriver_id%5D=3&booking%5Brider_id%5D=1" for 149.43.221.103 at 2019-04-29 14:05:24 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidesController#create as HTML
+  Parameters: {"authenticity_token"=>"54FGnEwbpezIjvCpYyzNm/HL83s3ZDwHG63LFQnNRjJAkqcRD/3gN8Eo1kXiIfLVSuphyguAdGCdW0hYpVAfkg==", "booking"=>{"driver_id"=>"3", "rider_id"=>"1"}}
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:3
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rides_controller.rb:8
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:8
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:8
+  [1m[36mRide Create (0.5ms)[0m  [1m[32mINSERT INTO "rides" ("driver_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["driver_id", 3], ["rider_id", 1], ["created_at", "2019-04-29 18:05:24.619098"], ["updated_at", "2019-04-29 18:05:24.619098"]]
+  ↳ app/controllers/rides_controller.rb:8
+  [1m[35m (59.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rides_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rides_controller.rb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:10
+  [1m[36mDriver Update (0.2ms)[0m  [1m[33mUPDATE "drivers" SET "available" = ?, "updated_at" = ? WHERE "drivers"."id" = ?[0m  [["available", 0], ["updated_at", "2019-04-29 18:05:24.702838"], ["id", 3]]
+  ↳ app/controllers/rides_controller.rb:10
+  [1m[35m (67.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rides_controller.rb:10
+Redirected to http://clab.cs.colgate.edu:3000/riders/1?driver_id=3
+Completed 302 Found in 201ms (ActiveRecord: 129.8ms)
+
+
+Started GET "/riders/1?driver_id=3" for 149.43.221.103 at 2019-04-29 14:05:24 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#show as HTML
+  Parameters: {"driver_id"=>"3", "id"=>"1"}
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:28
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:29
+  Rendering riders/show.html.haml within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 3]]
+  ↳ app/views/riders/show.html.haml:33
+  Rendered riders/show.html.haml within layouts/application (13.0ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 44ms (Views: 41.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/riders" for 149.43.221.103 at 2019-04-29 14:05:32 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+Redirected to http://clab.cs.colgate.edu:3000/riders?price_filter=&seats_filter=
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for 149.43.221.103 at 2019-04-29 14:05:32 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+  Rendering riders/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE (available = 1)[0m
+  ↳ app/views/riders/index.html.haml:29
+  Rendered riders/index.html.haml within layouts/application (11.0ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 44ms (Views: 39.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/riders" for 149.43.221.103 at 2019-04-29 14:06:08 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+Redirected to http://clab.cs.colgate.edu:3000/riders?price_filter=&seats_filter=
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for 149.43.221.103 at 2019-04-29 14:06:08 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+  Rendering riders/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE (available = 1)[0m
+  ↳ app/views/riders/index.html.haml:29
+  Rendered riders/index.html.haml within layouts/application (10.8ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 43ms (Views: 38.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 149.43.221.103 at 2019-04-29 14:06:16 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:9
+  Rendered pages/home.html.haml within layouts/application (6.5ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 59ms (Views: 58.4ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for 149.43.221.103 at 2019-04-29 14:06:18 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"M3F7yyCng3J8YMDp4YA7Dr2ADT2u10Mcb92IbWmfXduUYppGY0HGqXXG5gVgjQRABqGfjJIzC3vpKwsgxQIEew=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/lmcgovern/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/lmcgovern/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/lmcgovern/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://clab.cs.colgate.edu:3000/
+Completed 302 Found in 49ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 149.43.221.103 at 2019-04-29 14:06:19 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  Rendered pages/home.html.haml within layouts/application (4.7ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 33ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 149.43.221.103 at 2019-04-29 14:06:20 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 149.43.221.103 at 2019-04-29 14:06:47 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6S/5bQBsvxtHkCvzNgG42ekK4rC/+MMga3FCB9Kf/8Qa4JMKeRDP5eCCIHfp1ZT41kqTv/HjmzMMZGshRdtOQQ==", "user"=>{"email"=>"ryan@colgatejitney.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ryan@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ /home/lmcgovern/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://clab.cs.colgate.edu:3000/
+Completed 302 Found in 278ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 149.43.221.103 at 2019-04-29 14:06:47 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:9
+  Rendered pages/home.html.haml within layouts/application (5.9ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/drivers/3" for 149.43.221.103 at 2019-04-29 14:06:49 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."id" IN (?, ?, ?)[0m  [["id", 0], ["id", 3], ["id", 0]]
+  ↳ app/controllers/drivers_controller.rb:20
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ? LIMIT ?[0m  [["driver_id", 3], ["LIMIT", 11]]
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Review Load (0.0ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ? LIMIT ?[0m  [["driver_id", 3], ["LIMIT", 11]]
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+Completed 500 Internal Server Error in 278ms (ActiveRecord: 0.8ms)
+
+
+  
+  [1m[36mCACHE Review Load (0.0ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ? LIMIT ?[0m  [["driver_id", 3], ["LIMIT", 11]]
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+NameError (undefined local variable or method `param' for #<DriversController:0x00007f7f70218fa8>
+Did you mean?  params
+               params=):
+  
+app/controllers/drivers_controller.rb:27:in `show'
+Started GET "/drivers/3" for 149.43.221.103 at 2019-04-29 14:10:17 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."id" IN (?, ?, ?)[0m  [["id", 0], ["id", 3], ["id", 0]]
+  ↳ app/controllers/drivers_controller.rb:20
+  Rendering drivers/show.html.haml within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 3]]
+  ↳ app/views/drivers/show.html.haml:24
+  Rendered drivers/show.html.haml within layouts/application (19.1ms)
+  Rendered layouts/_alerts.html.erb (0.6ms)
+Completed 200 OK in 184ms (Views: 68.6ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/drivers/3" for 149.43.221.103 at 2019-04-29 14:10:24 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."id" IN (?, ?, ?)[0m  [["id", 0], ["id", 3], ["id", 0]]
+  ↳ app/controllers/drivers_controller.rb:20
+  Rendering drivers/show.html.haml within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 3]]
+  ↳ app/views/drivers/show.html.haml:24
+  Rendered drivers/show.html.haml within layouts/application (59.1ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 97ms (Views: 88.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/drivers/3" for 149.43.221.103 at 2019-04-29 14:11:37 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."id" IN (?, ?, ?)[0m  [["id", 0], ["id", 3], ["id", 0]]
+  ↳ app/controllers/drivers_controller.rb:20
+  Rendering drivers/show.html.haml within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 3]]
+  ↳ app/views/drivers/show.html.haml:24
+  Rendered drivers/show.html.haml within layouts/application (11.7ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 46ms (Views: 39.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/drivers/3" for 149.43.221.103 at 2019-04-29 14:11:39 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."id" IN (?, ?, ?)[0m  [["id", 0], ["id", 3], ["id", 0]]
+  ↳ app/controllers/drivers_controller.rb:20
+  Rendering drivers/show.html.haml within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 3]]
+  ↳ app/views/drivers/show.html.haml:24
+  Rendered drivers/show.html.haml within layouts/application (11.6ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 46ms (Views: 39.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/drivers/3" for 149.43.221.103 at 2019-04-29 14:12:18 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (1.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."id" IN (?, ?, ?)[0m  [["id", 0], ["id", 3], ["id", 0]]
+  ↳ app/controllers/drivers_controller.rb:20
+  Rendering drivers/show.html.haml within layouts/application
+  [1m[36mReview Load (1.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 3]]
+  ↳ app/views/drivers/show.html.haml:24
+  Rendered drivers/show.html.haml within layouts/application (196.5ms)
+  Rendered layouts/_alerts.html.erb (1.4ms)
+Completed 200 OK in 9236ms (Views: 463.6ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/drivers/3" for 149.43.221.103 at 2019-04-29 14:12:33 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (10.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (2.3ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."id" IN (?, ?, ?)[0m  [["id", 0], ["id", 3], ["id", 0]]
+  ↳ (byebug):1
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT  "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0) LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/drivers_controller.rb:20
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT  "rides".* FROM "rides" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/drivers_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:4
+  [1m[35m (80.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (74.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateDrivers (20190401165720)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "drivers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first" varchar, "last" varchar, "make" varchar, "model" varchar, "plate" varchar, "seats" integer, "available" boolean, "user_id" integer, "price" decimal(10,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190401165720_create_drivers.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_drivers_on_user_id" ON "drivers" ("user_id")[0m
+  ↳ db/migrate/20190401165720_create_drivers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190401165720"]]
+  ↳ bin/rails:4
+  [1m[35m (89.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+Migrating to CreateRiders (20190401170223)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "riders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first" varchar, "last" varchar, "start" text, "destination" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190401170223_create_riders.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_riders_on_user_id" ON "riders" ("user_id")[0m
+  ↳ db/migrate/20190401170223_create_riders.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190401170223"]]
+  ↳ bin/rails:4
+  [1m[35m (87.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+Migrating to CreateReviews (20190401170316)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "stars" integer, "description" text, "driver_id" integer, "rider_id" integer, "ride_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190401170316_create_reviews.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_driver_id" ON "reviews" ("driver_id")[0m
+  ↳ db/migrate/20190401170316_create_reviews.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_rider_id" ON "reviews" ("rider_id")[0m
+  ↳ db/migrate/20190401170316_create_reviews.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_ride_id" ON "reviews" ("ride_id")[0m
+  ↳ db/migrate/20190401170316_create_reviews.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190401170316"]]
+  ↳ bin/rails:4
+  [1m[35m (91.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+Migrating to DeviseCreateUsers (20190401173251)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190401173251_devise_create_users.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20190401173251_devise_create_users.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20190401173251_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190401173251"]]
+  ↳ bin/rails:4
+  [1m[35m (93.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+Migrating to CreateRides (20190428183931)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "rides" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "start" varchar, "destination" varchar, "done" boolean, "driver_id" integer, "rider_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_efe84989e9"
+FOREIGN KEY ("driver_id")
+  REFERENCES "drivers" ("id")
+, CONSTRAINT "fk_rails_49bf3e6bec"
+FOREIGN KEY ("rider_id")
+  REFERENCES "riders" ("id")
+)[0m
+  ↳ db/migrate/20190428183931_create_rides.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_rides_on_driver_id" ON "rides" ("driver_id")[0m
+  ↳ db/migrate/20190428183931_create_rides.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_rides_on_rider_id" ON "rides" ("rider_id")[0m
+  ↳ db/migrate/20190428183931_create_rides.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190428183931"]]
+  ↳ bin/rails:4
+  [1m[35m (85.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-29 18:14:46.640501"], ["updated_at", "2019-04-29 18:14:46.640501"]]
+  ↳ bin/rails:4
+  [1m[35m (53.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mUser Destroy (75.6ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDriver Destroy (0.1ms)[0m  [1m[31mDELETE FROM "drivers"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRider Destroy (0.1ms)[0m  [1m[31mDELETE FROM "riders"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mReview Destroy (64.5ms)[0m  [1m[31mDELETE FROM "reviews"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "liam@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "liam@colgatejitney.com"], ["encrypted_password", "$2a$11$2od.dNFOKLK.QyKsi672uei3aikFyGikjQZa7i5yNuaw0bpf4wJly"], ["created_at", "2019-04-29 18:14:52.126616"], ["updated_at", "2019-04-29 18:14:52.126616"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (69.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jack@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "jack@colgatejitney.com"], ["encrypted_password", "$2a$11$yR6tzxAqY7EQzq3EXNsYbeebCYIWFvDaDTF6LLqT2X9l7FAtu5Z9a"], ["created_at", "2019-04-29 18:14:52.448402"], ["updated_at", "2019-04-29 18:14:52.448402"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (81.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ryan@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "ryan@colgatejitney.com"], ["encrypted_password", "$2a$11$av3DzpHOSzJ5LZDlvcHJAOJlgLIPFadoVhO789PFHDTjMbOmgF3aO"], ["created_at", "2019-04-29 18:14:52.805367"], ["updated_at", "2019-04-29 18:14:52.805367"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (74.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "peyton@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "peyton@colgatejitney.com"], ["encrypted_password", "$2a$11$ARVl/qmTNY7RWT5cLmny4uLBV6zldyoAzrsMhAQQzxVty6eCdt.xW"], ["created_at", "2019-04-29 18:14:53.155064"], ["updated_at", "2019-04-29 18:14:53.155064"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (82.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harrison@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "harrison@colgatejitney.com"], ["encrypted_password", "$2a$11$giPnug64h2wDbtsks3avreH3Z0gWCEVs3gs9uMNahAAAIh437BXpq"], ["created_at", "2019-04-29 18:14:53.513622"], ["updated_at", "2019-04-29 18:14:53.513622"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (74.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "steve@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "steve@colgatejitney.com"], ["encrypted_password", "$2a$11$3EDkMPWyUuYbfEBufDJsseKcbBcZY4r1XBDmAjFOGpwOX.a1.WIRu"], ["created_at", "2019-04-29 18:14:53.863445"], ["updated_at", "2019-04-29 18:14:53.863445"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (74.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mDriver Create (0.3ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Liam"], ["last", "McGovern"], ["make", "Ford"], ["model", "Explorer"], ["plate", "ESK543"], ["seats", 8], ["available", 1], ["user_id", 1], ["price", 100.0], ["created_at", "2019-04-29 18:14:53.982506"], ["updated_at", "2019-04-29 18:14:53.982506"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (54.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mDriver Create (0.3ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Jack"], ["last", "Kerning"], ["make", "Jeep"], ["model", "Wrangler"], ["plate", "JDK456"], ["seats", 4], ["available", 1], ["user_id", 2], ["price", 69.0], ["created_at", "2019-04-29 18:14:54.041331"], ["updated_at", "2019-04-29 18:14:54.041331"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (45.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mDriver Create (0.3ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Ryan"], ["last", "Wetsman"], ["make", "Kia"], ["model", "Sorento"], ["plate", "OPA808"], ["seats", 6], ["available", 1], ["user_id", 3], ["price", 33.33], ["created_at", "2019-04-29 18:14:54.091145"], ["updated_at", "2019-04-29 18:14:54.091145"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (46.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mDriver Create (0.3ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Peyton"], ["last", "Baker"], ["make", "Honda"], ["model", "Prius"], ["plate", "GOGREEN"], ["seats", 4], ["available", 0], ["user_id", 4], ["price", 0.01], ["created_at", "2019-04-29 18:14:54.141255"], ["updated_at", "2019-04-29 18:14:54.141255"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (45.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mDriver Create (0.3ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Harrison"], ["last", "Chen"], ["make", "Toyota"], ["model", "Tundra"], ["plate", "Z00M3R"], ["seats", 3], ["available", 1], ["user_id", 5], ["price", 420.0], ["created_at", "2019-04-29 18:14:54.191143"], ["updated_at", "2019-04-29 18:14:54.191143"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (46.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mDriver Create (0.3ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Steve"], ["last", "Stevenson"], ["make", "Tesla"], ["model", "X"], ["plate", "B0RN2R1D3"], ["seats", 7], ["available", 1], ["user_id", 6], ["price", 80085.0], ["created_at", "2019-04-29 18:14:54.241068"], ["updated_at", "2019-04-29 18:14:54.241068"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (46.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mRider Create (0.3ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Liam"], ["last", "McGovern"], ["destination", "110 Broad Street"], ["user_id", 1], ["created_at", "2019-04-29 18:14:54.314399"], ["updated_at", "2019-04-29 18:14:54.314399"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (46.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mRider Create (0.3ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Jack"], ["last", "Kerning"], ["destination", "6 Pine Street"], ["user_id", 2], ["created_at", "2019-04-29 18:14:54.369968"], ["updated_at", "2019-04-29 18:14:54.369968"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (40.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mRider Create (0.3ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Ryan"], ["last", "Wetsman"], ["destination", "Library Cafe"], ["user_id", 3], ["created_at", "2019-04-29 18:14:54.417784"], ["updated_at", "2019-04-29 18:14:54.417784"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (43.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mRider Create (1.5ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Peyton"], ["last", "Baker"], ["destination", "The Jug"], ["user_id", 4], ["created_at", "2019-04-29 18:14:54.468153"], ["updated_at", "2019-04-29 18:14:54.468153"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (43.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mRider Create (0.3ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Harrison"], ["last", "Chen"], ["destination", "Wynn Hall"], ["user_id", 5], ["created_at", "2019-04-29 18:14:54.518101"], ["updated_at", "2019-04-29 18:14:54.518101"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (43.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:33
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:33
+  [1m[36mRider Create (0.3ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Steve"], ["last", "Stevenson"], ["destination", "The Pound"], ["user_id", 6], ["created_at", "2019-04-29 18:14:54.575744"], ["updated_at", "2019-04-29 18:14:54.575744"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (45.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:33
+Started GET "/drivers/3" for 149.43.221.103 at 2019-04-29 14:15:03 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/lmcgovern/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 1.3ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/drivers_controller.rb:8:in `show'
+Started GET "/d" for 149.43.221.103 at 2019-04-29 14:15:08 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/d"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 149.43.221.103 at 2019-04-29 14:15:10 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:9
+  Rendered pages/home.html.haml within layouts/application (9.3ms)
+  Rendered layouts/_alerts.html.erb (0.6ms)
+Completed 200 OK in 249ms (Views: 248.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for 149.43.221.103 at 2019-04-29 14:15:17 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 149.43.221.103 at 2019-04-29 14:15:22 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yBvxxbp+J11ifImonIdwdDgEsHySW+IzArwHKbGJyWDFbVSjTg3uveAYQ2xJmIDbBlAG3245BkBs3CSeEDvqRQ==", "user"=>{"email"=>"liam@colgatejitney.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liam@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ /home/lmcgovern/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://clab.cs.colgate.edu:3000/
+Completed 302 Found in 282ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 149.43.221.103 at 2019-04-29 14:15:23 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:9
+  Rendered pages/home.html.haml within layouts/application (6.1ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/riders" for 149.43.221.103 at 2019-04-29 14:15:24 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+Redirected to http://clab.cs.colgate.edu:3000/riders?price_filter=&seats_filter=
+Completed 302 Found in 85ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for 149.43.221.103 at 2019-04-29 14:15:24 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+  Rendering riders/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE (available = 1)[0m
+  ↳ app/views/riders/index.html.haml:29
+  Rendered riders/index.html.haml within layouts/application (35.6ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 77ms (Views: 65.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/riders/1?driver_id=3" for 149.43.221.103 at 2019-04-29 14:15:26 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#show as HTML
+  Parameters: {"driver_id"=>"3", "id"=>"1"}
+  [1m[36mRider Load (0.3ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:28
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:29
+  Rendering riders/show.html.haml within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 3]]
+  ↳ app/views/riders/show.html.haml:33
+  Rendered riders/show.html.haml within layouts/application (14.4ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 50ms (Views: 41.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/rides?booking%5Bdriver_id%5D=3&booking%5Brider_id%5D=1" for 149.43.221.103 at 2019-04-29 14:15:29 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidesController#create as HTML
+  Parameters: {"authenticity_token"=>"izWTTdJELLIF4QH/tyMRx9fI95yRHiB5TQgwpNQuNHJzOmeCXNRolnViCms5jnKaqOn2p34gpeSgJdaTcJwN6A==", "booking"=>{"driver_id"=>"3", "rider_id"=>"1"}}
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:3
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rides_controller.rb:8
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:8
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:8
+  [1m[36mRide Create (0.4ms)[0m  [1m[32mINSERT INTO "rides" ("driver_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["driver_id", 3], ["rider_id", 1], ["created_at", "2019-04-29 18:15:29.487301"], ["updated_at", "2019-04-29 18:15:29.487301"]]
+  ↳ app/controllers/rides_controller.rb:8
+  [1m[35m (65.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rides_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rides_controller.rb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:10
+  [1m[36mDriver Update (0.2ms)[0m  [1m[33mUPDATE "drivers" SET "available" = ?, "updated_at" = ? WHERE "drivers"."id" = ?[0m  [["available", 0], ["updated_at", "2019-04-29 18:15:29.561261"], ["id", 3]]
+  ↳ app/controllers/rides_controller.rb:10
+  [1m[35m (48.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rides_controller.rb:10
+Redirected to http://clab.cs.colgate.edu:3000/riders/1?driver_id=3
+Completed 302 Found in 154ms (ActiveRecord: 116.5ms)
+
+
+Started GET "/riders/1?driver_id=3" for 149.43.221.103 at 2019-04-29 14:15:29 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#show as HTML
+  Parameters: {"driver_id"=>"3", "id"=>"1"}
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:28
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:29
+  Rendering riders/show.html.haml within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 3]]
+  ↳ app/views/riders/show.html.haml:33
+  Rendered riders/show.html.haml within layouts/application (12.7ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 44ms (Views: 41.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/riders" for 149.43.221.103 at 2019-04-29 14:15:35 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+Redirected to http://clab.cs.colgate.edu:3000/riders?price_filter=&seats_filter=
+Completed 302 Found in 24ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for 149.43.221.103 at 2019-04-29 14:15:35 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+  Rendering riders/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE (available = 1)[0m
+  ↳ app/views/riders/index.html.haml:29
+  Rendered riders/index.html.haml within layouts/application (12.9ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 47ms (Views: 42.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 149.43.221.103 at 2019-04-29 14:15:39 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:9
+  Rendered pages/home.html.haml within layouts/application (6.1ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/drivers/1" for 149.43.221.103 at 2019-04-29 14:15:40 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (1.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."id" IN (?, ?, ?)[0m  [["id", 0], ["id", 1], ["id", 0]]
+  ↳ app/controllers/drivers_controller.rb:20
+  Rendering drivers/show.html.haml within layouts/application
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 1]]
+  ↳ app/views/drivers/show.html.haml:24
+  Rendered drivers/show.html.haml within layouts/application (166.1ms)
+  Rendered layouts/_alerts.html.erb (2.2ms)
+Completed 200 OK in 6847ms (Views: 479.6ms | ActiveRecord: 2.6ms)
+
+
+Started DELETE "/users/sign_out" for 149.43.221.103 at 2019-04-29 14:15:52 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Qezd0GGhixKxw1uHWEYaBQNMx+uwWBhQu8YqEHWTeyi54ykf7zHPNsFAUBPW63lYfG3G0F9mnc1W68wn0SFCsg=="}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/lmcgovern/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/lmcgovern/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/lmcgovern/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://clab.cs.colgate.edu:3000/
+Completed 302 Found in 89ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 149.43.221.103 at 2019-04-29 14:15:53 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  Rendered pages/home.html.haml within layouts/application (102.1ms)
+  Rendered layouts/_alerts.html.erb (2.8ms)
+Completed 200 OK in 515ms (Views: 509.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 149.43.221.103 at 2019-04-29 14:15:55 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (11.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (80.7ms)
+  Rendered layouts/_alerts.html.erb (2.9ms)
+Completed 200 OK in 580ms (Views: 565.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 149.43.221.103 at 2019-04-29 14:16:03 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eTsKjQNHdwI1LsY065O1o9hqvpif0/7LFUQo/ZD9/3p8WfHBKyEqtQgHHpZOuHm+aJOjhxMfIj7G6MnsFA3pYQ==", "user"=>{"email"=>"ryan@colgatejitney.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ryan@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ /home/lmcgovern/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://clab.cs.colgate.edu:3000/
+Completed 302 Found in 387ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 149.43.221.103 at 2019-04-29 14:16:03 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:9
+  Rendered pages/home.html.haml within layouts/application (184.5ms)
+  Rendered layouts/_alerts.html.erb (3.8ms)
+Completed 200 OK in 817ms (Views: 808.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/drivers/3" for 149.43.221.103 at 2019-04-29 14:16:05 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (1.6ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (0.4ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."id" IN (?, ?, ?)[0m  [["id", 0], ["id", 3], ["id", 0]]
+  ↳ (byebug):1
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT  "rides".* FROM "rides" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/drivers_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:4
+  [1m[35m (68.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (66.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateDrivers (20190401165720)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "drivers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first" varchar, "last" varchar, "make" varchar, "model" varchar, "plate" varchar, "seats" integer, "available" boolean, "user_id" integer, "price" decimal(10,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190401165720_create_drivers.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_drivers_on_user_id" ON "drivers" ("user_id")[0m
+  ↳ db/migrate/20190401165720_create_drivers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190401165720"]]
+  ↳ bin/rails:4
+  [1m[35m (74.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+Migrating to CreateRiders (20190401170223)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "riders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first" varchar, "last" varchar, "start" text, "destination" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190401170223_create_riders.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_riders_on_user_id" ON "riders" ("user_id")[0m
+  ↳ db/migrate/20190401170223_create_riders.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190401170223"]]
+  ↳ bin/rails:4
+  [1m[35m (72.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+Migrating to CreateReviews (20190401170316)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "stars" integer, "description" text, "driver_id" integer, "rider_id" integer, "ride_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190401170316_create_reviews.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_driver_id" ON "reviews" ("driver_id")[0m
+  ↳ db/migrate/20190401170316_create_reviews.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_rider_id" ON "reviews" ("rider_id")[0m
+  ↳ db/migrate/20190401170316_create_reviews.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_reviews_on_ride_id" ON "reviews" ("ride_id")[0m
+  ↳ db/migrate/20190401170316_create_reviews.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190401170316"]]
+  ↳ bin/rails:4
+  [1m[35m (78.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+Migrating to DeviseCreateUsers (20190401173251)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190401173251_devise_create_users.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20190401173251_devise_create_users.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20190401173251_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190401173251"]]
+  ↳ bin/rails:4
+  [1m[35m (85.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+Migrating to CreateRides (20190428183931)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "rides" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "start" varchar, "destination" varchar, "done" boolean, "driver_id" integer, "rider_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_efe84989e9"
+FOREIGN KEY ("driver_id")
+  REFERENCES "drivers" ("id")
+, CONSTRAINT "fk_rails_49bf3e6bec"
+FOREIGN KEY ("rider_id")
+  REFERENCES "riders" ("id")
+)[0m
+  ↳ db/migrate/20190428183931_create_rides.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_rides_on_driver_id" ON "rides" ("driver_id")[0m
+  ↳ db/migrate/20190428183931_create_rides.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_rides_on_rider_id" ON "rides" ("rider_id")[0m
+  ↳ db/migrate/20190428183931_create_rides.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190428183931"]]
+  ↳ bin/rails:4
+  [1m[35m (94.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-29 18:18:06.439887"], ["updated_at", "2019-04-29 18:18:06.439887"]]
+  ↳ bin/rails:4
+  [1m[35m (48.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mUser Destroy (66.9ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDriver Destroy (0.1ms)[0m  [1m[31mDELETE FROM "drivers"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRider Destroy (0.1ms)[0m  [1m[31mDELETE FROM "riders"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mReview Destroy (53.6ms)[0m  [1m[31mDELETE FROM "reviews"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "liam@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "liam@colgatejitney.com"], ["encrypted_password", "$2a$11$DjqOtgJJrwMneoS783roK.8swzBGc8wuNvkmkUt65rCiPxORJHJkq"], ["created_at", "2019-04-29 18:18:10.884622"], ["updated_at", "2019-04-29 18:18:10.884622"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (56.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jack@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "jack@colgatejitney.com"], ["encrypted_password", "$2a$11$uBOd1IkEqmMZ4OBILvv/YerD6jIXgqyuRXzTVHsYkT9.trZulwOLa"], ["created_at", "2019-04-29 18:18:11.216948"], ["updated_at", "2019-04-29 18:18:11.216948"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (66.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ryan@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "ryan@colgatejitney.com"], ["encrypted_password", "$2a$11$Eppz.D6DmL7Of0L33C79qOfPHbwlAKG300JYfjwV0/wcVqLwJRMB6"], ["created_at", "2019-04-29 18:18:11.558393"], ["updated_at", "2019-04-29 18:18:11.558393"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (66.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "peyton@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "peyton@colgatejitney.com"], ["encrypted_password", "$2a$11$vYDAl9FsnCHSd8LAJSgwb.uauKG6W3HiuaxqF174SWamzJKy05Aae"], ["created_at", "2019-04-29 18:18:11.900233"], ["updated_at", "2019-04-29 18:18:11.900233"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (66.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "harrison@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "harrison@colgatejitney.com"], ["encrypted_password", "$2a$11$BSgvEAo0ymgz3Kd98F9vX.K1AsqkoswPqICybgRoDtrbP8hyrdZFe"], ["created_at", "2019-04-29 18:18:12.242179"], ["updated_at", "2019-04-29 18:18:12.242179"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (66.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "steve@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "steve@colgatejitney.com"], ["encrypted_password", "$2a$11$2APsSeggTZxLOxG3ktiUPuKpbBAXgIPCY0p8putoPo5MWzZUfgfg6"], ["created_at", "2019-04-29 18:18:12.583521"], ["updated_at", "2019-04-29 18:18:12.583521"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (66.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mDriver Create (0.3ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Liam"], ["last", "McGovern"], ["make", "Ford"], ["model", "Explorer"], ["plate", "ESK543"], ["seats", 8], ["available", 1], ["user_id", 1], ["price", 100.0], ["created_at", "2019-04-29 18:18:12.694786"], ["updated_at", "2019-04-29 18:18:12.694786"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (51.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mDriver Create (0.3ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Jack"], ["last", "Kerning"], ["make", "Jeep"], ["model", "Wrangler"], ["plate", "JDK456"], ["seats", 4], ["available", 1], ["user_id", 2], ["price", 69.0], ["created_at", "2019-04-29 18:18:12.750786"], ["updated_at", "2019-04-29 18:18:12.750786"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (54.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mDriver Create (0.3ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Ryan"], ["last", "Wetsman"], ["make", "Kia"], ["model", "Sorento"], ["plate", "OPA808"], ["seats", 6], ["available", 1], ["user_id", 3], ["price", 33.33], ["created_at", "2019-04-29 18:18:12.808886"], ["updated_at", "2019-04-29 18:18:12.808886"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (54.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mDriver Create (0.3ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Peyton"], ["last", "Baker"], ["make", "Honda"], ["model", "Prius"], ["plate", "GOGREEN"], ["seats", 4], ["available", 0], ["user_id", 4], ["price", 0.01], ["created_at", "2019-04-29 18:18:12.867379"], ["updated_at", "2019-04-29 18:18:12.867379"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (54.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mDriver Create (0.3ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Harrison"], ["last", "Chen"], ["make", "Toyota"], ["model", "Tundra"], ["plate", "Z00M3R"], ["seats", 3], ["available", 1], ["user_id", 5], ["price", 420.0], ["created_at", "2019-04-29 18:18:12.925497"], ["updated_at", "2019-04-29 18:18:12.925497"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (46.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mDriver Create (0.3ms)[0m  [1m[32mINSERT INTO "drivers" ("first", "last", "make", "model", "plate", "seats", "available", "user_id", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Steve"], ["last", "Stevenson"], ["make", "Tesla"], ["model", "X"], ["plate", "B0RN2R1D3"], ["seats", 7], ["available", 1], ["user_id", 6], ["price", 80085.0], ["created_at", "2019-04-29 18:18:12.975788"], ["updated_at", "2019-04-29 18:18:12.975788"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (46.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mRider Create (0.3ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Liam"], ["last", "McGovern"], ["destination", "110 Broad Street"], ["user_id", 1], ["created_at", "2019-04-29 18:18:13.047435"], ["updated_at", "2019-04-29 18:18:13.047435"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (48.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mRider Create (0.3ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Jack"], ["last", "Kerning"], ["destination", "6 Pine Street"], ["user_id", 2], ["created_at", "2019-04-29 18:18:13.103933"], ["updated_at", "2019-04-29 18:18:13.103933"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (43.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mRider Create (0.3ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Ryan"], ["last", "Wetsman"], ["destination", "Library Cafe"], ["user_id", 3], ["created_at", "2019-04-29 18:18:13.154040"], ["updated_at", "2019-04-29 18:18:13.154040"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (41.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mRider Create (0.3ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Peyton"], ["last", "Baker"], ["destination", "The Jug"], ["user_id", 4], ["created_at", "2019-04-29 18:18:13.204264"], ["updated_at", "2019-04-29 18:18:13.204264"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (42.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mRider Create (0.3ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Harrison"], ["last", "Chen"], ["destination", "Wynn Hall"], ["user_id", 5], ["created_at", "2019-04-29 18:18:13.252307"], ["updated_at", "2019-04-29 18:18:13.252307"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (43.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:33
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:33
+  [1m[36mRider Create (0.3ms)[0m  [1m[32mINSERT INTO "riders" ("first", "last", "destination", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first", "Steve"], ["last", "Stevenson"], ["destination", "The Pound"], ["user_id", 6], ["created_at", "2019-04-29 18:18:13.302282"], ["updated_at", "2019-04-29 18:18:13.302282"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (43.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:33
+Started GET "/" for 149.43.221.103 at 2019-04-29 14:18:31 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/lmcgovern/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:9
+  Rendered pages/home.html.haml within layouts/application (91.0ms)
+  Rendered layouts/_alerts.html.erb (0.6ms)
+Completed 200 OK in 336ms (Views: 333.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/sign_in" for 149.43.221.103 at 2019-04-29 14:18:33 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 43ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 149.43.221.103 at 2019-04-29 14:18:40 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U/X2Be9k38G9/MtYJQ8Cqr9kOpo6+EQOGxegNxbpUIIfH8YKuKMGm0334MuRxJH/QzrmCDGx0QMI2J1c3dQJtg==", "user"=>{"email"=>"liam@colgatejitney.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "liam@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ /home/lmcgovern/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://clab.cs.colgate.edu:3000/
+Completed 302 Found in 283ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 149.43.221.103 at 2019-04-29 14:18:40 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:9
+  Rendered pages/home.html.haml within layouts/application (6.4ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 36ms (Views: 35.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/riders" for 149.43.221.103 at 2019-04-29 14:18:42 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+Redirected to http://clab.cs.colgate.edu:3000/riders?price_filter=&seats_filter=
+Completed 302 Found in 34ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for 149.43.221.103 at 2019-04-29 14:18:42 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+  Rendering riders/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE (available = 1)[0m
+  ↳ app/views/riders/index.html.haml:29
+  Rendered riders/index.html.haml within layouts/application (35.0ms)
+  Rendered layouts/_alerts.html.erb (0.6ms)
+Completed 200 OK in 129ms (Views: 118.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/riders/1?driver_id=3" for 149.43.221.103 at 2019-04-29 14:18:44 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#show as HTML
+  Parameters: {"driver_id"=>"3", "id"=>"1"}
+  [1m[36mRider Load (0.3ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:28
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:29
+  Rendering riders/show.html.haml within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 3]]
+  ↳ app/views/riders/show.html.haml:33
+  Rendered riders/show.html.haml within layouts/application (15.3ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 54ms (Views: 44.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/rides?booking%5Bdriver_id%5D=3&booking%5Brider_id%5D=1" for 149.43.221.103 at 2019-04-29 14:18:45 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidesController#create as HTML
+  Parameters: {"authenticity_token"=>"DVgJ6TjWbg7fA1BF6EU7e5+QgCTx7KxtE3Vg0Yk2ZH9NT6wxSZEdfvxoFo6tAtO9OEIgGXjLld6k3L9zhSj7Gw==", "booking"=>{"driver_id"=>"3", "rider_id"=>"1"}}
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:3
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rides_controller.rb:9
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:9
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:9
+  [1m[36mRide Create (0.4ms)[0m  [1m[32mINSERT INTO "rides" ("done", "driver_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["done", 0], ["driver_id", 3], ["rider_id", 1], ["created_at", "2019-04-29 18:18:45.266864"], ["updated_at", "2019-04-29 18:18:45.266864"]]
+  ↳ app/controllers/rides_controller.rb:9
+  [1m[35m (73.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rides_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rides_controller.rb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:11
+  [1m[36mDriver Update (0.2ms)[0m  [1m[33mUPDATE "drivers" SET "available" = ?, "updated_at" = ? WHERE "drivers"."id" = ?[0m  [["available", 0], ["updated_at", "2019-04-29 18:18:45.348195"], ["id", 3]]
+  ↳ app/controllers/rides_controller.rb:11
+  [1m[35m (47.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rides_controller.rb:11
+Redirected to http://clab.cs.colgate.edu:3000/riders/1?driver_id=3
+Completed 302 Found in 160ms (ActiveRecord: 123.1ms)
+
+
+Started GET "/riders/1?driver_id=3" for 149.43.221.103 at 2019-04-29 14:18:45 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#show as HTML
+  Parameters: {"driver_id"=>"3", "id"=>"1"}
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:28
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:29
+  Rendering riders/show.html.haml within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 3]]
+  ↳ app/views/riders/show.html.haml:33
+  Rendered riders/show.html.haml within layouts/application (12.7ms)
+  Rendered layouts/_alerts.html.erb (1.0ms)
+Completed 200 OK in 70ms (Views: 67.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/riders" for 149.43.221.103 at 2019-04-29 14:18:47 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+Redirected to http://clab.cs.colgate.edu:3000/riders?price_filter=&seats_filter=
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for 149.43.221.103 at 2019-04-29 14:18:47 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+  Rendering riders/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE (available = 1)[0m
+  ↳ app/views/riders/index.html.haml:29
+  Rendered riders/index.html.haml within layouts/application (16.5ms)
+  Rendered layouts/_alerts.html.erb (0.6ms)
+Completed 200 OK in 68ms (Views: 62.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 149.43.221.103 at 2019-04-29 14:18:48 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:9
+  Rendered pages/home.html.haml within layouts/application (7.6ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 56ms (Views: 55.0ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for 149.43.221.103 at 2019-04-29 14:18:49 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hvg2Ay1/JFdeGMZe4E2eV6THJUB5xPdIDqE5UyuBhTTG75PbXDhXJ31zgJWlCnaRAxWFffDjzvu5CObxJ58aUA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/lmcgovern/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/lmcgovern/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/lmcgovern/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://clab.cs.colgate.edu:3000/
+Completed 302 Found in 82ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 149.43.221.103 at 2019-04-29 14:18:49 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  Rendered pages/home.html.haml within layouts/application (4.8ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 36ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 149.43.221.103 at 2019-04-29 14:18:50 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 149.43.221.103 at 2019-04-29 14:18:56 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/oxLBXIzJfWllnZYMyvkeHRbJQ2UlKuAQHXDeSGL8SWcEnDpAMdu5xm0TpwnAG8w/HzTL8+3BnXuDurqmsqfCg==", "user"=>{"email"=>"ryan@colgatejitney.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ryan@colgatejitney.com"], ["LIMIT", 1]]
+  ↳ /home/lmcgovern/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://clab.cs.colgate.edu:3000/
+Completed 302 Found in 277ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 149.43.221.103 at 2019-04-29 14:18:56 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:9
+  Rendered pages/home.html.haml within layouts/application (5.8ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/drivers/3" for 149.43.221.103 at 2019-04-29 14:18:57 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT  "rides".* FROM "rides" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/drivers_controller.rb:20
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."id" IN (?, ?, ?)[0m  [["id", 0], ["id", 3], ["id", 0]]
+  ↳ (byebug):1
+  [1m[36mCACHE Ride Load (0.3ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE "rides"."id" IN (?, ?, ?)[0m  [["id", 0], ["id", 3], ["id", 0]]
+  ↳ app/controllers/drivers_controller.rb:20
+  Rendering drivers/show.html.haml within layouts/application
+  [1m[36mReview Load (1.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 3]]
+  ↳ app/views/drivers/show.html.haml:24
+  Rendered drivers/show.html.haml within layouts/application (290.5ms)
+  Rendered layouts/_alerts.html.erb (3.3ms)
+Completed 200 OK in 239322ms (Views: 853.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/drivers/3" for 149.43.221.103 at 2019-04-29 14:23:02 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (7.3ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+Completed 500 Internal Server Error in 6206ms (ActiveRecord: 20.8ms)
+
+
+  
+NoMethodError (undefined method `rider' for #<Class:0x00007f0de9864590>
+Did you mean?  order):
+  
+app/controllers/drivers_controller.rb:22:in `show'
+Started GET "/drivers/3" for 149.43.221.103 at 2019-04-29 14:23:33 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT  "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0) LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 5818ms (ActiveRecord: 2.7ms)
+
+
+  
+  [1m[36mCACHE Ride Load (0.0ms)[0m  [1m[34mSELECT  "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0) LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+NoMethodError (undefined method `rider' for #<Ride::ActiveRecord_Relation:0x00007f0de4236808>
+Did you mean?  order
+               rindex):
+  
+app/controllers/drivers_controller.rb:22:in `show'
+Started GET "/drivers/3" for 149.43.221.103 at 2019-04-29 14:24:27 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT  "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0) LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Ride Load (0.0ms)[0m  [1m[34mSELECT  "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0) LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Ride Load (0.0ms)[0m  [1m[34mSELECT  "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0) LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/drivers_controller.rb:21
+  [1m[36mCACHE Ride Load (0.0ms)[0m  [1m[34mSELECT  "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0) LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ? LIMIT ?[0m  [["driver_id", 3], ["LIMIT", 11]]
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Ride Load (0.0ms)[0m  [1m[34mSELECT  "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0) LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Review Load (0.0ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ? LIMIT ?[0m  [["driver_id", 3], ["LIMIT", 11]]
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Ride Load (0.0ms)[0m  [1m[34mSELECT  "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0) LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/lmcgovern/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0)[0m
+  ↳ (byebug):1
+Completed 500 Internal Server Error in 215626ms (ActiveRecord: 5.3ms)
+
+
+  
+NoMethodError (undefined method `rider' for #<Ride::ActiveRecord_Relation:0x00007f0dec271568>
+Did you mean?  order
+               rindex):
+  
+app/controllers/drivers_controller.rb:22:in `show'
+Started GET "/drivers/3" for 149.43.221.103 at 2019-04-29 14:28:06 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0)[0m
+  ↳ app/controllers/drivers_controller.rb:19
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 3.7ms)
+
+
+  
+NoMethodError (undefined method `rider' for #<Ride:0x00007f0dec1c35f8>
+Did you mean?  riders
+               riders=):
+  
+app/controllers/drivers_controller.rb:21:in `show'
+Started GET "/drivers/3" for 149.43.221.103 at 2019-04-29 14:28:14 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0)[0m
+  ↳ app/controllers/drivers_controller.rb:19
+  Rendering drivers/show.html.haml within layouts/application
+  Rendered drivers/show.html.haml within layouts/application (13.3ms)
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 3.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `first' for nil:NilClass):
+    3:         %h2.header.title= "#{@driver.first} #{@driver.last}"
+    4:     .row
+    5:         -if @has_ride
+    6:             .col-md-offset= "You have been booked by #{@rider.first} #{@rider.last}!"
+    7:             =link_to "Ride with #{@rider.first} #{@rider.last} completed!", ride_path(@active_ride), :method => :patch, :class => :button
+    8:         %span.line
+    9:     .row
+  
+app/views/drivers/show.html.haml:6:in `_app_views_drivers_show_html_haml___1893795032055355645_69848885858820'
+Started GET "/drivers/3" for 149.43.221.103 at 2019-04-29 14:28:32 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (1.4ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0)[0m
+  ↳ app/controllers/drivers_controller.rb:20
+  Rendering drivers/show.html.haml within layouts/application
+  Rendered drivers/show.html.haml within layouts/application (188.9ms)
+Completed 500 Internal Server Error in 5363ms (ActiveRecord: 10.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `first' for nil:NilClass):
+    3:         %h2.header.title= "#{@driver.first} #{@driver.last}"
+    4:     .row
+    5:         -if @has_ride
+    6:             .col-md-offset= "You have been booked by #{@rider.first} #{@rider.last}!"
+    7:             =link_to "Ride with #{@rider.first} #{@rider.last} completed!", ride_path(@active_ride), :method => :patch, :class => :button
+    8:         %span.line
+    9:     .row
+  
+app/views/drivers/show.html.haml:6:in `_app_views_drivers_show_html_haml___1893795032055355645_69848855874500'
+Started GET "/" for 149.43.221.103 at 2019-04-29 14:29:30 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/lmcgovern/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:9
+  Rendered pages/home.html.haml within layouts/application (54.7ms)
+  Rendered layouts/_alerts.html.erb (0.6ms)
+Completed 200 OK in 432ms (Views: 429.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/drivers/3" for 149.43.221.103 at 2019-04-29 14:29:33 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (0.4ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0)[0m
+  ↳ app/controllers/drivers_controller.rb:21
+  Rendering drivers/show.html.haml within layouts/application
+  Rendered drivers/show.html.haml within layouts/application (13.8ms)
+Completed 500 Internal Server Error in 5127ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `first' for nil:NilClass):
+    3:         %h2.header.title= "#{@driver.first} #{@driver.last}"
+    4:     .row
+    5:         -if @has_ride
+    6:             .col-md-offset= "You have been booked by #{@rider.first} #{@rider.last}!"
+    7:             =link_to "Ride with #{@rider.first} #{@rider.last} completed!", ride_path(@active_ride), :method => :patch, :class => :button
+    8:         %span.line
+    9:     .row
+  
+app/views/drivers/show.html.haml:6:in `_app_views_drivers_show_html_haml___3503611823300871998_70038740505820'
+Started GET "/drivers/3" for 149.43.221.103 at 2019-04-29 14:29:52 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (1.1ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0)[0m
+  ↳ app/controllers/drivers_controller.rb:21
+  Rendering drivers/show.html.haml within layouts/application
+  Rendered drivers/show.html.haml within layouts/application (242.7ms)
+Completed 500 Internal Server Error in 6938ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `first' for nil:NilClass):
+    3:         %h2.header.title= "#{@driver.first} #{@driver.last}"
+    4:     .row
+    5:         -if @has_ride
+    6:             .col-md-offset= "You have been booked by #{@rider.first} #{@rider.last}!"
+    7:             =link_to "Ride with #{@rider.first} #{@rider.last} completed!", ride_path(@active_ride), :method => :patch, :class => :button
+    8:         %span.line
+    9:     .row
+  
+app/views/drivers/show.html.haml:6:in `_app_views_drivers_show_html_haml___3503611823300871998_70038806783860'
+Started GET "/drivers/3" for 149.43.221.103 at 2019-04-29 14:30:12 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT  "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0) LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/drivers_controller.rb:20
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0)[0m
+  ↳ (byebug):1
+  [1m[36mCACHE Ride Load (0.0ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0)[0m
+  ↳ app/controllers/drivers_controller.rb:21
+  Rendering drivers/show.html.haml within layouts/application
+  Rendered drivers/show.html.haml within layouts/application (21.7ms)
+Completed 500 Internal Server Error in 94050ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `first' for nil:NilClass):
+    3:         %h2.header.title= "#{@driver.first} #{@driver.last}"
+    4:     .row
+    5:         -if @has_ride
+    6:             .col-md-offset= "You have been booked by #{@rider.first} #{@rider.last}!"
+    7:             =link_to "Ride with #{@rider.first} #{@rider.last} completed!", ride_path(@active_ride), :method => :patch, :class => :button
+    8:         %span.line
+    9:     .row
+  
+app/views/drivers/show.html.haml:6:in `_app_views_drivers_show_html_haml___3503611823300871998_70038814491020'
+Started GET "/drivers/3" for 149.43.221.103 at 2019-04-29 14:31:51 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT  "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0) LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/drivers_controller.rb:20
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0)[0m
+  ↳ (byebug):1
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mCACHE Ride Load (0.0ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0)[0m
+  ↳ app/controllers/drivers_controller.rb:21
+Completed 500 Internal Server Error in 51839ms (ActiveRecord: 5.8ms)
+
+
+  
+NoMethodError (undefined method `riders' for #<Ride:0x00007f665459bac0>
+Did you mean?  rider
+               rider=):
+  
+app/controllers/drivers_controller.rb:23:in `show'
+Started GET "/drivers/3" for 149.43.221.103 at 2019-04-29 14:32:57 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0)[0m
+  ↳ app/controllers/drivers_controller.rb:20
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:22
+  Rendering drivers/show.html.haml within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 3]]
+  ↳ app/views/drivers/show.html.haml:24
+  Rendered drivers/show.html.haml within layouts/application (13.6ms)
+  Rendered layouts/_alerts.html.erb (0.6ms)
+Completed 200 OK in 166ms (Views: 66.3ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/drivers/3" for 149.43.221.103 at 2019-04-29 14:33:26 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0)[0m
+  ↳ app/controllers/drivers_controller.rb:20
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:22
+  Rendering drivers/show.html.haml within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 3]]
+  ↳ app/views/drivers/show.html.haml:25
+  Rendered drivers/show.html.haml within layouts/application (12.3ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 48ms (Views: 40.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/drivers/3" for 149.43.221.103 at 2019-04-29 14:33:39 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0)[0m
+  ↳ app/controllers/drivers_controller.rb:20
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:22
+  Rendering drivers/show.html.haml within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 3]]
+  ↳ app/views/drivers/show.html.haml:27
+  Rendered drivers/show.html.haml within layouts/application (12.2ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 47ms (Views: 39.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/drivers/3" for 149.43.221.103 at 2019-04-29 14:33:46 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0)[0m
+  ↳ app/controllers/drivers_controller.rb:20
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:22
+  Rendering drivers/show.html.haml within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 3]]
+  ↳ app/views/drivers/show.html.haml:28
+  Rendered drivers/show.html.haml within layouts/application (12.4ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 48ms (Views: 40.7ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/rides/1" for 149.43.221.103 at 2019-04-29 14:44:54 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidesController#update as HTML
+  Parameters: {"authenticity_token"=>"GZGu0BUgA3MkLGY5xEty2Vb6pUfCHPW0xXJym8328bglePB/lopwe9mMlPn5Gr266xMJ2o0pvAeBREEsN+1cyQ==", "id"=>"1"}
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT  "rides".* FROM "rides" WHERE "rides"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:21
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 1.2ms)
+
+
+  
+NoMethodError (undefined method `driver' for nil:NilClass):
+  
+app/controllers/rides_controller.rb:22:in `update'
+Started PATCH "/rides/1" for 149.43.221.103 at 2019-04-29 14:45:11 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidesController#update as HTML
+  Parameters: {"authenticity_token"=>"GZGu0BUgA3MkLGY5xEty2Vb6pUfCHPW0xXJym8328bglePB/lopwe9mMlPn5Gr266xMJ2o0pvAeBREEsN+1cyQ==", "id"=>"1"}
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT  "rides".* FROM "rides" WHERE "rides"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:21
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:22
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rides_controller.rb:25
+  [1m[36mRide Update (0.3ms)[0m  [1m[33mUPDATE "rides" SET "done" = ?, "updated_at" = ? WHERE "rides"."id" = ?[0m  [["done", 1], ["updated_at", "2019-04-29 18:45:11.942146"], ["id", 1]]
+  ↳ app/controllers/rides_controller.rb:25
+  [1m[35m (97.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rides_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rides_controller.rb:27
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:27
+  [1m[36mDriver Update (0.3ms)[0m  [1m[33mUPDATE "drivers" SET "available" = ?, "updated_at" = ? WHERE "drivers"."id" = ?[0m  [["available", 1], ["updated_at", "2019-04-29 18:45:12.064826"], ["id", 3]]
+  ↳ app/controllers/rides_controller.rb:27
+  [1m[35m (99.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rides_controller.rb:27
+Redirected to http://clab.cs.colgate.edu:3000/drivers/1?driver_id=3
+Completed 302 Found in 324ms (ActiveRecord: 203.5ms)
+
+
+Started GET "/drivers/1?driver_id=3" for 149.43.221.103 at 2019-04-29 14:45:12 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"driver_id"=>"3", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0)[0m
+  ↳ app/controllers/drivers_controller.rb:20
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `rider' for nil:NilClass):
+  
+app/controllers/drivers_controller.rb:22:in `show'
+Started PATCH "/rides/1" for 149.43.221.103 at 2019-04-29 14:47:15 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidesController#update as HTML
+  Parameters: {"authenticity_token"=>"GZGu0BUgA3MkLGY5xEty2Vb6pUfCHPW0xXJym8328bglePB/lopwe9mMlPn5Gr266xMJ2o0pvAeBREEsN+1cyQ==", "id"=>"1"}
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT  "rides".* FROM "rides" WHERE "rides"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:21
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:22
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rides_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rides_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rides_controller.rb:27
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rides_controller.rb:27
+Redirected to http://clab.cs.colgate.edu:3000/drivers/1?driver_id=3
+Completed 302 Found in 101ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/drivers/1?driver_id=3" for 149.43.221.103 at 2019-04-29 14:47:16 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"driver_id"=>"3", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0)[0m
+  ↳ app/controllers/drivers_controller.rb:20
+  Rendering drivers/show.html.haml within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 3]]
+  ↳ app/views/drivers/show.html.haml:28
+  Rendered drivers/show.html.haml within layouts/application (13.9ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 53ms (Views: 42.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 149.43.221.103 at 2019-04-29 14:47:21 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:9
+  Rendered pages/home.html.haml within layouts/application (6.5ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/riders" for 149.43.221.103 at 2019-04-29 14:47:22 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.3ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+Redirected to http://clab.cs.colgate.edu:3000/riders?price_filter=&seats_filter=
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for 149.43.221.103 at 2019-04-29 14:47:23 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+  Rendering riders/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE (available = 1)[0m
+  ↳ app/views/riders/index.html.haml:29
+  Rendered riders/index.html.haml within layouts/application (12.0ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 46ms (Views: 40.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/riders/3?driver_id=3" for 149.43.221.103 at 2019-04-29 14:47:26 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#show as HTML
+  Parameters: {"driver_id"=>"3", "id"=>"3"}
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:28
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:29
+  Rendering riders/show.html.haml within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 3]]
+  ↳ app/views/riders/show.html.haml:33
+  Rendered riders/show.html.haml within layouts/application (13.5ms)
+  Rendered layouts/_alerts.html.erb (0.6ms)
+Completed 200 OK in 49ms (Views: 45.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/rides?booking%5Bdriver_id%5D=3&booking%5Brider_id%5D=3" for 149.43.221.103 at 2019-04-29 14:47:28 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidesController#create as HTML
+  Parameters: {"authenticity_token"=>"3aU+DNLSjfiZkQM9BJewkJ0epbTsb7hJ/jtKUKkIbSHhTGCjUXj+8GQx8f05xn/zIPcJKaNa8fq6DXnnUxPAUA==", "booking"=>{"driver_id"=>"3", "rider_id"=>"3"}}
+  [1m[36mRider Load (0.2ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:3
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rides_controller.rb:9
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:9
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:9
+  [1m[36mRide Create (0.4ms)[0m  [1m[32mINSERT INTO "rides" ("done", "driver_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["done", 0], ["driver_id", 3], ["rider_id", 3], ["created_at", "2019-04-29 18:47:28.551558"], ["updated_at", "2019-04-29 18:47:28.551558"]]
+  ↳ app/controllers/rides_controller.rb:9
+  [1m[35m (68.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rides_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rides_controller.rb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:11
+  [1m[36mDriver Update (0.3ms)[0m  [1m[33mUPDATE "drivers" SET "available" = ?, "updated_at" = ? WHERE "drivers"."id" = ?[0m  [["available", 0], ["updated_at", "2019-04-29 18:47:28.626547"], ["id", 3]]
+  ↳ app/controllers/rides_controller.rb:11
+  [1m[35m (57.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rides_controller.rb:11
+Redirected to http://clab.cs.colgate.edu:3000/riders/3?driver_id=3
+Completed 302 Found in 144ms (ActiveRecord: 128.1ms)
+
+
+Started GET "/riders/3?driver_id=3" for 149.43.221.103 at 2019-04-29 14:47:28 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#show as HTML
+  Parameters: {"driver_id"=>"3", "id"=>"3"}
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:28
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:29
+  Rendering riders/show.html.haml within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 3]]
+  ↳ app/views/riders/show.html.haml:33
+  Rendered riders/show.html.haml within layouts/application (13.6ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 46ms (Views: 42.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/riders" for 149.43.221.103 at 2019-04-29 14:47:31 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+Redirected to http://clab.cs.colgate.edu:3000/riders?price_filter=&seats_filter=
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/riders?price_filter=&seats_filter=" for 149.43.221.103 at 2019-04-29 14:47:31 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidersController#index as HTML
+  Parameters: {"price_filter"=>"", "seats_filter"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:7
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/riders_controller.rb:8
+  Rendering riders/index.html.haml within layouts/application
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE (available = 1)[0m
+  ↳ app/views/riders/index.html.haml:29
+  Rendered riders/index.html.haml within layouts/application (12.8ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 67ms (Views: 41.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 149.43.221.103 at 2019-04-29 14:47:32 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.haml:9
+  Rendered pages/home.html.haml within layouts/application (6.5ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/drivers/3" for 149.43.221.103 at 2019-04-29 14:47:33 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (0.3ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0)[0m
+  ↳ app/controllers/drivers_controller.rb:20
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:23
+  Rendering drivers/show.html.haml within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 3]]
+  ↳ app/views/drivers/show.html.haml:28
+  Rendered drivers/show.html.haml within layouts/application (12.9ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 49ms (Views: 41.5ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/rides/2?driver_id=3" for 149.43.221.103 at 2019-04-29 14:47:34 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RidesController#update as HTML
+  Parameters: {"authenticity_token"=>"YJel25WNq22PUN5uQXekxIteUA5RYfEFxQagab6x4c1cfvt0FifYZXLwLK58JmunNrf8kx5UuLaBMJPeRKpMvA==", "driver_id"=>"3", "id"=>"2"}
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT  "rides".* FROM "rides" WHERE "rides"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:21
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:22
+  [1m[36mRider Load (0.1ms)[0m  [1m[34mSELECT  "riders".* FROM "riders" WHERE "riders"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rides_controller.rb:25
+  [1m[36mRide Update (0.3ms)[0m  [1m[33mUPDATE "rides" SET "done" = ?, "updated_at" = ? WHERE "rides"."id" = ?[0m  [["done", 1], ["updated_at", "2019-04-29 18:47:34.579799"], ["id", 2]]
+  ↳ app/controllers/rides_controller.rb:25
+  [1m[35m (57.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rides_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rides_controller.rb:27
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/rides_controller.rb:27
+  [1m[36mDriver Update (0.2ms)[0m  [1m[33mUPDATE "drivers" SET "available" = ?, "updated_at" = ? WHERE "drivers"."id" = ?[0m  [["available", 1], ["updated_at", "2019-04-29 18:47:34.643046"], ["id", 3]]
+  ↳ app/controllers/rides_controller.rb:27
+  [1m[35m (58.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rides_controller.rb:27
+Redirected to http://clab.cs.colgate.edu:3000/drivers/2?driver_id=3
+Completed 302 Found in 130ms (ActiveRecord: 116.9ms)
+
+
+Started GET "/drivers/2?driver_id=3" for 149.43.221.103 at 2019-04-29 14:47:34 -0400
+Cannot render console from 149.43.221.103! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by DriversController#show as HTML
+  Parameters: {"driver_id"=>"3", "id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:8
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT  "drivers".* FROM "drivers" WHERE "drivers"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/drivers_controller.rb:9
+  [1m[36mRide Load (0.2ms)[0m  [1m[34mSELECT "rides".* FROM "rides" WHERE (driver_id = 3 AND done = 0)[0m
+  ↳ app/controllers/drivers_controller.rb:20
+  Rendering drivers/show.html.haml within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."driver_id" = ?[0m  [["driver_id", 3]]
+  ↳ app/views/drivers/show.html.haml:28
+  Rendered drivers/show.html.haml within layouts/application (12.4ms)
+  Rendered layouts/_alerts.html.erb (0.6ms)
+Completed 200 OK in 65ms (Views: 59.2ms | ActiveRecord: 0.8ms)
+
+

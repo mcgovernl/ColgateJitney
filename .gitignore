@@ -1,6 +1,6 @@
-db/*.sqlite3
-coverage/
-tmp/*
-.bundle/
-log/*
-.byebug_history
+/db/*.sqlite3
+/coverage/
+/tmp/*
+/.bundle/
+/log/*
+/.byebug_history
