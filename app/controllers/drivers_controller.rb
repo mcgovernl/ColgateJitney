@@ -13,7 +13,20 @@ class DriversController < ApplicationController
         if @driver == nil
           redirect_to new_driver_path and return
         end
+
         @reviews = @driver.reviews
+        begin
+          @active_ride = Ride.where("driver_id = ? AND done = ?",@driver.id,false)
+          @active_ride=@active_ride[0]
+          if @active_ride
+            @has_ride = true
+            @rider = @active_ride.rider
+          else
+            @has_ride = false
+          end
+        rescue ActiveRecord::RecordNotFound
+          @has_ride = false
+        end
     end
 
     def new

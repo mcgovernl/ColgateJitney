@@ -2,6 +2,13 @@
     .row
         %h2.header.title= "#{@driver.first} #{@driver.last}"
     .row
+        -if @has_ride
+            .col-md-offset= "You have been booked by #{@rider.first} #{@rider.last}!"
+            %div.container
+                %br
+                =link_to "Ride with #{@rider.first} #{@rider.last} completed!", ride_path(:id => @active_ride.id, :driver_id => @driver.id), :method => :patch, :class => :button
+                %br
+                %br
         %span.line
     .r
         .col-md-offset= "Make: #{@driver.make}, Model: #{@driver.model}, Plate: #{@driver.plate}"

@@ -73,7 +73,7 @@ class RidersController < ApplicationController
 
     private
     def create_update_params
-        params.require(:rider).permit(:first,:last,:destination,:user_id)
+        params.require(:rider).permit(:first,:last,:destination,:start,:user_id)
     end
 
     def update_settings(parms, sess)

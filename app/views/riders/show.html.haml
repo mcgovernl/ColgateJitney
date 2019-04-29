@@ -19,6 +19,8 @@
         -else
             .col-md-offset.not_available= "Not currently available :("
     .row
+        .col-md-offset=link_to "Book a Ride", rides_path(:booking => {:rider_id => @rider.id, :driver_id => @driver.id}), :method => :post, :class => :button
+    .row
     .row
     %table.table
         %h1.review Reviews

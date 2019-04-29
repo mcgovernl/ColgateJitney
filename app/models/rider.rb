@@ -1,6 +1,7 @@
 class Rider < ApplicationRecord
     has_many :reviews
     has_many :drivers , :through => :reviews
+    has_many :rides
     belongs_to :user
 
     def self.filter_on_constraints(constraint_hash)
