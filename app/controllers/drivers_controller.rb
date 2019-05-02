@@ -82,9 +82,6 @@ class DriversController < ApplicationController
         end
     end
 
-    def destroy
-    end
-
     private
     def create_update_params
         params.require(:driver).permit(:first,:last,:make,:model,:plate,:seats,:available,:price,:user_id)
