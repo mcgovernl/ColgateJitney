@@ -22,6 +22,8 @@ class RidersController < ApplicationController
 
         @drivers = filter_and_sort view_prefs
         # @drivers = Driver.where("available = ?", true)
+
+        @rides = Ride.where("rider_id = ? and done = ?",@rider.id,true)
     end
 
     def show

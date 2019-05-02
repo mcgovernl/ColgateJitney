@@ -37,6 +37,21 @@
                         %td.stars= rev.stars
                         %td= rev.description
             %br
+    .row
+        %h1.header Ride History
+        %table.table
+            %thead
+                %th Pickup
+                %th Dropoff
+                %th Driver
+            %tbody
+                -@rides.each do |ride|
+                    -rider = Rider.find(ride.rider_id)
+                    %tr
+                        %td.pickup= ride.start
+                        %td.dropoff= ride.destination
+                        %td.name= "#{rider.first} #{rider.last}"
+
 %br
 %br
 %br

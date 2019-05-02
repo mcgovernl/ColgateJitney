@@ -27,6 +27,8 @@ class DriversController < ApplicationController
         rescue ActiveRecord::RecordNotFound
           @has_ride = false
         end
+
+        @rides = Ride.where("driver_id = ? and done = ?",@driver.id,true)
     end
 
     def new

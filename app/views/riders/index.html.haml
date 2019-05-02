@@ -33,6 +33,19 @@
                     %td.car= "#{driver.make} #{driver.model}"
                     %td.price= "$#{driver.price}"
     %br
+    %h1.header Ride History
+    %table.table
+        %thead
+            %th Pickup
+            %th Dropoff
+            %th Driver
+        %tbody
+            -@rides.each do |ride|
+                -driver = Driver.find(ride.driver_id)
+                %tr
+                    %td.pickup= ride.start
+                    %td.dropoff= ride.destination
+                    %td.name= link_to "#{driver.first} #{driver.last}", rider_path(:id => @rider.id, :driver_id => driver.id)
     %br
     %div.container
         =link_to "Back to Driver/Rider selection" , root_path, :class => "button"
