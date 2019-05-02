@@ -25,12 +25,12 @@ Driver.create!(first: 'Peyton',last: 'Baker',make: 'Honda',model: 'Prius',plate:
 Driver.create!(first: 'Harrison',last: 'Chen',make: 'Toyota',model: 'Tundra',plate: 'Z00M3R',seats: 3,available: true,user_id: 5,price: 420)
 Driver.create!(first: 'Steve',last: 'Stevenson',make: 'Tesla',model: 'X',plate: 'B0RN2R1D3',seats: 7,available: true,user_id: 6,price: 80085)
 
-Rider.create!(first: 'Liam',last: 'McGovern',destination: "110 Broad Street",user_id: 1)
-Rider.create!(first: 'Jack',last: 'Kerning',destination: "6 Pine Street",user_id: 2)
-Rider.create!(first: 'Ryan',last: 'Wetsman',destination: "Library Cafe",user_id: 3)
-Rider.create!(first: 'Peyton',last: 'Baker',destination: "The Jug",user_id: 4)
-Rider.create!(first: "Harrison", last: "Chen",destination: "Wynn Hall",user_id: 5)
-Rider.create!(first: 'Steve',last: 'Stevenson',destination: "The Pound",user_id: 6)
+Rider.create!(first: 'Liam',last: 'McGovern',destination: "110 Broad Street",user_id: 1,has_ride: false,start: "13 Oak Drive")
+Rider.create!(first: 'Jack',last: 'Kerning',destination: "6 Pine Street",user_id: 2,has_ride: false,start: "13 Oak Drive")
+Rider.create!(first: 'Ryan',last: 'Wetsman',destination: "Library Cafe",user_id: 3,has_ride: false,start: "13 Oak Drive")
+Rider.create!(first: 'Peyton',last: 'Baker',destination: "The Jug",user_id: 4,has_ride: false,start: "13 Oak Drive")
+Rider.create!(first: "Harrison", last: "Chen",destination: "Wynn Hall",user_id: 5,has_ride: false,start: "13 Oak Drive")
+Rider.create!(first: 'Steve',last: 'Stevenson',destination: "The Pound",user_id: 6,has_ride: false,start: "13 Oak Drive")
 
 # Review.create!(stars: 5,description: "All you could ask for from a driver",driver_id: 1, rider_id: 5)
 # Review.create!(stars: 3,description: "Made me spill my drink on myself",driver_id: 3, rider_id: 4)

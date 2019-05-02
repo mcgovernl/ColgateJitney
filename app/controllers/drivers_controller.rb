@@ -16,11 +16,11 @@ class DriversController < ApplicationController
 
         @reviews = @driver.reviews
         begin
-          @active_ride = Ride.where("driver_id = ? AND done = ?",@driver.id,false)
-          @active_ride=@active_ride[0]
-          if @active_ride
+          @ride = Ride.where("driver_id = ? AND done = ?",@driver.id,false)
+          @ride=@ride[0]
+          if @ride
             @has_ride = true
-            @rider = @active_ride.rider
+            @rider = @ride.rider
           else
             @has_ride = false
           end

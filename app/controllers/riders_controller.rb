@@ -28,6 +28,7 @@ class RidersController < ApplicationController
       @rider = Rider.find(params[:id])
       @driver = Driver.find(params[:driver_id])
       @reviews = @driver.reviews
+      @rides = Ride.where("driver_id = ? AND rider_id = ?",@driver.id,@rider.id)
     end
 
     def new

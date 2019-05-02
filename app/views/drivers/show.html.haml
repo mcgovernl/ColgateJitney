@@ -1,12 +1,14 @@
 #main
     .row
-        %h2.header.title= "#{@driver.first} #{@driver.last}"
-    .row
+        %h1.header.review= "#{@driver.first} #{@driver.last}"
         -if @has_ride
-            .col-md-offset= "You have been booked by #{@rider.first} #{@rider.last}!"
+            .row
+                .col-md-offset= "You have been booked by #{@rider.first} #{@rider.last}!"
+            .row
+                .col-md-offset= "Pickup: #{@ride.start}  |  Dropoff: #{@ride.destination}"
             %div.container
                 %br
-                =link_to "Ride with #{@rider.first} #{@rider.last} completed!", ride_path(:id => @active_ride.id, :driver_id => @driver.id), :method => :patch, :class => :button
+                =link_to "Ride with #{@rider.first} #{@rider.last} completed!", ride_path(:id => @ride.id, :driver_id => @driver.id), :method => :patch, :class => :button
                 %br
                 %br
         %span.line
@@ -21,12 +23,19 @@
             .col-md-offset= "Currently available!"
         -else
             .col-md-offset= "Not currently available :("
+    .row
+        %table.table
+            %h1.review Reviews
+            %thead
+                %th Stars
+                %th Description
+                //%th Reviewer
 
-    .row
-        %h2.header.title= "Reviews"
-    .row
-        -@reviews.each do |review|
-            .col-md-offset-2= "#{review.stars} #{review.description}"
+            %tbody
+                -@reviews.each do |rev|
+                    %tr
+                        %td.stars= rev.stars
+                        %td= rev.description
             %br
 %br
 %br

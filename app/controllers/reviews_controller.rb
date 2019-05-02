@@ -3,33 +3,38 @@ class ReviewsController < ApplicationController
         @review = Review.new()
         @driver = Driver.find(params[:driver_id])
         @rider = Rider.find(params[:rider_id])
+        @ride = Ride.find(params[:ride_id])
     end
 
     def create
-        r = Review.new(create_update_params)
+        rev = Review.new(create_update_params)
         d = Driver.find(params[:review][:driver_id])
+        ride = Ride.where("driver_id = ? AND rider_id = ? AND reviewed = ?",d.id,params[:review][:rider_id],false)
+        ride = ride[0]
         if params[:review][:stars] != ""
-            if r.save!()
-                flash[:notice] = "New review for #{d.first} #{d.last}"
-                redirect_to rider_path(:id => params[:review][:rider_id], :driver_id => params[:review][:driver_id]) and return
+            ride.reviewed = true
+            if rev.save()
+                if ride.save()
+                    flash[:notice] = "New review for #{d.first} #{d.last}"
+                    redirect_to rider_path(:id => params[:review][:rider_id], :driver_id => params[:review][:driver_id]) and return
+                end
             end
-        else
-            flash[:warning] = "Error creating Review"
-            redirect_to new_review_path(:rider_id => params[:review][:rider_id], :driver_id => params[:review][:driver_id]) and return
         end
+        flash[:warning] = "Error creating Review"
+        redirect_to new_review_path(:rider_id => params[:review][:rider_id], :driver_id => params[:review][:driver_id], :ride_id => params[:review][:ride_id]) and return
     end
 
-    def edit
-    end
-
-    def update
-    end
-
-    def destroy
-    end
+    # def edit
+    # end
+    #
+    # def update
+    # end
+    #
+    # def destroy
+    # end
 
     private
     def create_update_params
-        params.require(:review).permit(:stars,:description,:driver_id,:rider_id)
+        params.require(:review).permit(:stars,:description,:driver_id,:rider_id,:ride_id)
     end
 end
