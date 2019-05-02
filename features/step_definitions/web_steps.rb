@@ -54,7 +54,8 @@ click_button(button)
 end
 
 When /^(?:|I )follow "([^"]*)"$/ do |link|
-click_link(link)
+first(:link, link).click
+#click_link(link)
 end
 
 When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
@@ -287,7 +288,7 @@ Given("I am not a first time driver") do
 end
 
 Given("I am not a first time rider") do
-    @rider = Rider.create!({:first => "Capy",:last => "Bara",:destination => "Hamilton",:user_id => @user.id})
+    @rider = Rider.create!({:first => "Capy",:last => "Bara",:destination => "Hamilton",:has_ride => false,:user_id => @user.id})
 end
 
 Given("these Reviews:") do |table|
@@ -299,4 +300,30 @@ end
 Given("I am a new user") do
   @user.driver = nil
   @user.rider = nil
+end
+
+When("my ride ends") do
+    @ride = Ride.where("done = ?",false)[0]
+    @ride.done = true
+    @ride.save
+    driver_id = @ride.driver_id
+    @driver = Driver.where("id = ?",driver_id)[0]
+    @driver.available = true
+    @driver.save
+end
+
+When("I byebug") do
+    byebug
+end
+
+Given("these Rides:") do |table|
+    table.hashes.each do |h|
+        Ride.create!(h)
+    end
+end
+
+Given("these Riders:") do |table|
+    table.hashes.each do |h|
+        Rider.create!(h)
+    end
 end

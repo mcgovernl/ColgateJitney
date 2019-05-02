@@ -16,4 +16,4 @@ Feature: see driver info
         Given I am on the home page
         When I follow "I am a Rider"
         And I follow "Jack Kerning"
-        Then I should see "Leave a review"
+        Then I should see "YXY-6969"

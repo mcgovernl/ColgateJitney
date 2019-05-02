@@ -16,6 +16,10 @@ Feature: Leave a review
         Given I am on the home page
         When I follow "I am a Rider"
         And I follow "Jack Kerning"
+        And I follow "Book a Ride"
+        When my ride ends
+        When I go to the riders page
+        When I follow "Jack Kerning"
         And I follow "Leave a review"
         And I fill in "3" for "How many stars?"
         And I fill in "Literally a Dog!" for "Leave a description"
@@ -25,6 +29,10 @@ Feature: Leave a review
     Scenario: Leaving an empty review
         Given I am on the home page
         When I follow "I am a Rider"
+        And I follow "Jack Kerning"
+        And I follow "Book a Ride"
+        And my ride ends
+        And I go to the riders page
         And I follow "Jack Kerning"
         And I follow "Leave a review"
         And I press "Add Review"

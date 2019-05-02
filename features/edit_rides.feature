@@ -1,7 +1,7 @@
-Feature: see your own reviews
+Feature: end ride
     As a driver
-    So that I can see what people think of me as a driver
-    I want to be able to see reviews of myself
+    So that I can declare a ride as being done
+    I want to be able to end a ride
 
     Background:
         Given I am logged in
@@ -11,14 +11,10 @@ Feature: see your own reviews
             | Paytooooon | Baker | 13 Oak Drive | The Old Stone Jug | false | 1 |
         And these Rides:
             | start | destination | done | reviewed | rider_id | driver_id |
-            | 13 Oak Drive | The Old Stone Jug | true | false | 1 | 1 |
-        And these Reviews:
-            | stars | description | driver_id | rider_id | ride_id |
-            | 4 | Literally a Dog! | 1 | 1 | 1 |
+            | 13 Oak Drive | The Old Stone Jug | false | false | 1 | 1 |
 
-
-    Scenario: see your reviews
+    Scenario: end ride
         Given I am on the home page
         When I follow "I am a Driver"
-        Then I should see "Literally a Dog!"
-        And I should see "4"
+        And I follow "Ride with Paytooooon Baker completed!"
+        Then I should see "Successfully completed ride with Paytooooon Baker"
