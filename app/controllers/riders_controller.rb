@@ -64,7 +64,7 @@ class RidersController < ApplicationController
         r = Rider.find(id)
         r.update(create_update_params)
         if r.save()
-            flash[:notice] = "Successfully updated rider #{r.first} , #{r.last}"
+            flash[:notice] = "Successfully updated rider #{r.first} #{r.last}"
             redirect_to riders_path() and return
         else
             flash[:warning] = "Error updating rider"

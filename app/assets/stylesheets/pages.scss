@@ -4,6 +4,7 @@
 .center{
   text-align: center;
 }
+
 .title{
   color: maroon;
   text-align: center;
@@ -56,12 +57,18 @@
   text-align: center;
 }
 .alert{
+  animation: animation .65s ease-in-out infinite alternate;
+  -moz-animation: animation .65s ease-in-out infinite alternate;
+  -webkit-animation: animation .65s ease-in-out infinite alternate;
+  -o-animation: animation .65s ease-in-out infinite alternate;
   text-align: center;
-  color: red;
 }
 .notice{
+  animation: animation .65s ease-in-out infinite alternate;
+  -moz-animation: animation .65s ease-in-out infinite alternate;
+  -webkit-animation: animation .65s ease-in-out infinite alternate;
+  -o-animation: animation .65s ease-in-out infinite alternate;
   text-align: center;
-  color: blue;
 }
 
 a{
@@ -125,6 +132,7 @@ span {
   -webkit-animation: animation .65s ease-in-out infinite alternate;
   -o-animation: animation .65s ease-in-out infinite alternate;
 }
+
 
 @keyframes animation
 {
