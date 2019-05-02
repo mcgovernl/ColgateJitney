@@ -41,3 +41,7 @@
 
         .field
             =f.submit "Update Driver Info"
+%div.container
+    %br
+    %a=link_to "Back to Driver Home Page", driver_path(:driver_id => @driver.id) , :class => "button"
+    %br

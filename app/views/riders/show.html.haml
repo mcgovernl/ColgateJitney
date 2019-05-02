@@ -28,15 +28,15 @@
         %thead
             %th Stars
             %th Description
-            //%th Reviewer
+            %th Reviewer
 
         %tbody
             -@reviews.each do |rev|
+                -rider = Rider.find(rev.rider_id)
                 %tr
                     %td.stars= rev.stars
                     %td= rev.description
-                    //Leave the name of rider who wrote description
-
+                    %td= "#{rider.first} #{rider.last}"
     %br
     %br
     %br

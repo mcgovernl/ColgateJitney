@@ -24,18 +24,22 @@
         -else
             .col-md-offset= "Not currently available :("
     .row
+        %h1.review Reviews
+        /%p.review Driver Rating could add avg star for reviews
         %table.table
-            %h1.review Reviews
+
             %thead
                 %th Stars
                 %th Description
-                //%th Reviewer
+                %th Reviewer
 
             %tbody
                 -@reviews.each do |rev|
+                    -rider = Rider.find(rev.rider_id)
                     %tr
                         %td.stars= rev.stars
                         %td= rev.description
+                        %td= "#{rider.first} #{rider.last}"
             %br
     .row
         %h1.header Ride History
