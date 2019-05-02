@@ -45,7 +45,7 @@
                 %tr
                     %td.pickup= ride.start
                     %td.dropoff= ride.destination
-                    %td.name= link_to "#{driver.first} #{driver.last}", rider_path(:id => @rider.id, :driver_id => driver.id)
+                    %td.driver_name= link_to "#{driver.first} #{driver.last}", rider_path(:id => @rider.id, :driver_id => driver.id)
     %br
     %div.container
         =link_to "Back to Driver/Rider selection" , root_path, :class => "button"
