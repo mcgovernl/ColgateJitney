@@ -15,10 +15,12 @@
 
         =f.hidden_field :driver_id, :value => @driver.id
         =f.hidden_field :rider_id, :value => @rider.id
+        =f.hidden_field :ride_id, :value => @ride.id
+
 
         .field
             =f.submit "Add Review"
     %br
     %br
     %div.container
-        =link_to "Back to Rider Info", rider_path(@driver.id) , :class => "button"
+        =link_to "Back to Rider Info", rider_path(:id => @rider.id ,:driver_id => @driver.id) , :class => "button"

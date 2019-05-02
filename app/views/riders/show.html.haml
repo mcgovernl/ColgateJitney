@@ -18,9 +18,10 @@
             .col-md-offset.available.burn= "Currently available!"
         -else
             .col-md-offset.not_available= "Not currently available :("
-    .row
-        .col-md-offset=link_to "Book a Ride", rides_path(:booking => {:rider_id => @rider.id, :driver_id => @driver.id}), :method => :post, :class => :button
-    .row
+    -if @rider.has_ride == false
+        .row
+            .col-md-offset=link_to "Book a Ride", rides_path(:booking => {:rider_id => @rider.id, :driver_id => @driver.id}), :method => :post, :class => :button
+        .row
     .row
     %table.table
         %h1.review Reviews
@@ -40,8 +41,11 @@
     %br
     %br
     %div.container
-        =link_to "Leave a review", new_review_path(:rider_id => params[:id] , :driver_id => params[:driver_id]), :class => "button fire"
-        %br
-        %br
-        %br
+        -@rides.each do |ride|
+            -if ride.reviewed == false
+                =link_to "Leave a review", new_review_path(:rider_id => params[:id] , :driver_id => params[:driver_id],:ride_id => ride.id), :class => "button fire"
+                %br
+                %br
+                %br
+                -break
         =link_to "Go back to view all drivers", riders_path(), :class => "button burn"

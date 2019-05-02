@@ -5,6 +5,7 @@ class CreateRiders < ActiveRecord::Migration[5.2]
       t.string :last
       t.text :start
       t.text :destination
+      t.boolean :has_ride
       t.references :user
       t.timestamps
     end

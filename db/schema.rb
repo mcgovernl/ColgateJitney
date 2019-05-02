@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2019_04_28_183931) do
     t.string "last"
     t.text "start"
     t.text "destination"
+    t.boolean "has_ride"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -55,6 +56,7 @@ ActiveRecord::Schema.define(version: 2019_04_28_183931) do
     t.string "start"
     t.string "destination"
     t.boolean "done"
+    t.boolean "reviewed"
     t.integer "driver_id"
     t.integer "rider_id"
     t.datetime "created_at", null: false
