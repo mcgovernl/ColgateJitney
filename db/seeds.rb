@@ -19,14 +19,14 @@ User.create!(email: 'harrison@colgatejitney.com', password: 'test123', password_
 User.create!(email: 'steve@colgatejitney.com', password: 'test123', password_confirmation: 'test123') #user id 6
 
 Driver.create!(first: 'Liam',last: 'McGovern',make: 'Ford',model: 'Explorer',plate: 'ESK543',seats: 8,available: true,user_id: 1,price: 100)
-Driver.create!(first: 'Jack',last: 'Kerning',make: 'Jeep',model: 'Wrangler',plate: 'JDK456',seats: 4,available: true,user_id: 2,price: 69)
+Driver.create!(first: 'Jack',last: 'Kerning',make: 'Jeep',model: 'Wrangler',plate: 'JDK456',seats: 4,available: true,user_id: 2,price: 100)
 Driver.create!(first: 'Ryan',last: 'Wetsman',make: 'Kia',model: 'Sorento',plate: 'OPA808',seats: 6,available: true,user_id: 3,price: 33.33)
 Driver.create!(first: 'Peyton',last: 'Baker',make: 'Honda',model: 'Prius',plate: 'GOGREEN',seats: 4,available: false,user_id: 4, price: 0.01)
-Driver.create!(first: 'Harrison',last: 'Chen',make: 'Toyota',model: 'Tundra',plate: 'Z00M3R',seats: 3,available: true,user_id: 5,price: 420)
-Driver.create!(first: 'Steve',last: 'Stevenson',make: 'Tesla',model: 'X',plate: 'B0RN2R1D3',seats: 7,available: true,user_id: 6,price: 80085)
+Driver.create!(first: 'Harrison',last: 'Chen',make: 'Toyota',model: 'Tundra',plate: 'Z00M3R',seats: 3,available: true,user_id: 5,price: 100)
+Driver.create!(first: 'Steve',last: 'Stevenson',make: 'Tesla',model: 'X',plate: 'B0RN2R1D3',seats: 7,available: true,user_id: 6,price: 100)
 
 Rider.create!(first: 'Liam',last: 'McGovern',destination: "110 Broad Street",user_id: 1,has_ride: false,start: "13 Oak Drive")
-Rider.create!(first: 'Jack',last: 'Kerning',destination: "6 Pine Street",user_id: 2,has_ride: false,start: "13 Oak Drive")
+Rider.create!(first: 'Jack',last: 'Kerning',destination: "5 Pine Street",user_id: 2,has_ride: false,start: "13 Oak Drive")
 Rider.create!(first: 'Ryan',last: 'Wetsman',destination: "Library Cafe",user_id: 3,has_ride: false,start: "13 Oak Drive")
 Rider.create!(first: 'Peyton',last: 'Baker',destination: "The Jug",user_id: 4,has_ride: false,start: "13 Oak Drive")
 Rider.create!(first: "Harrison", last: "Chen",destination: "Wynn Hall",user_id: 5,has_ride: false,start: "13 Oak Drive")
